@@ -1,0 +1,17 @@
+.grid { 
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 1rem;
+    overflow: auto;
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: #121111;
+    z-index: 1;
+}

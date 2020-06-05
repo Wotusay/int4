@@ -1,6 +1,5 @@
 import React from "react";
-import { useStore } from "../../hooks";
-import { Link } from "react-router-dom";
+
 import { useObserver } from "mobx-react-lite";
 import styles from "./picture.module.css";
 

@@ -1,6 +1,6 @@
 class RestService {
     entity = ``;
-    url = `/api`;
+    url = ``;
   
     constructor(entity) {
       this.entity = entity;

@@ -19,10 +19,13 @@ const Home = () => {
                     <li key={picture.id}>
                    <Picture  picture={picture} />     
                     </li>
-             
                 )
                     
                 )}
+
+                <li className={styles.add}>
+                    +
+                </li>
             </ul>
         </section>
     ))

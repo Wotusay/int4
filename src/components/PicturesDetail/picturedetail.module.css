@@ -1,0 +1,29 @@
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    grid-template-rows: 1fr 2rem;
+    padding: 1rem;
+
+}
+
+.back {
+  color: white;
+
+  margin: 1rem;
+  margin-left: 5rem;
+  margin-top: 2rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.back:hover{
+    color: salmon;
+}
+
+.text {
+    width:30rem;
+    padding: 1rem;
+}

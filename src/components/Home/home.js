@@ -3,6 +3,10 @@ import { useStore } from "../../hooks";
 import { useObserver } from "mobx-react-lite";
 import Picture from "../Picture/picture";
 import styles from "./home.module.css";
+import { ROUTES } from "../../consts";
+import { Link} from 'react-router-dom';
+
+
 
 const Home = () => {    
 
@@ -17,7 +21,9 @@ const Home = () => {
                 {store.pictures.map(picture => (
                 
                     <li key={picture.id}>
-                   <Picture  picture={picture} />     
+                    <Link to={ROUTES.pictureDetail.to + picture.id}>
+                   <Picture  picture={picture} />  
+                   </Link>   
                     </li>
                 )
                     

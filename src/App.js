@@ -11,10 +11,10 @@ function App() {
   return (
     <div className={styles.container}>
       <Switch>
-        <Route>
+        <Route exact path={ROUTES.home}>
           <Home/>
         </Route>
-        <Route path={ROUTES.pictureDetail.path}>
+        <Route  path={ROUTES.pictureDetail.path}>
           <PicturesDetail/>
         </Route>
       </Switch>

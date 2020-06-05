@@ -1,6 +1,6 @@
 class RestService {
     entity = ``;
-    url = ``;
+    url = `https://json-kappa.herokuapp.com/`;
   
     constructor(entity) {
       this.entity = entity;

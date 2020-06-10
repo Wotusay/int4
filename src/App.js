@@ -11,7 +11,7 @@ function App() {
   return (
     <div className={styles.container}>
       <Switch>
-        <Route exact path={ROUTES.home}>
+        <Route exact path={ROUTES.pictureBook}>
           <Picturebook/>
         </Route>
         <Route  path={ROUTES.pictureDetail.path}>

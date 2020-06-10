@@ -57,7 +57,21 @@
         justify-content: center;
         grid-template-columns: 1fr 1fr;
         margin: 1rem;
+        position: absolute;
+        width: 1390px;
     }
+}
 
+    @media only screen and (min-width: 1920px) {
 
+    
+        .header {
+            color: #000000;
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr;
+            margin: 1rem;
+            position: absolute;
+            width: 1880px;
+        }
 }

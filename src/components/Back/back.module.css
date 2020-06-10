@@ -1,1 +1,14 @@
-.
+.back__btn {
+    background-color: transparent;
+    color: black;
+    text-transform: capitalize;
+    padding-top: 2rem;
+    margin-bottom: -2rem;
+    margin-left: -80rem;
+    transition: all 0.3s;
+  }
+  
+  .back__btn:hover{
+    color: cornflowerblue;
+  }
+  

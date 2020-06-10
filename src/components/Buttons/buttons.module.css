@@ -1,0 +1,14 @@
+.button { 
+    background-image: url('/assets/button.svg');
+    width: 4.7rem;
+    height: 4.5rem;
+    position: absolute;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 1s;
+}
+
+.button:hover{ 
+    opacity: 1;
+}

@@ -1,23 +1,10 @@
 .pic {
     overflow-y: hidden;
     overflow-x: auto;
+    position: relative;
     max-width: none;
 }
 
-.button { 
-    background-image: url('/assets/button.svg');
-    width: 4.7rem;
-    height: 4.5rem;
-    position: absolute;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: all 1s;
-}
-
-.button:hover{ 
-    opacity: 1;
-}
 
 @media only screen and (min-width: 320px) {
     .pic{ 

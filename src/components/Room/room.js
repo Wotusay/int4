@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./room.module.css";
+import Buttons from "../Buttons/buttons"
 
 const Room = () => {
+  
     return (
         <>
             <div className={styles.pic}>
-                <span className={styles.button} style={{}}></span>
-                <span className={styles.button} style={{}}></span>
-                <span className={styles.button} style={{}}></span>
-                <span className={styles.button} style={{}}></span>
+            <Buttons />
+
             <picture>       
                 <source 
             media="(max-width: 320px)" srcset="assets/room1-mobile.jpg" 

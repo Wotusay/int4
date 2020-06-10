@@ -2,13 +2,13 @@ import React from "react";
 import { useStore } from "../../hooks";
 import { useObserver } from "mobx-react-lite";
 import Picture from "../Picture/picture";
-import styles from "./home.module.css";
+import styles from "./picturebook.module.css";
 import { ROUTES } from "../../consts";
 import { Link} from 'react-router-dom';
 import Draggable from 'react-draggable';
 
 
-const Home = () => {    
+const Picturebook = () => {    
 
 
     const store = useStore();
@@ -48,4 +48,4 @@ const Home = () => {
 
 
 
-export default Home; 
+export default Picturebook; 

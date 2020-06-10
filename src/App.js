@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Picturebook from './components/Picturebook/picturebook'
 import { ROUTES } from './consts';
 import PicturesDetail from './components/PicturesDetail/PicturesDetail.js';
+import Room from './components/Room/room';
 
 
 
@@ -11,6 +12,9 @@ function App() {
   return (
     <div className={styles.container}>
       <Switch>
+      <Route exact path={ROUTES.home}>
+          <Room/>
+        </Route>
         <Route exact path={ROUTES.pictureBook}>
           <Picturebook/>
         </Route>

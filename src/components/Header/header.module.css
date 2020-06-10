@@ -1,1 +1,63 @@
-.
+.header {
+    color: #000000;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.login {
+    color: white;
+    background-color: black;
+    padding: 8px 14px;
+    border: 1px solid black;
+}
+
+.logo {
+    font-size: 24px;
+    padding-top: 5px;
+}
+
+.about {
+    border: 1px solid #373F41;
+    text-decoration: none;
+    color: #373F41;
+    padding: 8px 14px;
+    font-size: 16px;
+}
+
+@media only screen and (min-width: 320px) {
+    .login{ 
+        display: none;
+    }
+
+    .about {
+        border: 1px solid #373F41;
+        text-decoration: none;
+        color: #373F41;
+        font-size: 16px;
+        margin-left: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .login { 
+        display: flex;
+    }
+
+    .header {
+        color: #000000;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        margin: 1rem;
+    }
+
+
+}

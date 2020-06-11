@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./buttons.module.css";
-import MediaQuery from 'react-responsive'
+import MediaQuery from 'react-responsive';
 
 const buttons = () => {
       //Easy to change elements

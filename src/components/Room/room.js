@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./room.module.css";
-import Buttons from "../Buttons/buttons"
+import Buttons from "../Buttons/buttons";
+import Indicator from "../Indicator/indicator";
 
 const Room = () => {
+
   
     return (
         <>
@@ -31,6 +33,7 @@ const Room = () => {
           />
         </picture>
             </div>
+            <Indicator />
         </>
     )
 }

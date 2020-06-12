@@ -25,6 +25,9 @@ const PicturesDetail = () => {
         <Back/>
  
         <div className={styles.grid}>
+            <h2 className={styles.title}>
+                Activiteit naam
+            </h2>
             <img className={styles.pic} width="550" height="550" src={picture.urls.regular} alt={picture.alt_description}/>
             <p className={styles.text}> {picture.alt_description} </p> 
         </div> </section>

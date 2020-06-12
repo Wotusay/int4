@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "./header.module.css";
 import { Link } from "react-router-dom";
+import { ROUTES } from "../../consts";
 
 const Header = () => {
     return(
         <> 
         <div className={styles.header}>
-            <h1 className={styles.logo}>LOGO</h1>
+            <Link  to={ROUTES.home} style={{textDecoration: 'none'}} >
+            <h1 className={styles.logo}>HoneyHome</h1>
+            </Link>
             <div className={styles.buttons}>
             <Link style={{textDecoration: 'none'}}>
                 <p className={styles.about}>Over ons</p>

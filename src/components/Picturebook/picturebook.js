@@ -5,7 +5,7 @@ import Picture from "../Picture/picture";
 import styles from "./picturebook.module.css";
 import { ROUTES } from "../../consts";
 import { Link} from 'react-router-dom';
-import Draggable from 'react-draggable';
+import Back from "../Back/back";
 
 
 const Picturebook = () => {    
@@ -19,23 +19,19 @@ const Picturebook = () => {
     return useObserver(() => (
 
             <section >
-            <h1 className={styles.title}>Photobook</h1>
+           
+            <h1 className={styles.title}>Photobook</h1> 
+            <Back/>
             <ul className={styles.grid}  > 
                 {store.pictures.map(picture => (
-                    <Draggable> 
                     <li key={picture.id}>
-                    
                     <Link to={ROUTES.pictureDetail.to + picture.id}>
                   <Picture  picture={picture} /> 
                    </Link>   
-                    </li></Draggable> 
+                    </li>
                 )
                     
                 )}
-
-                <li className={styles.add}>
-                    +
-                </li>
             </ul>
         </section>
         

@@ -1,4 +1,4 @@
-.container {
+.grid {
     display: grid;
     justify-content: center;
     align-content: center;
@@ -8,15 +8,8 @@
 
 }
 
-.back {
-  color: #000000;
-
-  margin: 1rem;
-  margin-left: 5rem;
-  margin-top: 2rem;
-  transition: all 0.5s;
-  cursor: pointer;
-  font-size: 2rem;
+.return {
+    padding: 2rem;
 }
 
 .back:hover{

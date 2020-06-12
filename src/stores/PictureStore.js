@@ -2,7 +2,7 @@ import RestService from "../services/RestService";
 import { decorate, observable, action } from "mobx";
 import Picture from "../models/picture";
 
-class Store {
+class PictureStore {
     constructor() {
         this.pictures = [];
         this.pictureService = new RestService("results");
@@ -55,10 +55,10 @@ class Store {
       
 }
 
-decorate(Store, {
+decorate(PictureStore, {
     pictures: observable,
     addPicture: action,
     updatePictureFromServer: action
   });
   
-  export default Store;
+  export default PictureStore;

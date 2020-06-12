@@ -12,9 +12,9 @@ import { mediaQueries } from "../../consts";
 
 const PicturesDetail = () => {
     const {id} = useParams();
-    const store = useStore();
+    const {pictureStore} = useStore();
     return useObserver(() => {
-        const picture = store.resolvePicture(id);
+        const picture = pictureStore.resolvePicture(id);
         if (!picture) return <p>Loading ...</p>;
     ;
 

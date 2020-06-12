@@ -9,13 +9,7 @@ import Back from "../Back/back";
 
 
 const Picturebook = () => {    
-
-
-    const store = useStore();
-
-
-
-    
+    const {pictureStore} = useStore();
     return useObserver(() => (
 
             <section >
@@ -23,7 +17,7 @@ const Picturebook = () => {
             <h1 className={styles.title}>Photobook</h1> 
             <Back/>
             <ul className={styles.grid}  > 
-                {store.pictures.map(picture => (
+                {pictureStore.pictures.map(picture => (
                     <li key={picture.id}>
                     <Link to={ROUTES.pictureDetail.to + picture.id}>
                   <Picture  picture={picture} /> 

@@ -3,15 +3,11 @@ import styles from "./buttons.module.css";
 import MediaQuery from 'react-responsive';
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../consts";
+import { mediaQueries } from "../../consts";
+
 
 const buttons = () => {
-      //Easy to change elements
-  const mediaQueries = {
-    mobile: 320,
-    tablet: 768,
-    labtop: 1440,
-    desktop: 1920
-  }
+
 
     return (
         <>            

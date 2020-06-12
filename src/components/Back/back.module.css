@@ -13,3 +13,27 @@
     color: cornflowerblue;
   }
   
+
+  @media only screen and (min-width: 320px) {
+    .back__btn {
+      color: black;
+      font-size: 1.6rem;
+      margin: 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+  .back__btn {
+    color: black;
+    font-size: 1.9rem;
+    margin: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .back__btn {
+    color: black;
+    font-size: 2rem;
+    margin: 1rem;
+  }
+}

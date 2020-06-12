@@ -1,32 +1,47 @@
 .grid { 
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    grid-gap: 1rem;
-    overflow: auto;
+    justify-content: center;
 }
 
 .title {
     font-size: 2rem;
     color: black;
-    text-align: center;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1;
-}
-
-.add{ 
-    font-size: 20rem;
-    color: #000000;
-    justify-content: center;
     display: flex;
-    align-content: center;
-    align-self: center;
-    opacity: 0.7;
-    transition: all 0.5s;
+    justify-content: center;
+    padding-top: 3rem;
+    background-color: white;
 }
 
-.add:hover {
-    opacity: 1;
+
+@media only screen and (min-width: 320px) {
+    .grid {
+        grid-template-columns: repeat(2, 9rem);
+        grid-gap: 1rem;
+
+    }
+
+    .title {
+        padding-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .grid {
+        grid-template-columns: repeat(2, 19rem);
+        grid-gap: 1rem;
+
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .grid {
+        grid-template-columns: repeat(3, 21rem);
+        grid-gap: 1rem;
+        overflow: auto;
+    }
+
+    .title {
+        padding-top: 3rem;
+    }
+
 }

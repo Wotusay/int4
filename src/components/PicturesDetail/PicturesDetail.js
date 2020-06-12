@@ -5,6 +5,8 @@ import styles from "./picturedetail.module.css";
 
 import { useObserver } from "mobx-react-lite";
 import Back from "../Back/back";
+import MediaQuery from "react-responsive";
+import { mediaQueries } from "../../consts";
 
 
 
@@ -27,8 +29,14 @@ const PicturesDetail = () => {
         <div className={styles.grid}>
             <h2 className={styles.title}>
                 Activiteit naam
-            </h2>
-            <img className={styles.pic} width="550" height="550" src={picture.urls.regular} alt={picture.alt_description}/>
+            </h2>       
+            <MediaQuery maxDeviceWidth={mediaQueries.tablet} >
+                <img className={styles.pic} width="294" height="183" src={picture.urls.regular} alt={picture.alt_description}/>
+            </MediaQuery>
+            <MediaQuery maxDeviceWidth={mediaQueries.desktop} minDeviceWidth={mediaQueries.tablet+1}>
+                <img className={styles.pic} width="718.18" height="363.35" src={picture.urls.regular} alt={picture.alt_description}/>
+            </MediaQuery>
+     
             <p className={styles.text}> {picture.alt_description} </p> 
         </div> </section>
         </>

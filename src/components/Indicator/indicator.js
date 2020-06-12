@@ -1,14 +1,11 @@
 import React from "react";
 import styles from "./indicator.module.css";
 import MediaQuery from 'react-responsive';
+import { mediaQueries } from "../../consts";
+
 
 const Indicator = () => {
-    const mediaQueries = {
-        mobile: 320,
-        tablet: 768,
-        labtop: 1440,
-        desktop: 1920
-      }
+
 
       return(
           <>

@@ -7,6 +7,7 @@ import PicturesDetail from "./components/PicturesDetail/PicturesDetail.js";
 import Room from "./components/Room/room";
 import Header from "./components/Header/header";
 import Login from "./components/Login/login";
+import CurrentBox from "./components/CurrentBox/currentBox";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route exact path={ROUTES.room}>
             <Room />
+          </Route>
+          <Route exact path={ROUTES.currentBox}>
+            <CurrentBox />
           </Route>
 
           <Route exact path={ROUTES.pictureBook}>

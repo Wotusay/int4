@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'exodus';
+    src:  url('../../fonts/AnyConv.com__ExodusDemo-Regular.woff2') format('woff2'),
+          url('../../fonts/AnyConv.com__ExodusDemo-Regular.woff') format('woff');
+  }
+
+
 .header {
     color: #000000;
     display: grid;
@@ -23,7 +30,8 @@
 .logo {
     font-size: 24px;
     padding-top: 5px;
-    color: black;
+    color: white;
+    font-family: exodus;
 }
 
 .about {

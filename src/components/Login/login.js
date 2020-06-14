@@ -27,7 +27,7 @@ const Login = () => {
           ></input>
           <div className={styles.loginButtonWrapper}>
             <button className={styles.loginButtonWhere}>
-              Waar vindt ik de code?
+              Waar vind ik de code?
             </button>
             <button onClick={handleLogin} className={styles.loginButton}>
               Inloggen

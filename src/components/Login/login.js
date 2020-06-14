@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import styles from "./login.module.css";
+import { useStores } from "../../hooks/index";
 
 const Login = () => {
   const [code, setCode] = useState("");
+  const { uiStore } = useStores();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (code === "3403 - XPD2  - SPA1 - DPE2") {
-      console.log("logged in");
-    } else {
-      console.log("error");
-    }
+    uiStore.setCurrentCode(code);
   };
 
   return (

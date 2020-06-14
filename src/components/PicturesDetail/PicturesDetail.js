@@ -1,5 +1,5 @@
 import React from "react";
-import { useStore } from "../../hooks";
+import { useStores } from "../../hooks";
 import { useParams } from "react-router-dom";
 import styles from "./picturedetail.module.css";
 
@@ -12,7 +12,7 @@ import { mediaQueries } from "../../consts";
 
 const PicturesDetail = () => {
     const {id} = useParams();
-    const {pictureStore} = useStore();
+    const {pictureStore} = useStores();
     return useObserver(() => {
         const picture = pictureStore.resolvePicture(id);
         if (!picture) return <p>Loading ...</p>;

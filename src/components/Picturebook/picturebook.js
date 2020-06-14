@@ -1,5 +1,5 @@
 import React from "react";
-import { useStore } from "../../hooks";
+import { useStores } from "../../hooks";
 import { useObserver } from "mobx-react-lite";
 import Picture from "../Picture/picture";
 import styles from "./picturebook.module.css";
@@ -9,7 +9,7 @@ import Back from "../Back/back";
 
 
 const Picturebook = () => {    
-    const {pictureStore} = useStore();
+    const {pictureStore} = useStores();
     return useObserver(() => (
 
             <section >

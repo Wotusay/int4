@@ -1,4 +1,4 @@
 import { storeContext } from "../contexts";
 import { useContext } from "react";
 
-export const useStore = () => useContext(storeContext);
+export const useStores = () => useContext(storeContext);

@@ -8,20 +8,28 @@ import Room from "./components/Room/room";
 import Header from "./components/Header/header";
 import Login from "./components/Login/login";
 import CurrentBox from "./components/CurrentBox/currentBox";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { useStores } from "./hooks";
+import { useObserver } from "mobx-react-lite";
 
 function App() {
-  return (
+  const { uiStore } = useStores();
+  return useObserver(() => (
     <>
       <Header />
       <div className={styles.container}>
         <Switch>
           <Route exact path={ROUTES.home}>
-            <Login />
+            {uiStore.currentCode ? (
+              <Redirect to={ROUTES.box} />
+            ) : (
+              <Login />
+            )}
           </Route>
           <Route exact path={ROUTES.room}>
             <Room />
           </Route>
-          <Route exact path={ROUTES.currentBox}>
+          <Route exact path={ROUTES.box}>
             <CurrentBox />
           </Route>
 
@@ -34,7 +42,7 @@ function App() {
         </Switch>
       </div>
     </>
-  );
+  ));
 }
 
 export default App;

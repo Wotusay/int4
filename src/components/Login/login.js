@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styles from "./login.module.css";
-import { ROUTES } from "../../consts";
-import {Redirect } from "react-router-dom";
 
 const Login = () => {
   const [code, setCode] = useState("");
@@ -10,7 +8,6 @@ const Login = () => {
     e.preventDefault();
     if (code === "3403 - XPD2  - SPA1 - DPE2") {
       console.log("logged in");
-      <Redirect to={ROUTES.home} />
     } else {
       console.log("error");
     }

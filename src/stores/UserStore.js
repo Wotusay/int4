@@ -1,10 +1,10 @@
 import { decorate, observable, action } from "mobx";
-import Box from "../models/box";
+import User from "../models/user";
 
-class BoxStore {
+class UserStore {
     constructor() {
 
     }
 }
 
-export default BoxStore;
+export default UserStore;

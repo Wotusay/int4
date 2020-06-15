@@ -20,7 +20,7 @@ function App() {
       <div className={styles.container}>
         <Switch>
           <Route exact path={ROUTES.home}>
-            {uiStore.currentCode ? (
+            {uiStore.currentBox !== undefined && uiStore.checker !== undefined ? (
               <Redirect to={ROUTES.box} />
             ) : (
               <Login />

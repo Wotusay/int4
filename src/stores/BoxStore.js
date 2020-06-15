@@ -5,30 +5,29 @@ class BoxStore {
     constructor(rootStore) {
         this.rootStore = rootStore;
         this.boxService = new BoxService(this.rootStore.firebase);
-        this.boxes = [];
+        this.box = undefined;
     }
 
     onBoxesChanged = boxes => {
         this.addBoxes(boxes)
     }
 
-    getBoxes = async () => {
-        const result = await this.boxService.getBox();
-        this.onBoxesChanged(result.data());
-        console.log(result.data());
+    getBoxes = async code => {
+        if(code !== undefined) {
+        const result = await this.boxService.getBoxWithCode(code);
+        this.onBoxesChanged(result);
+        }
       };
 
-    addBoxes = box => {
-        let boxExist = this.boxes.findIndex(item => item.id === box.id);
-        if(boxExist === -1) {
-            this.boxes.push(box);
-        }
+    addBoxes = async box => {
+        this.box = box;
+        this.rootStore.uiStore.setCurrentBox();
     }
 
 }
 
 decorate(BoxStore, {
-    boxes: observable,
+    box: observable,
     addBoxes: action
   });
 

@@ -1,19 +1,26 @@
 import { decorate, observable, action } from "mobx";
 
 class UiStore {
-  constructor() {
+  constructor(rootStore) {
     this.currentCode = undefined;
     this.loggedIn = ["Log in"];
     this.errorMessage = "";
+    this.rootStore = rootStore;
   }
 
   logout = () => {
     this.loggedIn = "Log in";
   };
 
-  setCurrentCode(code) {
-    if (code === "3403 - XPD2  - SPA1 - DPE2") {
-      this.currentCode = true;
+  setCurrentCode =  async (code) => {
+
+    //dit komt uit de database
+    await this.rootStore.boxStore.getBoxes();
+    //stringfy het element anders lukt het niet hij heeft het mee als een []
+    const boxCode =  await this.rootStore.boxStore.boxes.map(box => box.code).toString();
+
+    if (code === boxCode ) {
+      this.currentCode = this.rootStore.boxStore.boxes.code;
       this.loggedIn = "Log uit";
       console.log("succes");
     } else {
@@ -26,7 +33,7 @@ class UiStore {
 
 decorate(UiStore, {
   currentCode: observable,
-  setCurrentCode: action,
+  setCurrentCode: action
 });
 
 export default UiStore;

@@ -8,8 +8,8 @@ class BoxService {
 
 
     getBox = async () => {
-    const boxRef = await this.db.collection("Boxes").doc().withConverter(boxConverter).get();
-    return boxRef;   
+    const boxRef = await this.db.collection("Boxes").doc('dgO3kqzjeWwjS36ib8Cc').withConverter(boxConverter).get();
+    return boxRef;
 
 }
 

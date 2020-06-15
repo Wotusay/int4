@@ -1,5 +1,4 @@
 import { decorate, observable, action } from "mobx";
-import Box from "../models/box";
 import BoxService from "../services/BoxService";
 
 class BoxStore {
@@ -9,19 +8,28 @@ class BoxStore {
         this.boxes = [];
     }
 
-    onBoxChanged = box => {
-        this.addBox(box);
+    onBoxesChanged = boxes => {
+        this.addBoxes(boxes)
     }
 
     getBoxes = async () => {
-        const result = await this.boxService.getBox()
-        this.onBoxChanged(result);
+        const result = await this.boxService.getBox();
+        this.onBoxesChanged(result.data());
+        console.log(result.data());
       };
+
+    addBoxes = box => {
+        let boxExist = this.boxes.findIndex(item => item.id === box.id);
+        if(boxExist === -1) {
+            this.boxes.push(box);
+        }
+    }
+
 }
 
 decorate(BoxStore, {
     boxes: observable,
-    addBox: action
+    addBoxes: action
   });
 
 export default BoxStore;

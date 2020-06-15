@@ -24,18 +24,18 @@ const boxConverter = {
         price: box.price
       };
     },
-    
+
     fromFirestore: function(snapshot, options) {
       const data = snapshot.data(options);
       return new Box({
         id: snapshot.id,
         title: data.title,
-        pic: data.pic,
+        code: data.code,
         userId: data.userId,
         price: data.price
       });
     }
   };
 
-export {boxConverter};
+export { boxConverter };
 export default Box;

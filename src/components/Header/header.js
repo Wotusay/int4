@@ -26,7 +26,7 @@ const Header = () => {
             </Link>
             <Link style={{ textDecoration: "none" }}>
               <p className={styles.login} onClick={handleLogout}>
-                {uiStore.loggedIn}
+                {uiStore.loginState}
               </p>
             </Link>
           </div>

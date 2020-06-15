@@ -12,7 +12,6 @@ const Picturebook = () => {
   const { pictureStore } = useStores();
   const [image, setImage] = useState(null);
   const [progress, setProgress] = useState(0);
-  let allUrl = [];
 
   const handleChange = (e) => {
     if (e.target.files[0]) {

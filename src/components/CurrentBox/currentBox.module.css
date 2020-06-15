@@ -1,15 +1,34 @@
-.box {
-  background: rgb(243,200,122);
-  background: linear-gradient(45deg, rgba(243,200,122,1) 0%, rgba(244,147,153,1) 100%);
-  height: 100vh;
+.boxWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  background: rgb(243, 200, 122);
+  background: linear-gradient(
+    45deg,
+    rgba(243, 200, 122, 1) 0%,
+    rgba(244, 147, 153, 1) 100%
+  );
+  height: 100vh;
+}
+
+.box {
+  text-align: center;
+}
+
+.img {
 }
 
 .boxTitle {
   color: white;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.explore {
+  margin-top: 2rem;
+  background-color: white;
+  font-size: 1.2rem;
+  border: none;
+  width: 10rem;
+  height: 3rem;
 }

@@ -26,7 +26,6 @@ class UiStore {
     } else {
       const error = "Deze code bestaat niet.";
       console.log(error);
-      this.errorMessage = "Deze code bestaat niet.";
     }
   }
 }

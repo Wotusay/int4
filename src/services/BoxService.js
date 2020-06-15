@@ -7,11 +7,28 @@ class BoxService {
     }
 
 
-    getBox = async () => {
-    const boxRef = await this.db.collection("Boxes").doc('dgO3kqzjeWwjS36ib8Cc').withConverter(boxConverter).get();
-    return boxRef;
+    getBoxWithCode = async code => {
+        let data = [];   
+   await this.db.collection("Boxes").where("code", "==", code).withConverter(boxConverter).get()
+    .then(function(querySnapShot) {
+        querySnapShot.forEach(doc =>  {
+          if (doc !== undefined) {
+            console.log(doc.data())
+            data = doc.data();
+          } if (doc === undefined) {
+              console.log('nothing found');
+          }
+        })
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error);
+    });
+    ;
 
+    return data;
 }
+
+
 
 }
 

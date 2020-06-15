@@ -1,39 +1,63 @@
-import { decorate, observable, action } from "mobx";
+import { decorate, observable, action,computed } from "mobx";
 
 class UiStore {
   constructor(rootStore) {
-    this.currentCode = undefined;
-    this.loggedIn = ["Log in"];
-    this.errorMessage = "";
+    this.currentCode = '3403 - XPD2  - SPA1 - DPE2';
     this.rootStore = rootStore;
+    this.currentBox = undefined;
+    this.loginState = false; 
+  }
+
+  login = () => {
+    if (this.currentBox !== undefined) {
+      this.loginState = true;
+      console.log('logged in');
+    }
   }
 
   logout = () => {
-    this.loggedIn = "Log in";
-  };
-
-  setCurrentCode =  async (code) => {
-
-    //dit komt uit de database
-    await this.rootStore.boxStore.getBoxes();
-    //stringfy het element anders lukt het niet hij heeft het mee als een []
-    const boxCode =  await this.rootStore.boxStore.boxes.map(box => box.code).toString();
-
-    if (code === boxCode ) {
-      this.currentCode = this.rootStore.boxStore.boxes.code;
-      this.loggedIn = "Log uit";
-      console.log("succes");
-    } else {
-      const error = "Deze code bestaat niet.";
-      console.log(error);
-      this.errorMessage = "Deze code bestaat niet.";
+    if(this.loginState === true) {
+      this.loginState = false;
+      this.empty();
     }
+  }
+
+  setCurrentBox = async () => {
+    this.currentBox = await this.rootStore.boxStore.box;
+  }
+
+  setCurrentCode = async (code) => {
+    this.currentCode = code;
+    await this.searchWithCode(code);
+    //dit komt uit de database
+    //stringfy het element anders lukt het niet hij heeft het mee als een []
+  }
+
+  searchWithCode = async code => {
+    await this.rootStore.boxStore.getBoxes(code);
+  }
+
+  empty() {
+    this.currentBox = undefined;
+  }
+
+  get checker() {
+      if(
+        this.currentBox !== undefined) {
+        return this.currentBox.code
+      }
   }
 }
 
 decorate(UiStore, {
   currentCode: observable,
-  setCurrentCode: action
+  currentBox: observable,
+  loginState: observable,
+  login:action, 
+  setCurrentCode: action,
+  empty:action,
+  checker: computed,
+
 });
 
 export default UiStore;

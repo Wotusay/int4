@@ -21,7 +21,8 @@ const boxConverter = {
         title: box.title,
         code: box.code,
         userId: box.userId,
-        price: box.price
+        price: box.price,
+        pic: box.pic
       };
     },
 
@@ -32,7 +33,8 @@ const boxConverter = {
         title: data.title,
         code: data.code,
         userId: data.userId,
-        price: data.price
+        price: data.price,
+        pic: data.pic
       });
     }
   };

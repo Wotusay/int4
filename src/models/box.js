@@ -2,14 +2,13 @@ import { v4 } from "uuid";
 import { decorate, observable, action, computed } from "mobx";
 
 class Box {
-    constructor({ id = v4(), store, userId, activities= [], price = '€40', code, title }) {
-        this.id =  id;
-        this.store= store;
-        this.userId= userId; //maar 1 user
-        this.activities = activities; //apartre model
-        this.title= title;
-        this.price = price;
-        this.code= code;
+    constructor({ id = v4(), store, userId, code, price, title }) {
+        this.id = id;
+        this.store = store;
+        this.title = title; 
+        this.price =price; 
+        this.userId = userId;
+        this.code = code;
 
     }
 
@@ -19,18 +18,19 @@ class Box {
 const boxConverter = {
     toFirestore: function(box) {
       return {
-        code: box.code,
         title: box.title,
+        code: box.code,
         userId: box.userId,
         price: box.price
       };
     },
+    
     fromFirestore: function(snapshot, options) {
       const data = snapshot.data(options);
       return new Box({
         id: snapshot.id,
         title: data.title,
-        code: data.code,
+        pic: data.pic,
         userId: data.userId,
         price: data.price
       });

@@ -9,10 +9,19 @@ class BoxStore {
         this.boxes = [];
     }
 
-    getBoxes = async () => {
-        const result = this.boxService.getBox('dgO3kqzjeWwjS36ib8Cc');
-        console.log(result);
+    onBoxChanged = box => {
+        this.addBox(box);
     }
+
+    getBoxes = async () => {
+        const result = await this.boxService.getBox()
+        this.onBoxChanged(result);
+      };
 }
+
+decorate(BoxStore, {
+    boxes: observable,
+    addBox: action
+  });
 
 export default BoxStore;

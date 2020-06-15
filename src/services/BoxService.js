@@ -6,9 +6,11 @@ class BoxService {
         this.db = firebase.firestore();
     }
 
-    getBox = async boxId => {
-    return await this.db.collection("Boxes")
-    .doc(boxId).withConverter(boxConverter).get();
+
+    getBox = async () => {
+    const boxRef = await this.db.collection("Boxes").doc().withConverter(boxConverter).get();
+    return boxRef;   
+
 }
 
 }

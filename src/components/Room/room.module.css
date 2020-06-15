@@ -1,7 +1,4 @@
-.room {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.roomWrapper {
   background: rgb(243, 200, 122);
   background: linear-gradient(
     45deg,
@@ -11,52 +8,11 @@
   height: 100vh;
 }
 
-.itemTent {
+.room {
+  overflow: hidden;
   display: grid;
-  position: absolute;
-  height: 30rem;
-  width: 30rem;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(20, 5vw);
+  grid-template-rows: repeat(20, 5vh);
 }
-
-.ellipse {
-  overflow: hidden;
-  position: relative;
-  grid-row: 1;
-  grid-column: 2;
-}
-
-.flower1 {
-  overflow: hidden;
-  position: relative;
-  grid-row: 3;
-  grid-column: 1 / span 3;
-}
-
-.flower2 {
-  overflow: hidden;
-  position: relative;
-  grid-row: 1;
-  grid-column: 5 / span 10;
-}
-
-.tent {
-  overflow: hidden;
-  position: relative;
-  grid-row: 1 / span 12;
-  grid-column: 1 / span 12;
-  transition: ease-in-out 0.2s;
-}
-
-/* .tent:hover {
-  transform: scale(1.1);
-}
-
-.flower1:hover {
-  transform: rotate(20deg);
-}
-
-.flower2:hover {
-    transform: rotate(-20deg);
-  } */

@@ -1,28 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./room.module.css";
 import { useObserver } from "mobx-react-lite";
+import Tent from "../Attributes/Tent/Tent";
+import Yoga from "../Attributes/Yoga/Yoga";
 
 const Room = () => {
   return useObserver(() => (
     <>
-      <div className={styles.room}>
-        <div className={styles.itemTent}>
-          <img
-            className={styles.ellipse}
-            src="/assets/adventure_room/tent/ellipse.png"
-          ></img>
-          <img
-            className={styles.flower1}
-            src="/assets/adventure_room/tent/flower_1.png"
-          ></img>
-          <img
-            className={styles.flower2}
-            src="/assets/adventure_room/tent/flower_2.png"
-          ></img>
-          <img
-            className={styles.tent}
-            src="/assets/adventure_room/tent/tent.png"
-          ></img>
+      <div className={styles.roomWrapper}>
+        <div className={styles.room}>
+          <Tent/>
+          <Yoga/>
         </div>
       </div>
     </>

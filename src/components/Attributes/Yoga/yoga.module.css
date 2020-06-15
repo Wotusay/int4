@@ -1,0 +1,36 @@
+.itemYoga {
+  transform: translateX(-8rem);
+  display: grid;
+  grid-row: 17;
+  grid-column: 1;
+  height: 30rem;
+  width: 30rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.ellipse {
+  z-index: 1;
+  overflow: hidden;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.flower2 {
+  z-index: 2;
+  overflow: hidden;
+  grid-row: 1;
+  grid-column: 7;
+  transform: translateY(-8rem);
+}
+
+.yoga {
+  z-index: 3;
+  overflow: hidden;
+  grid-row: 1 / span 12;
+  grid-column: 3 / span 12;
+  transition: ease-in-out 0.2s;
+}
+
+.yoga:hover {
+  transform: scale(1.1);
+}

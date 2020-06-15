@@ -1,41 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import { useStores } from "../../hooks";
 import { useObserver } from "mobx-react-lite";
 import Picture from "../Picture/picture";
 import styles from "./picturebook.module.css";
 import { ROUTES } from "../../consts";
-import { Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Back from "../Back/back";
+import { storage } from "../../services/FirebaseService";
 
+const Picturebook = () => {
+  const { pictureStore } = useStores();
+  const [image, setImage] = useState(null);
+  const [progress, setProgress] = useState(0);
+  let allUrl = [];
 
-const Picturebook = () => {    
-    const {pictureStore} = useStores();
-    return useObserver(() => (
+  const handleChange = (e) => {
+    if (e.target.files[0]) {
+      setImage(e.target.files[0]);
+    }
+  };
 
-            <section >
-           
-            <h1 className={styles.title}>Photobook</h1> 
-            <Back/>
-            <ul className={styles.grid}  > 
-                {pictureStore.pictures.map(picture => (
-                    <li key={picture.id}>
-                    <Link to={ROUTES.pictureDetail.to + picture.id}>
-                  <Picture  picture={picture} /> 
-                   </Link>   
-                    </li>
-                )
-                    
-                )}
-            </ul>
-        </section>
-        
+  const handleUpload = () => {
+    const uploadTask = storage.ref(`${image.name}`).put(image);
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {
+        const progress = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        setProgress(progress);
+      },
+      (error) => {
+        console.log(error);
+      },
+      () => {
+        storage.ref("images").child(image.name);
+      }
+    );
+  };
 
-    )
+  return useObserver(() => (
+    <section>
+      <h1 className={styles.title}>Photobook</h1>
+      <Back />
+      <ul className={styles.grid}>
+        {pictureStore.pictures.map((picture) => (
+          <li key={picture.id}>
+            <Link to={ROUTES.pictureDetail.to + picture.id}>
+              <Picture picture={picture} />
+            </Link>
+          </li>
+        ))}
+        <li>
+          <input type="file" onChange={handleChange}></input>
+          <button onClick={handleUpload}>Upload</button>
+          <progress value={progress} max="100"></progress>
+        </li>
+      </ul>
+    </section>
+  ));
+};
 
-    )
-
-}
-
-
-
-export default Picturebook; 
+export default Picturebook;

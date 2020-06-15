@@ -1,13 +1,5 @@
-import { configure } from "mobx";
-import PictureStore from "./PictureStore";
-import UiStore from "./UiStore";
-import BoxStore from "./BoxStore";
-import UserStore from "./UserStore";
-import ActivitiesStore from "./ActivitiesStore";
 import * as firebase from "firebase/app";
-
-
-configure({ enforceActions: `observed` });
+import BoxStore from "./BoxStore";
 
 class RootStore {
   constructor() {
@@ -23,12 +15,7 @@ class RootStore {
 
     this.firebase = firebase.initializeApp(firebaseConfig);
 
-
-    this.pictureStore = new PictureStore(this);
-    this.uiStore = new UiStore(this);
     this.boxStore = new BoxStore(this);
-    this.userStore = new UserStore(this);
-    this.activitiesStore = new ActivitiesStore(this);
   }
 
   
@@ -36,6 +23,6 @@ class RootStore {
 const getCurrenTimeStamp = () => {
   return firebase.firestore.Timestamp.now();
 };
-export { getCurrenTimeStamp };
 
+export { getCurrenTimeStamp };
 export default RootStore;

@@ -1,16 +1,16 @@
 import { v4 } from "uuid";
 
 class Box {
-    constructor({ id = v4(), store, userId, code, price, title }) {
+    constructor({ id = v4(), store, userId, code, price, title, pic }) {
         this.id = id;
         this.store = store;
         this.title = title; 
         this.price =price; 
         this.userId = userId;
         this.code = code;
+        this.pic = pic;
 
     }
-
 
 }
 

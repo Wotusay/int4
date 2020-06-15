@@ -1,42 +1,59 @@
 import React from "react";
 import styles from "./currentBox.module.css";
+import { useStores } from "../../hooks";
+import { useHistory } from "react-router-dom";
+import { useObserver } from "mobx-react-lite";
+import { ROUTES } from "../../consts";
 
 const CurrentBox = () => {
-  return (
-    <>
+  const {uiStore} = useStores();  
+  const history  = useHistory();
+
+  return useObserver(() => {  
+    if (uiStore.currentBox == undefined) {
+      history.push(ROUTES.home)
+      return (
+        <p> loading ...</p>
+      )
+    } else {
+      return(
+      <>
+
       <div className={styles.boxWrapper}>
         <div className={styles.box}>
           <picture className={styles.img}>
             <source
               media="(max-width: 320px)"
-              srcSet="/assets/adventure_box-phone.png"
+              srcSet={`${uiStore.currentBox.pic}-mobile.png`}
             />
             <source
               media="(max-width: 768px)"
-              srcSet="/assets/adventure_box-tablet.png"
+              srcSet={`${uiStore.currentBox.pic}.png`}
             />
             <source
               media="(max-width: 1440px)"
-              srcset="/assets/adventure_box.png"
+              srcset={`${uiStore.currentBox.pic}.png`}
             />
 
             <source
               media="(max-width: 1920px)"
-              src="/assets/adventure_box.png"
+              src={`${uiStore.currentBox.pic}.png`}
             />
 
             <img
-              src="/assets/adventure_box.png"
+              src={`${uiStore.currentBox.pic}.png`}
               alt="Adventure box"
               style={{ width: "auto" }}
             />
           </picture>
-          <p className={styles.boxTitle}>Adventure Box</p>
+          <p className={styles.boxTitle}>{uiStore.currentBox.title}</p>
           <button className={styles.explore}>Open Box</button>
         </div>
       </div>
-    </>
-  );
+    </>)
+    }
+   
+  });
 };
 
 export default CurrentBox;

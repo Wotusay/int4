@@ -8,22 +8,21 @@ class UiStore {
     this.loginState = false; 
   }
 
-  login = () => {
-    if (this.currentBox !== undefined) {
+  login = async () => {
       this.loginState = true;
       console.log('logged in');
-    }
+    
   }
 
   logout = () => {
-    if(this.loginState === true) {
       this.loginState = false;
       this.empty();
-    }
+    
   }
 
-  setCurrentBox = async () => {
-    this.currentBox = await this.rootStore.boxStore.box;
+  setCurrentBox = box => {
+    this.currentBox = box
+
   }
 
   setCurrentCode = async (code) => {
@@ -42,8 +41,7 @@ class UiStore {
   }
 
   get checker() {
-      if(
-        this.currentBox !== undefined) {
+      if(this.currentBox !== undefined) {
         return this.currentBox.code
       }
   }

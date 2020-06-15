@@ -5,11 +5,11 @@ class BoxStore {
     constructor(rootStore) {
         this.rootStore = rootStore;
         this.boxService = new BoxService(this.rootStore.firebase);
-        this.box = undefined;
+        this.boxes = [];
     }
 
-    onBoxesChanged = boxes => {
-        this.addBoxes(boxes)
+    onBoxesChanged = box => {
+        this.addBoxes(box)
     }
 
     getBoxes = async code => {
@@ -20,14 +20,14 @@ class BoxStore {
       };
 
     addBoxes = async box => {
-        this.box = box;
-        this.rootStore.uiStore.setCurrentBox();
+        this.boxes.push(box);
+        this.rootStore.uiStore.setCurrentBox(box);
     }
 
 }
 
 decorate(BoxStore, {
-    box: observable,
+    boxes: observable,
     addBoxes: action
   });
 

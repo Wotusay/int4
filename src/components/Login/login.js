@@ -6,9 +6,12 @@ const Login = () => {
   const [code, setCode] = useState("");
   const { uiStore } = useStores();
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleLogin = async (e) => {      
     uiStore.setCurrentCode(code);
+    e.preventDefault();
+    uiStore.login();
+
+
   };
 
   return (
@@ -27,7 +30,7 @@ const Login = () => {
             <button className={styles.loginButtonWhere}>
               Waar vind ik de code?
             </button>
-            <button onClick={handleLogin} className={styles.loginButton}>
+            <button onClick={e =>handleLogin(e)} className={styles.loginButton}>
               Inloggen
             </button>
           </div>

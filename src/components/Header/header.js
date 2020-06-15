@@ -10,19 +10,19 @@ const Header = () => {
 
   return useObserver(() => (
     <>
-      <div className={styles.header}>
-        <Link to={ROUTES.home} style={{ textDecoration: "none" }}>
-          <h1 className={styles.logo}>HoneyHome</h1>
-        </Link>
-        <div className={styles.buttons}>
-          <Link style={{ textDecoration: "none" }}>
-            <p className={styles.about}>Over ons</p>
+      <div className={styles.headerWrapper}>
+        <div className={styles.header}>
+          <Link to={ROUTES.home} style={{ textDecoration: "none" }}>
+            <h1 className={styles.logo}>HoneyHome</h1>
           </Link>
-          <Link style={{ textDecoration: "none" }}>
-            <p className={styles.login}>
-              {uiStore.loggedIn}
-            </p>
-          </Link>
+          <div className={styles.buttons}>
+            <Link style={{ textDecoration: "none" }}>
+              <p className={styles.about}>Over ons</p>
+            </Link>
+            <Link style={{ textDecoration: "none" }}>
+              <p className={styles.login}>{uiStore.loggedIn}</p>
+            </Link>
+          </div>
         </div>
       </div>
     </>

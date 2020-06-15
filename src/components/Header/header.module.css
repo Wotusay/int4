@@ -1,87 +1,48 @@
 @font-face {
-    font-family: 'exodus';
-    src:  url('../../fonts/AnyConv.com__ExodusDemo-Regular.woff2') format('woff2'),
-          url('../../fonts/AnyConv.com__ExodusDemo-Regular.woff') format('woff');
-  }
+  font-family: "exodus";
+  src: url("../../fonts/AnyConv.com__ExodusDemo-Regular.woff2") format("woff2"),
+    url("../../fonts/AnyConv.com__ExodusDemo-Regular.woff") format("woff");
+}
 
+.headerWrapper {
+  display: flex;
+  justify-content: center;
+}
 
 .header {
-    color: #000000;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr;
-    margin: 1rem;
-    z-index: 1;
+  color: #000000;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+  z-index: 1;
+  position: absolute;
+  width: 90vw;
 }
 
 .buttons {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
-
 .login {
-    color: black;
-    background-color: white;
-    padding: 8px 14px;
-    border: 1px solid white;
+  color: black;
+  background-color: white;
+  padding: 8px 14px;
+  border: 1px solid white;
 }
 
 .logo {
-    font-size: 24px;
-    padding-top: 5px;
-    color: white;
-    font-family: exodus;
+  font-size: 24px;
+  padding-top: 5px;
+  color: white;
+  font-family: exodus;
 }
 
 .about {
-    border: 1px solid white;
-    text-decoration: none;
-    color: white;
-    padding: 8px 14px;
-    font-size: 16px;
-}
-
-@media only screen and (min-width: 320px) {
-    .login{ 
-        display: none;
-    }
-
-    .about {
-        border: 1px solid white;
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-        margin-left: 3rem;
-    }
-}
-
-@media only screen and (min-width: 1440px) {
-    .login { 
-        display: flex;
-    }
-
-    .header {
-        color: #000000;
-        display: grid;
-        justify-content: center;
-        grid-template-columns: 1fr 1fr;
-        margin: 1rem;
-        position: absolute;
-        width: 1390px;
-    }
-}
-
-    @media only screen and (min-width: 1920px) {
-
-    
-        .header {
-            color: #000000;
-            display: grid;
-            justify-content: center;
-            grid-template-columns: 1fr 1fr;
-            margin: 1rem;
-            position: absolute;
-            width: 1880px;
-        }
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  padding: 8px 14px;
+  font-size: 16px;
 }

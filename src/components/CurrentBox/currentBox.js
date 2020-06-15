@@ -8,11 +8,11 @@ const CurrentBox = () => {
         <picture>
           <source
             media="(max-width: 320px)"
-            srcset="assets/adventure_box-phone.png"
+            srcSet="assets/adventure_box-phone.png"
           />
           <source
-            media="(max-width: 767px)"
-            srcset="assets/adventure_box-tablet.png"
+            media="(max-width: 768px)"
+            srcSet="assets/adventure_box-tablet.png"
           />
           <source
             media="(max-width: 1440px)"
@@ -21,7 +21,7 @@ const CurrentBox = () => {
 
           <source
             media="(max-width: 1920px)"
-            srcset="assets/adventure_box.png"
+            src="assets/adventure_box.png"
           />
 
           <img

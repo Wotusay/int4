@@ -1,5 +1,5 @@
 import { decorate, observable, action } from "mobx";
-import Box from "../box/box";
+import Box from "../models/box";
 
 class BoxStore {
     constructor() {

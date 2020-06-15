@@ -8,6 +8,11 @@ import { useObserver } from "mobx-react-lite";
 const Header = () => {
   const { uiStore } = useStores();
 
+  const handleLogout = (e) => {
+    e.preventDefault();
+    uiStore.logout();
+  };
+
   return useObserver(() => (
     <>
       <div className={styles.headerWrapper}>
@@ -20,7 +25,9 @@ const Header = () => {
               <p className={styles.about}>Over ons</p>
             </Link>
             <Link style={{ textDecoration: "none" }}>
-              <p className={styles.login}>{uiStore.loggedIn}</p>
+              <p className={styles.login} onClick={handleLogout}>
+                {uiStore.loggedIn}
+              </p>
             </Link>
           </div>
         </div>

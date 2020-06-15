@@ -1,5 +1,4 @@
 import { v4 } from "uuid";
-import { decorate, observable, action, computed } from "mobx";
 
 class Box {
     constructor({ id = v4(), store, userId, code, price, title }) {

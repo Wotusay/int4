@@ -1,5 +1,6 @@
 import * as firebase from "firebase/app";
 import BoxStore from "./BoxStore";
+import UiStore from "./UiStore";
 
 class RootStore {
   constructor() {
@@ -10,15 +11,13 @@ class RootStore {
       projectId: process.env.REACT_APP_projectId,
       storageBucket: process.env.REACT_APP_storageBucket,
       messagingSenderId: process.env.REACT_APP_messagingSenderId,
-      appId: process.env.REACT_APP_appId
+      appId: process.env.REACT_APP_appId,
     };
 
     this.firebase = firebase.initializeApp(firebaseConfig);
-
+    this.uiStore = new UiStore(this);
     this.boxStore = new BoxStore(this);
   }
-
-  
 }
 const getCurrenTimeStamp = () => {
   return firebase.firestore.Timestamp.now();

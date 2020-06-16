@@ -11,7 +11,9 @@ import CurrentBox from "./components/CurrentBox/currentBox";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { useStores } from "./hooks";
 import { useObserver } from "mobx-react-lite";
+import Boxes from "./components/Boxes/boxes";
 import Home from "./components/Home/home";
+import NotFound from "./components/NotFound/not-found";
 
 
 function App() {
@@ -21,8 +23,8 @@ function App() {
       <Header />
       <div className={styles.container}>
         <Switch>
-          <Route exact path={ROUTES.home}>
-          <Home />
+          <Route exact strict path={ROUTES.boxes.path}>
+          <Boxes />
           </Route>
               <Route exact path={ROUTES.login}>
                 {uiStore.currentBox !== undefined &&
@@ -39,12 +41,19 @@ function App() {
                 <CurrentBox />
               </Route>
 
-              <Route exact path={ROUTES.photoBook}>
+              <Route exact path={ROUTES.picturebook}>
                 <Photobook />
               </Route>
-              <Route path={ROUTES.pictureDetail.path}>
+              <Route exact path={ROUTES.pictureDetail.path}>
                 <PicturesDetail />
               </Route>
+              <Route exact strict path={ROUTES.home}>
+                <Home />
+               </Route>
+
+               <Route>
+                  <NotFound/>
+               </Route>
         </Switch>
       </div>
     </>

@@ -9,7 +9,7 @@ import Back from "../Back/back";
 import { storage } from "../../services/FirebaseService";
 
 const Photobook = () => {
-  const { pictureStore } = useStores();
+  //const { pictureStore } = useStores();
   // const [image, setImage] = useState(null);
   // const [progress, setProgress] = useState(0);
 

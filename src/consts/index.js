@@ -2,10 +2,11 @@
 const ROUTES = {
     home: "/",
     pictureDetail: { path: "/pictures/:id", to: "/pictures/" },
-    pictureBook: "/picturebook",
+    picturebook: "/picturebook",
     room:"/room",
     box: "/currentbox",
-    login: "/login"
+    login: "/login",
+    boxes: {path: "/boxes/:id", to: "/boxes" }
   
   };
 

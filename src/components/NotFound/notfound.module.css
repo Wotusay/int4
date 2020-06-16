@@ -1,0 +1,18 @@
+.title {
+    color: white;
+    font-size: 10rem;
+    width: 79rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-left: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 100vh;
+}

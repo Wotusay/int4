@@ -29,10 +29,10 @@ const Header = () => {
             </MediaQuery>
           </Link>
           <div className={styles.buttons}>
-            <Link style={{ textDecoration: "none" }}>
+            <Link to={ROUTES.home}  style={{ textDecoration: "none" }}>
               <p className={styles.about}>Over ons</p>
             </Link>
-            <Link onClick={(e) => handleLogin(e)} className={styles.login} style={{ textDecoration: "none" }}>
+            <Link to={ROUTES.home}  onClick={(e) => handleLogin(e)} className={styles.login} style={{ textDecoration: "none" }}>
                 {uiStore.loginState === true ? 'Logout' : 'Login' }
             </Link>
           </div>

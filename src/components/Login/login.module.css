@@ -1,32 +1,20 @@
 .login {
-  background: rgb(239, 75, 75);
-  background: linear-gradient(
-    45deg,
-    rgba(239, 75, 75, 1) 0%,
-    rgba(236, 143, 106, 1) 100%
-  );
+  background: linear-gradient(262.97deg, #EF4B4B -4.77%, #EC8F6A 90.83%);
   height: 100vh;
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-content: center;
+
 }
 
 .loginIntro {
-  font-size: 2.7rem;
   color: white;
-  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
 }
 
 .loginInput {
-  height: 3rem;
-  width: 30rem;
   border: none;
-  font-size: 1.7rem;
-  text-align: center;
-}
-
-.loginInput::placeholder {
 }
 
 .loginButtonWhere {
@@ -34,25 +22,98 @@
   border: solid white 0.1rem;
   background-color: none;
   color: white;
-  height: 3rem;
-  min-width: fit-content;
   cursor: pointer;
-  font-size: 1.2rem;
 }
 
 .loginButton {
-  height: 3rem;
-  min-width: fit-content;
   color: black;
   background-color: white;
   border: none;
   cursor: pointer;
-  font-size: 1.2rem;
 }
 
 .loginButtonWrapper {
-  margin-top: 2rem;
-  width: 30rem;
   display: flex;
-  justify-content: space-between;
 }
+
+@media only screen and (min-width: 320px) {
+  .loginIntro {
+    font-size: 2.1rem;
+  }
+
+  .loginButtonWrapper {
+    margin-top: 5.1rem;
+    flex-flow: column;
+    align-items: center;
+  }
+  
+  .login {
+    padding-top: 2rem;
+    grid-template-rows: 3rem 16rem;
+    grid-gap: 2.1rem;
+  }
+
+  .loginInput {
+    height: 3rem;
+    width: 18rem;
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .loginButton {
+    height: 3rem;
+    font-size: 1.8rem;
+    width: 17rem;
+
+  }
+
+  .loginButtonWhere {
+    font-size: 1.8rem;
+    height: 3rem;
+    order: 1;
+    width: 19rem;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .login {
+    grid-template-rows: 3rem 10rem;
+    grid-gap: 3.1rem;
+  }
+
+  .loginButtonWrapper {
+    margin-top: 3.1rem;
+    width: 30rem;
+    flex-flow: initial;
+    justify-content: space-between;
+  }
+
+  .loginButton {
+    height: 3rem;
+    width: unset;
+    font-size: 1.2rem;
+  }
+
+  .loginButtonWhere {
+    font-size: 1.2rem;
+    height: 3rem;
+    margin-top: unset;
+    width: unset;
+    order: unset;
+  }
+
+  .loginInput {
+    height: 3rem;
+    width: 30rem;
+    font-size: 1.7rem;
+    padding-left: 4rem;
+  }
+
+  .loginIntro {
+    font-size: 2.7rem;
+  }
+}
+
+

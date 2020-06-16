@@ -12,6 +12,7 @@ import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { useStores } from "./hooks";
 import { useObserver } from "mobx-react-lite";
 
+
 function App() {
   const { uiStore } = useStores();
   return useObserver(() => (
@@ -19,26 +20,27 @@ function App() {
       <Header />
       <div className={styles.container}>
         <Switch>
-          <Route exact path={ROUTES.home}>
-            {uiStore.currentBox !== undefined && uiStore.checker !== undefined ? (
-              <Redirect to={ROUTES.box} />
-            ) : (
-              <Login />
-            )}
-          </Route>
-          <Route exact path={ROUTES.room}>
-            <Room />
-          </Route>
-          <Route exact path={ROUTES.box}>
-            <CurrentBox />
-          </Route>
+              <Route exact path={ROUTES.home}>
+                {uiStore.currentBox !== undefined &&
+                uiStore.checker !== undefined ? (
+                  <Redirect to={ROUTES.box} />
+                ) : (
+                  <Login />
+                )}
+              </Route>
+              <Route exact path={ROUTES.room}>
+                <Room />
+              </Route>
+              <Route exact path={ROUTES.box}>
+                <CurrentBox />
+              </Route>
 
-          <Route exact path={ROUTES.pictureBook}>
-            <Picturebook />
-          </Route>
-          <Route path={ROUTES.pictureDetail.path}>
-            <PicturesDetail />
-          </Route>
+              <Route exact path={ROUTES.pictureBook}>
+                <Picturebook />
+              </Route>
+              <Route path={ROUTES.pictureDetail.path}>
+                <PicturesDetail />
+              </Route>
         </Switch>
       </div>
     </>

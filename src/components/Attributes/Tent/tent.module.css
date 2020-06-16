@@ -3,6 +3,7 @@
   transform: translateX(-5rem);
   grid-row: 3;
   grid-column: 1;
+  transition: ease-in-out 0.2s;
 }
 
 .itemTent {
@@ -45,6 +46,7 @@
   transition: ease-in-out 0.2s;
 }
 
-.tent:hover {
+.fullImg:hover {
+  transform: translateX(-5rem);
   transform: scale(1.1);
 }

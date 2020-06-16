@@ -15,6 +15,7 @@ const Room = () => {
     <>
       <div className={styles.roomWrapper}>
         <div className={styles.room}>
+          <p className={styles.title}>The adventure room</p>
           <Tent />
           <Yoga />
           <Fire />

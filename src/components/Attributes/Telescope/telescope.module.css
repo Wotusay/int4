@@ -1,5 +1,10 @@
 .fullImg {
-    grid-row: 4;
-    grid-column: 9;
-    overflow: hidden;
-  }
+  grid-row: 4;
+  grid-column: 9;
+  overflow: hidden;
+  transition: ease-in-out 0.2s;
+}
+
+.fullImg:hover {
+  transform: scale(1.1);
+}

@@ -2,4 +2,9 @@
     grid-row: 9;
     grid-column: 12;
     overflow: hidden;
+    transition: ease-in-out 0.2s;
+  }
+
+  .fullImg:hover {
+    transform: scale(1.1);
   }

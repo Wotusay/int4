@@ -1,13 +1,26 @@
-.boxWrapper {
+
+.color_adventure {
+  background: linear-gradient(238.32deg, #F3C87A 0%, #F49399 94.44%);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(243, 200, 122);
-  background: linear-gradient(
-    45deg,
-    rgba(243, 200, 122, 1) 0%,
-    rgba(244, 147, 153, 1) 100%
-  );
+  height: 100vh;
+}
+
+.color_romantic {
+  background: linear-gradient(262.97deg, #FEE785 -4.77%, #FF5959 106.94%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.color_tropic {
+  background: linear-gradient(262.97deg, #529471 -4.77%, #F5F093 90.83%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 

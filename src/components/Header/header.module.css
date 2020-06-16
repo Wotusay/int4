@@ -47,33 +47,32 @@
 }
 
 @media only screen and (min-width: 320px) {
-  .logo { 
+  .logo {
     font-size: 4.4rem;
     padding-top: 5px;
   }
 
   .header {
     grid-template-columns: 0fr 1fr;
-
   }
 
   .about {
     font-size: 1.6rem;
     height: 3.5rem;
+
   }
   .login {
     font-size: 1.6rem;
     height: 3.5rem;
-}
+  }
 
-.buttons {
-  margin-top: 1rem;
-}
-
+  .buttons {
+    margin-top: 1rem;
+  }
 }
 
 @media only screen and (min-width: 769px) {
-  .logo { 
+  .logo {
     font-size: 24px;
     padding-top: 5px;
   }
@@ -86,5 +85,5 @@
   }
   .login {
     font-size: 1.6rem;
-}
+  }
 }

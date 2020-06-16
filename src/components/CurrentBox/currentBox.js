@@ -19,7 +19,7 @@ const CurrentBox = () => {
       return(
       <>
 
-      <div className={styles.boxWrapper}>
+      <div className={uiStore.currentBox.title === 'Tropicae box' ? styles.color_tropic : uiStore.currentBox.title === 'Advontura Box' ?  styles.color_adventure : styles.color_romantic}>
         <div className={styles.box}>
           <picture className={styles.img}>
             <source
@@ -28,16 +28,11 @@ const CurrentBox = () => {
             />
             <source
               media="(max-width: 768px)"
-              srcSet={`${uiStore.currentBox.pic}.png`}
+              srcSet={`${uiStore.currentBox.pic}-tablet.png`}
             />
             <source
               media="(max-width: 1440px)"
               srcset={`${uiStore.currentBox.pic}.png`}
-            />
-
-            <source
-              media="(max-width: 1920px)"
-              src={`${uiStore.currentBox.pic}.png`}
             />
 
             <img

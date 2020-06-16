@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./App.module.css";
 import { Switch, Route } from "react-router-dom";
-import Picturebook from "./components/Picturebook/picturebook";
+import Photobook from "./components/Photobook/photobook";
 import { ROUTES } from "./consts";
 import PicturesDetail from "./components/PicturesDetail/PicturesDetail.js";
 import Room from "./components/Room/room";
@@ -39,8 +39,8 @@ function App() {
                 <CurrentBox />
               </Route>
 
-              <Route exact path={ROUTES.pictureBook}>
-                <Picturebook />
+              <Route exact path={ROUTES.photoBook}>
+                <Photobook />
               </Route>
               <Route path={ROUTES.pictureDetail.path}>
                 <PicturesDetail />

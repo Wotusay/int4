@@ -13,9 +13,7 @@ const Header = () => {
   const handleLogin  = (e) => {
     e.preventDefault();
       uiStore.logout();
-      return history.push(ROUTES.home);
-
-      
+      return history.push(ROUTES.login);
   };
 
   return useObserver(() => (

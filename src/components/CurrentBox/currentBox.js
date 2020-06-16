@@ -11,7 +11,7 @@ const CurrentBox = () => {
 
   return useObserver(() => {  
     if (uiStore.currentBox === undefined) {
-      history.push(ROUTES.home)
+      history.push(ROUTES.login)
       return (
         <p> loading ...</p>
       )

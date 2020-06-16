@@ -11,6 +11,7 @@ import CurrentBox from "./components/CurrentBox/currentBox";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { useStores } from "./hooks";
 import { useObserver } from "mobx-react-lite";
+import Home from "./components/Home/home";
 
 
 function App() {
@@ -20,7 +21,10 @@ function App() {
       <Header />
       <div className={styles.container}>
         <Switch>
-              <Route exact path={ROUTES.home}>
+          <Route exact path={ROUTES.home}>
+          <Home />
+          </Route>
+              <Route exact path={ROUTES.login}>
                 {uiStore.currentBox !== undefined &&
                 uiStore.checker !== undefined ? (
                   <Redirect to={ROUTES.box} />

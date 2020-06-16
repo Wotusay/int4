@@ -23,10 +23,10 @@ const Header = () => {
       <div className={styles.headerWrapper}>
         <div className={styles.header}>
           <Link to={ROUTES.home} style={{ textDecoration: "none" }}>
-          <MediaQuery maxDeviceWidth={mediaQueries.desktop} minDeviceWidth={mediaQueries.tablet+1}>
+          <MediaQuery maxDeviceWidth={mediaQueries.desktop} minDeviceWidth={mediaQueries.tablet}>
             <h1 className={styles.logo}>HoneyHome</h1>
             </MediaQuery>
-            <MediaQuery maxDeviceWidth={mediaQueries.tablet}>
+            <MediaQuery maxDeviceWidth={mediaQueries.tablet-1}>
             <h1 className={styles.logo}>H</h1>
             </MediaQuery>
           </Link>

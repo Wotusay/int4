@@ -1,0 +1,71 @@
+.wrapper {
+    position: relative;
+    width: 72rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20vh;
+}
+
+.pic1 {
+    position: absolute;
+    z-index: 8;
+
+    top: 34.4rem;
+    left: 19.6rem;
+
+}
+.pic2 {
+    position: absolute;
+    z-index: 7;
+    top: 23rem;
+    right: 17rem;
+
+}
+
+
+.pic3 {
+    position: absolute;
+    z-index: 6;
+    right: 29.99rem;
+    top: 28rem;
+}
+.pic4 {
+    position: absolute;
+    z-index: 5;
+    left: 12rem;
+    top: 19rem;
+}
+
+.pic5 {
+    position: absolute;
+    z-index: 4;
+    right: 14rem;
+    top: 22rem;
+
+}
+.pic6 {
+    position: absolute;
+    z-index: 3;
+    top: 9.7rem;
+    right: 29rem
+
+}
+.pic7 {
+    position: absolute;
+    z-index: 2;
+    top: 20rem;
+    right: 27rem;
+
+}
+.pic8 {
+    position: absolute;
+    z-index: 1;
+    top: 18rem;
+    right: 30rem;
+
+}
+.pic9 {
+    position: absolute;
+    z-index: 0;
+}

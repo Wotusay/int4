@@ -13,6 +13,7 @@ const Boxes = () => {
 
     return useObserver(() => (
         <>
+        <div className={styles.wrapper}>
         <button  className={styles.button_prev}>
         <svg width="30" height="54" viewBox="0 0 30 54" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M28 52L3 25.0263L28 2" stroke="white" strokeWidth="4"/>
@@ -24,7 +25,7 @@ const Boxes = () => {
             <svg width="30" height="54" viewBox="0 0 30 54" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 2L27 28.9737L2 52" stroke="white" strokeWidth="4"/>
             </svg>
-        </button>
+        </button></div>
         </>
     ))
 

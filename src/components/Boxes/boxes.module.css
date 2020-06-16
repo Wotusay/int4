@@ -2,11 +2,24 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    align-self: center;
+    margin-top: 50vh;
+    z-index: 1;
+
 }
 
 .button_prev {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    margin-top: 50vh;
 
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 3rem 72rem 3rem;
+    grid-gap: 10rem;
+    justify-content: center;
+    align-content: center;
 }

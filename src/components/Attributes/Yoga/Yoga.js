@@ -4,7 +4,12 @@ import styles from "./yoga.module.css";
 const Yoga = () => {
   return (
     <>
-      <div className={styles.itemYoga}>
+      <img
+        alt="Ellipse"
+        className={styles.fullImg}
+        src="/assets/adventure_room/yoga/full_img.png"
+      ></img>
+      {/* <div className={styles.itemYoga}>
         <img
           alt="Ellipse"
           className={styles.ellipse}
@@ -20,7 +25,7 @@ const Yoga = () => {
           alt="Tent"
           src="/assets/adventure_room/yoga/yoga.png"
         ></img>
-      </div>
+      </div> */}
     </>
   );
 };

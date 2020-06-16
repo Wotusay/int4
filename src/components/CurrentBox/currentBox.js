@@ -10,7 +10,7 @@ const CurrentBox = () => {
   const history  = useHistory();
 
   return useObserver(() => {  
-    if (uiStore.currentBox == undefined) {
+    if (uiStore.currentBox === undefined) {
       history.push(ROUTES.home)
       return (
         <p> loading ...</p>

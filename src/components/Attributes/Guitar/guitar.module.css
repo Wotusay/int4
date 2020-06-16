@@ -1,0 +1,5 @@
+.fullImg {
+    grid-row: 3;
+    grid-column: 16;
+    overflow: hidden;
+  }

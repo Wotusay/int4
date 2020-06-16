@@ -1,10 +1,15 @@
 import React from "react";
 import styles from "./tent.module.css";
 
-const Tent= () => {
+const Tent = () => {
   return (
     <>
-    <div className={styles.itemTent}>
+      <img
+        alt="Ellipse"
+        className={styles.fullImg}
+        src="/assets/adventure_room/tent/full_img.png"
+      ></img>
+      {/* <div className={styles.itemTent}>
             <img
               alt="Ellipse"
               className={styles.ellipse}
@@ -25,7 +30,7 @@ const Tent= () => {
               alt="Tent"
               src="/assets/adventure_room/tent/tent.png"
             ></img>
-          </div>
+          </div> */}
     </>
   );
 };

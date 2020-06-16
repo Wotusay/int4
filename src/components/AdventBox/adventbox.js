@@ -1,7 +1,4 @@
 import React from "react";
-import { useObserver } from "mobx-react-lite";
-import MediaQuery from "react-responsive";
-import { mediaQueries } from "../../consts";
 import styles from "./adventbox.module.css"
 
 const AdventureBox = () => {

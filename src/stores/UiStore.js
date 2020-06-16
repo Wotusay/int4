@@ -43,6 +43,8 @@ class UiStore {
   get checker() {
       if(this.currentBox !== undefined) {
         return this.currentBox.code
+      } else {
+        return undefined
       }
   }
 }
@@ -54,7 +56,7 @@ decorate(UiStore, {
   login:action, 
   setCurrentCode: action,
   empty:action,
-  checker: computed,
+  checker: computed
 
 });
 

@@ -2,8 +2,6 @@ import React from "react";
 
 import { useObserver } from "mobx-react-lite";
 import styles from "./boxes.module.css";
-import MediaQuery from "react-responsive";
-import { mediaQueries } from "../../consts";
 import { useParams } from "react-router-dom";
 import AdventureBox from "../AdventBox/adventbox";
 

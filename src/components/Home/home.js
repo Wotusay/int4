@@ -1,10 +1,7 @@
 import React from "react";
 import styles from "./home.module.css";
-import { Link, useHistory } from "react-router-dom";
-import { ROUTES, mediaQueries } from "../../consts";
-import { useStores } from "../../hooks/index";
-import { useObserver } from "mobx-react-lite";
-import MediaQuery from "react-responsive";
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
 
@@ -22,7 +19,7 @@ const Home = () => {
             <Link className={styles.pic}>
              </Link>
         </div>
-        <img className={styles.indicator} src='assets/indication-letsgo.png'/> 
+        <img alt='test' className={styles.indicator} src='assets/indication-letsgo.png'/> 
     </>
   );
 };

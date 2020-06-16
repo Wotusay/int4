@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useStores } from "../../hooks";
+import React from "react";
+//import { useStores } from "../../hooks";
 import { useObserver } from "mobx-react-lite";
-import Picture from "../Picture/picture";
+//import Picture from "../Picture/picture";
 import styles from "./photobook.module.css";
-import { ROUTES } from "../../consts";
-import { Link } from "react-router-dom";
-import Back from "../Back/back";
-import { storage } from "../../services/FirebaseService";
+//import { ROUTES } from "../../consts";
+//import { Link } from "react-router-dom";
+//import Back from "../Back/back";
+//import { storage } from "../../services/FirebaseService";
 
 const Photobook = () => {
   //const { pictureStore } = useStores();

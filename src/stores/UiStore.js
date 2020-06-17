@@ -44,7 +44,7 @@ class UiStore {
       if(this.currentBox !== undefined) {
         return this.currentBox.code
       } else {
-        return undefined
+        return undefined 
       }
   }
 }

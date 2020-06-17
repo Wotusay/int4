@@ -19,16 +19,16 @@ function App() {
   const { uiStore } = useStores();
   return useObserver(() => (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className={styles.container}>
         <Switch>
           <Route exact strict path={ROUTES.boxes.path}>
             <Boxes />
           </Route>
-          <Route exact path={ROUTES.login}>
+          <Route exact strict path={ROUTES.login}>
             {uiStore.currentBox !== undefined &&
             uiStore.checker !== undefined ? (
-              <Redirect to={ROUTES.box} />
+              <Redirect to={ROUTES.currentbox} />
             ) : (
               <Login />
             )}

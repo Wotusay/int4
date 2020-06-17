@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { useObserver } from "mobx-react-lite";
 import { ROUTES } from "../../consts";
 import Header from "../Header2/header";
+import { Link } from "react-router-dom";
 
 const CurrentBox = () => {
   const { uiStore } = useStores();
@@ -42,8 +43,9 @@ const CurrentBox = () => {
               Waar wachten jullie nog op? It’s adventure time!
             </p>
             <p className={styles.contentLeftIntro3}>It’s adventure time!</p>
-
-            <button className={styles.contentLeftButton}>Open Box</button>
+            <Link to={ROUTES.login}>
+              <button className={styles.contentLeftButton}>Open Box</button>
+            </Link>
           </div>
 
           <div className={styles.contentRight}>

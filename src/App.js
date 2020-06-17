@@ -14,14 +14,18 @@ import { useObserver } from "mobx-react-lite";
 import Boxes from "./components/Boxes/boxes";
 import Home from "./components/Home/home";
 import NotFound from "./components/NotFound/not-found";
+import Dashboard from "./components/Dashboard/dashboard";
 
 function App() {
   const { uiStore } = useStores();
   return useObserver(() => (
     <>
-      <Header />
       <div className={styles.container}>
+        <Header />
         <Switch>
+          {/* <Route exact strict path={ROUTES.home}>
+            <Home />
+          </Route>
           <Route exact strict path={ROUTES.boxes.path}>
             <Boxes />
           </Route>
@@ -42,12 +46,12 @@ function App() {
 
           <Route exact path={ROUTES.picturebook}>
             <Photobook />
+          </Route> */}
+          <Route exact path={ROUTES.dashboard}>
+            <Dashboard />
           </Route>
           <Route exact path={ROUTES.pictureDetail.path}>
             <PicturesDetail />
-          </Route>
-          <Route exact strict path={ROUTES.home}>
-            <Home />
           </Route>
           <Route>
             <NotFound />

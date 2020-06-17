@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { useObserver } from "mobx-react-lite";
 import { ROUTES } from "../../consts";
 import Header from "../Header2/header";
-import { Link } from "react-router-dom";
+
 
 const CurrentBox = () => {
   const { uiStore } = useStores();
@@ -24,6 +24,7 @@ const CurrentBox = () => {
         <Header />
         <div className={styles.box}>
           <img
+            alt='plant'
             className={styles.contentLeftImg}
             src="/assets/current_box/plant_left.png"
           ></img>
@@ -51,6 +52,7 @@ const CurrentBox = () => {
             <img
               className={styles.contentRightImg}
               src="/assets/current_box/box.png"
+              alt="box"
             ></img>
           </div>
         </div>

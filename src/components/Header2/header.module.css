@@ -9,6 +9,9 @@
 .logo {
   grid-column: 2;
   align-self: center;
+  font-family: Exodus, sans-serif;
+  font-size: 3rem;
+  color: white;
 }
 
 .nav {
@@ -16,11 +19,33 @@
   grid-column: 3;
   justify-self: flex-end;
   align-self: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .navItem {
-  margin-left: 1rem;
-  font-size: 2rem;
+  margin-left: 2rem;
+  font-size: 1.8rem;
   color: white;
   font-family: Muli, sans-serif;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  color: black;
+  font-family: Muli, sans-serif;
+  background-color: white;
+  width: 8rem;
+  height: 3.5rem;
+  transition: ease-in-out 0.2s;
+}
+
+.login:hover {
+  background-color: transparent;
+  border: 0.2rem solid white;
+  color: white;
 }

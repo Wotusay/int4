@@ -4,10 +4,11 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 20vh;
+    margin-top: 13vh;
 }
 
 .pic1 {
+    transition: all 0.3s;
     position: absolute;
     z-index: 8;
 
@@ -16,28 +17,32 @@
 
 }
 .pic2 {
+    transition: all 0.3s;
     position: absolute;
     z-index: 7;
-    top: 23rem;
+    top: 27rem;
     right: 17rem;
-
 }
 
 
 .pic3 {
+    transition: all 0.3s;
     position: absolute;
     z-index: 6;
     right: 29.99rem;
     top: 28rem;
 }
 .pic4 {
+    transition: all 0.3s;
     position: absolute;
     z-index: 5;
     left: 12rem;
-    top: 19rem;
+    transform: rotate(40.2deg);
+    top: 25rem;
 }
 
 .pic5 {
+    transition: all 0.3s;
     position: absolute;
     z-index: 4;
     right: 14rem;
@@ -45,6 +50,7 @@
 
 }
 .pic6 {
+    transition: all 0.3s;
     position: absolute;
     z-index: 3;
     top: 9.7rem;
@@ -52,6 +58,7 @@
 
 }
 .pic7 {
+    transition: all 0.3s;
     position: absolute;
     z-index: 2;
     top: 20rem;
@@ -59,6 +66,7 @@
 
 }
 .pic8 {
+    transition: all 0.3s;
     position: absolute;
     z-index: 1;
     top: 18rem;
@@ -66,6 +74,111 @@
 
 }
 .pic9 {
+    transition: all 0.3s;
     position: absolute;
     z-index: 0;
+}
+
+.text1{
+    color: white;
+    position: absolute;
+    top: 47rem;
+    left: 44rem;
+    display: inherit;
+    width: 26.6rem;
+    font-size: 2.4rem;
+    font-family:'Muli'
+}
+.text2{
+    color: white;
+    position: absolute;
+ 
+    left: 26rem;
+    top: 51rem;
+
+    display: inherit;
+    width: 26.6rem;
+    font-size: 2.4rem;
+    font-family:'Muli'
+}
+.text3{
+    color: white;
+    position: absolute;
+    top: 31rem;
+    left: -8rem;
+
+
+    display: inherit;
+    width: 26.6rem;
+    font-size: 2.4rem;
+    font-family:'Muli'
+}
+.text4{
+    color: white;
+    position: absolute;
+    top: 12rem;
+    left: 48rem;
+    display: inherit;
+    width: 26.6rem;
+    font-size: 2.4rem;
+    font-family:'Muli'
+}
+.text5{
+    color: white;
+    position: absolute;
+    top: 10rem;
+    left: 48rem;
+
+    display: inherit;
+    width: 26.6rem;
+    font-size: 2.4rem;
+    font-family:'Muli'
+}
+.text6{
+    color: white;
+    position: absolute;
+    top: 20rem;
+    left: 48rem;
+    display: inherit;
+    width: 26.6rem;
+    font-size: 2.4rem;
+    font-family:'Muli'
+}
+.text7{
+    color: white;
+    position: absolute;
+    top: 6rem;
+    left: 14rem;
+    display: inherit;
+    width: 26.6rem;
+    font-size: 2.4rem;
+    font-family:'Muli'
+}
+
+.pic2:hover {
+    top: 24rem ; 
+}
+
+.pic3:hover {
+    top: 25rem;
+}
+
+.pic4:hover {
+    top: 22rem;
+}
+
+.pic5:hover {
+    top: 19rem;
+}
+
+.pic6:hover {
+    top: 6.7rem;
+}
+
+.pic7:hover {
+    top: 17rem;
+}
+
+.pic8:hover {
+    top: 15rem;
 }

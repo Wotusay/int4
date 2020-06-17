@@ -22,6 +22,9 @@ function App() {
       <Header />
       <div className={styles.container}>
         <Switch>
+        <Route exact strict path={ROUTES.home}>
+            <Home />
+          </Route>
           <Route exact strict path={ROUTES.boxes.path}>
             <Boxes />
           </Route>

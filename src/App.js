@@ -5,7 +5,7 @@ import Photobook from "./components/Photobook/photobook";
 import { ROUTES } from "./consts";
 import PicturesDetail from "./components/PicturesDetail/PicturesDetail.js";
 import Room from "./components/Room/room";
-import Header from "./components/Header/header";
+import Header from "./components/Header2/header";
 import Login from "./components/Login/login";
 import CurrentBox from "./components/CurrentBox/currentBox";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
@@ -19,7 +19,7 @@ function App() {
   const { uiStore } = useStores();
   return useObserver(() => (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className={styles.container}>
         <Switch>
           <Route exact strict path={ROUTES.boxes.path}>

@@ -26,7 +26,8 @@
   background: linear-gradient(238.32deg, #f3c87a 0%, #f49399 94.44%);
   display: grid;
   grid-template-columns: 10% 1fr 1fr 10%;
-  grid-template-rows: 10% 1fr 10%;
+  grid-template-rows: 15% 1fr 10%;
+  height: 100vh;
 }
 
 .contentLeft {

@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import styles from "./login.module.css";
 import { useStores } from "../../hooks/index";
+import Header from "../Header2/header";
 
 const Login = () => {
   const [code, setCode] = useState("");
   const { uiStore } = useStores();
 
-  const handleLogin = async (e) => {      
+  const handleLogin = async (e) => {
     uiStore.setCurrentCode(code);
     e.preventDefault();
     uiStore.login();
-
-
   };
 
   return (
     <>
+      <Header />
       <div className={styles.login}>
         <p className={styles.loginIntro}>Vul uw code hier in.</p>
         <form>
@@ -30,7 +30,10 @@ const Login = () => {
             <button className={styles.loginButtonWhere}>
               Waar vind ik de code?
             </button>
-            <button onClick={e =>handleLogin(e)} className={styles.loginButton}>
+            <button
+              onClick={(e) => handleLogin(e)}
+              className={styles.loginButton}
+            >
               Inloggen
             </button>
           </div>

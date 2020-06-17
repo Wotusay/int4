@@ -3,7 +3,6 @@
     border: none;
     cursor: pointer;
     align-self: center;
-    margin-top: 50vh;
     z-index: 1;
 
 }
@@ -12,14 +11,115 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    margin-top: 50vh;
-
 }
 
 .wrapper {
     display: grid;
+    height: 100vh;
     grid-template-columns: 3rem 72rem 3rem;
+    grid-column-gap: 20rem;
     grid-gap: 10rem;
     justify-content: center;
     align-content: center;
+    margin-top: 10rem;
+}
+
+.adventure_wrapper {
+    background: linear-gradient(238.32deg, #F3C87A 0%, #F49399 94.44%);
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 3rem 72rem 3rem;
+    grid-gap: 10rem;
+    justify-content: center;
+    padding-top: 10rem;
+
+    align-content: center;
+}
+
+.romantic_wrapper {
+    background: linear-gradient(262.97deg, #FEE785 -4.77%, #FF5959 106.94%);   
+     display: grid;
+    height: 100vh;
+    grid-template-columns: 3rem 72rem 3rem;
+    grid-gap: 10rem;
+    padding-top: 10rem;
+
+    justify-content: center;
+    align-content: center;
+}
+
+.tropic_wrapper {
+    background: linear-gradient(262.97deg, #529471 -4.77%, #F5F093 90.83%);
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 3rem 72rem 3rem;
+    grid-gap: 10rem;
+
+    padding-top: 10rem;
+
+    justify-content: center;
+    align-content: center;
+}
+
+.info_wrapper {
+    position: relative;
+    grid-column: 2;
+    z-index: 10;
+    padding-top: 20rem;
+    margin-left: -6rem;
+    font-family: 'Muli', sans-serif;
+
+    font-weight: bold;
+
+
+}
+
+.pos {
+    color: white;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.title { 
+    font-size: 4.8rem;
+    font-family: 'Playfair Display';
+}
+
+.buttons_wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.info {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+
+}
+
+.button_main{
+    text-decoration: none;
+    background-color: white;
+    color:#000000;
+    padding: 8px 14px;
+    font-size: 1.4rem;
+}
+.button_sec{
+    text-decoration: none;
+    padding: 8px 14px;
+    font-size: 1.4rem;
+      color: white;
+    border: 1px solid #FFFFFF;
+}
+
+.leave1 {
+    position: absolute;
+    bottom: 0;
+  
+}
+.leave2 {
+    position: absolute;  right: 0;
 }

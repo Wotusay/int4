@@ -109,3 +109,13 @@ span {
   grid-column: 3 / span 4;
   grid-row: 2;
 }
+
+@media only screen and (min-width: 1440px) {
+  .box {
+    background: linear-gradient(238.32deg, #f3c87a 0%, #f49399 94.44%);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20vh 1fr 1fr 20vh;
+    grid-template-rows: 20vh 1fr 1fr 20vh;
+  }
+}

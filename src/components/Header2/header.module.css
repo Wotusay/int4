@@ -1,0 +1,26 @@
+.header {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 10vw 1fr 1fr 10vw;
+  width: 100vw;
+  height: 10rem;
+}
+
+.logo {
+  grid-column: 2;
+  align-self: center;
+}
+
+.nav {
+  display: flex;
+  grid-column: 3;
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.navItem {
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: white;
+  font-family: Muli, sans-serif;
+}

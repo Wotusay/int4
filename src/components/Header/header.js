@@ -18,7 +18,7 @@ const Header = () => {
 
   return useObserver(() => (
     <>
-      <div className={styles.headerWrapper}>
+      {/* <div className={styles.headerWrapper}> */}
         <div className={styles.header}>
           <Link to={ROUTES.home} style={{ textDecoration: "none" }}>
           <MediaQuery maxDeviceWidth={mediaQueries.desktop} minDeviceWidth={mediaQueries.tablet}>
@@ -37,7 +37,7 @@ const Header = () => {
             </Link>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   ));
 };

@@ -4,8 +4,9 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: -23rem;
+    margin-top: -28rem;
 }
+
 .pic9 {
     transition: all 0.3s;
     position: absolute;

@@ -23,16 +23,16 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
-          {/* <Route exact strict path={ROUTES.home}>
+          <Route exact strict path={ROUTES.home}>
             <Home />
           </Route>
           <Route exact strict path={ROUTES.boxes.path}>
             <Boxes />
           </Route>
-          <Route exact path={ROUTES.login}>
+          <Route exact strict path={ROUTES.login}>
             {uiStore.currentBox !== undefined &&
             uiStore.checker !== undefined ? (
-              <Redirect to={ROUTES.box} />
+              <Redirect to={ROUTES.currentbox} />
             ) : (
               <Login />
             )}
@@ -46,7 +46,7 @@ function App() {
 
           <Route exact path={ROUTES.picturebook}>
             <Photobook />
-          </Route> */}
+          </Route>
           <Route exact path={ROUTES.dashboard}>
             <Dashboard />
           </Route>

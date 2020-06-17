@@ -12,13 +12,13 @@ const CurrentBox = () => {
   const history = useHistory();
 
   return useObserver(() => {
-    // if (uiStore.currentBox === undefined) {
-    //   history.push(ROUTES.login)
-    //   return (
-    //     <p> loading ...</p>
-    //   )
-    // } else {
-    // className={uiStore.currentBox.title === 'Tropicae box' ? styles.color_tropic : uiStore.currentBox.title === 'Advontura Box' ?  styles.color_adventure : styles.color_romantic}
+    console.log(uiStore.currentBox)
+     if (uiStore.currentBox === undefined) {
+       history.push(ROUTES.login)
+       return (
+         <p> loading ...</p>
+       )
+     } else {
     return (
       <>
         <Header />
@@ -29,23 +29,22 @@ const CurrentBox = () => {
           ></img>
           <div className={styles.contentLeft}>
             <p className={styles.contentLeftTitle}>
-              Hallo <span>Eva & Mathias!</span>
+              Hallo <span>{uiStore.currentBox.userId === '255' ? 'Eva & Mathias!' : uiStore.currentBox.userId === '882' ? 'Jeffrey & Rosa' : uiStore.currentBox.userId === '256' ? 'Willem & Laura' : '' }</span>
             </p>
             <p className={styles.contentLeftIntro}>
-              Jullie kozen ervoor om een avontuurlijke reis te beleven met onze{" "}
-              <span>Advontura Box.</span>
+              Jullie kozen ervoor om een {uiStore.currentBox.title === 'Advontura Box' ? 'advontuurlijke' : uiStore.currentBox.title === 'Amare Box' ? 'Liefdevolle' : 'Tropische'} reis te beleven met onze{" "}
+              <span>{uiStore.currentBox.title}</span>
             </p>
             <p className={styles.contentLeftIntro1}>
-              Deze doos zit vol met activiteiten die de avontuurlijke kant van
+              Deze doos zit vol met activiteiten die de {uiStore.currentBox.title === 'Advontura Box' ? 'Advontuurlijke' : uiStore.currentBox.title === 'Amare Box' ? 'Liefdevolle' : 'Tropische'} kant van
               jullie huwelijk zeker op de proef zal stellen.
             </p>
             <p className={styles.contentLeftIntro2}>
-              Waar wachten jullie nog op? It’s adventure time!
+              Waar wachten jullie nog op? It’s {uiStore.currentBox.title === 'Advontura Box' ? 'adventure' : uiStore.currentBox.title === 'Amare Box' ? 'love' : 'tropic'} time!
             </p>
-            <p className={styles.contentLeftIntro3}>It’s adventure time!</p>
-            <Link to={ROUTES.login}>
-              <button className={styles.contentLeftButton}>Open Box</button>
-            </Link>
+            <p className={styles.contentLeftIntro3}>It’s {uiStore.currentBox.title === 'Advontura Box' ? 'adventure' : uiStore.currentBox.title === 'Amare Box' ? 'love' : 'tropic'} time!</p>
+
+            <button className={styles.contentLeftButton}>Open Box</button>
           </div>
 
           <div className={styles.contentRight}>
@@ -57,6 +56,7 @@ const CurrentBox = () => {
         </div>
       </>
     );
+     }
   });
 };
 

@@ -6,6 +6,8 @@ import { useParams, useHistory,Link } from "react-router-dom";
 import AdventureBox from "../AdventBox/adventbox";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { ROUTES } from "../../consts";
+import RomanBox from "../RomanBox/romanbox";
+import TropicBox from "../TropicBox/tropicbox";
 
 const Boxes = () => {
     const {id} = useParams();
@@ -32,7 +34,7 @@ const Boxes = () => {
         <path d="M28 52L3 25.0263L28 2" stroke="white" strokeWidth="4"/>
         </svg>
         </button>   
-        {id === 'adventure-box' ? <AdventureBox/> : id === 'romantic-box' ? <p>test</p> : id === 'tropic-box' ? <p>test</p> : <Redirect to={ROUTES.boxes.to + '/adventure-box'}  /> }
+        {id === 'adventure-box' ? <AdventureBox/> : id === 'romantic-box' ? <RomanBox /> : id === 'tropic-box' ? <TropicBox/> : <Redirect to={ROUTES.boxes.to + '/adventure-box'}  /> }
 
         <button onClick={e => handleNext(e)}  className={styles.button_next}>
             <svg width="30" height="54" viewBox="0 0 30 54" fill="none" xmlns="http://www.w3.org/2000/svg">

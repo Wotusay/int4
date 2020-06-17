@@ -14,7 +14,7 @@ import { useObserver } from "mobx-react-lite";
 import Boxes from "./components/Boxes/boxes";
 import Home from "./components/Home/home";
 import NotFound from "./components/NotFound/not-found";
-
+import MorningRoom from "./components/Room/MorningRoom/morningRoom";
 
 function App() {
   const { uiStore } = useStores();
@@ -24,36 +24,39 @@ function App() {
       <div className={styles.container}>
         <Switch>
           <Route exact strict path={ROUTES.boxes.path}>
-          <Boxes />
+            <Boxes />
           </Route>
-              <Route exact path={ROUTES.login}>
-                {uiStore.currentBox !== undefined &&
-                uiStore.checker !== undefined ? (
-                  <Redirect to={ROUTES.box} />
-                ) : (
-                  <Login />
-                )}
-              </Route>
-              <Route exact path={ROUTES.room}>
-                <Room />
-              </Route>
-              <Route exact path={ROUTES.box}>
-                <CurrentBox />
-              </Route>
+          <Route exact path={ROUTES.login}>
+            {uiStore.currentBox !== undefined &&
+            uiStore.checker !== undefined ? (
+              <Redirect to={ROUTES.box} />
+            ) : (
+              <Login />
+            )}
+          </Route>
+          <Route exact path={ROUTES.room}>
+            <Room />
+          </Route>
+          <Route exact path={ROUTES.box}>
+            <CurrentBox />
+          </Route>
 
-              <Route exact path={ROUTES.picturebook}>
-                <Photobook />
-              </Route>
-              <Route exact path={ROUTES.pictureDetail.path}>
-                <PicturesDetail />
-              </Route>
-              <Route exact strict path={ROUTES.home}>
-                <Home />
-               </Route>
+          <Route exact path={ROUTES.picturebook}>
+            <Photobook />
+          </Route>
+          <Route exact path={ROUTES.pictureDetail.path}>
+            <PicturesDetail />
+          </Route>
+          <Route exact strict path={ROUTES.home}>
+            <Home />
+          </Route>
+          <Route exact path={ROUTES.morningRoom}>
+            <MorningRoom />
+          </Route>
 
-               <Route>
-                  <NotFound/>
-               </Route>
+          <Route>
+            <NotFound />
+          </Route>
         </Switch>
       </div>
     </>

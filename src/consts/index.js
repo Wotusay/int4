@@ -3,7 +3,7 @@ const ROUTES = {
   pictureDetail: { path: "/pictures/:id", to: "/pictures/" },
   picturebook: "/picturebook",
   room: "/room",
-  box: "/currentbox",
+  currentbox: "/currentbox",
   login: "/login",
   morningRoom: "/morningroom",
   boxes: { path: "/boxes/:id", to: "/boxes" },

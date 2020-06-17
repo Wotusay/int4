@@ -14,7 +14,6 @@ import { useObserver } from "mobx-react-lite";
 import Boxes from "./components/Boxes/boxes";
 import Home from "./components/Home/home";
 import NotFound from "./components/NotFound/not-found";
-import MorningRoom from "./components/Room/MorningRoom/morningRoom";
 
 function App() {
   const { uiStore } = useStores();
@@ -50,10 +49,6 @@ function App() {
           <Route exact strict path={ROUTES.home}>
             <Home />
           </Route>
-          <Route exact path={ROUTES.morningRoom}>
-            <MorningRoom />
-          </Route>
-
           <Route>
             <NotFound />
           </Route>

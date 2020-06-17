@@ -4,6 +4,7 @@ import { useStores } from "../../hooks";
 import { useHistory } from "react-router-dom";
 import { useObserver } from "mobx-react-lite";
 import { ROUTES } from "../../consts";
+import Header from "../Header2/header";
 
 const CurrentBox = () => {
   const { uiStore } = useStores();
@@ -19,6 +20,7 @@ const CurrentBox = () => {
     // className={uiStore.currentBox.title === 'Tropicae box' ? styles.color_tropic : uiStore.currentBox.title === 'Advontura Box' ?  styles.color_adventure : styles.color_romantic}
     return (
       <>
+        <Header />
         <div className={styles.box}>
           <img
             className={styles.contentLeftImg}
@@ -37,12 +39,9 @@ const CurrentBox = () => {
               jullie huwelijk zeker op de proef zal stellen.
             </p>
             <p className={styles.contentLeftIntro2}>
-              Waar wachten jullie nog op? 
-              It’s adventure time!
+              Waar wachten jullie nog op? It’s adventure time!
             </p>
-            <p className={styles.contentLeftIntro3}>
-              It’s adventure time!
-            </p>
+            <p className={styles.contentLeftIntro3}>It’s adventure time!</p>
 
             <button className={styles.contentLeftButton}>Open Box</button>
           </div>

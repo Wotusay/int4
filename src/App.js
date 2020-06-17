@@ -19,7 +19,7 @@ function App() {
   const { uiStore } = useStores();
   return useObserver(() => (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className={styles.container}>
         <Switch>
           <Route exact strict path={ROUTES.boxes.path}>

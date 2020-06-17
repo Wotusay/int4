@@ -4,32 +4,23 @@
     url("../../fonts/AnyConv.com__ExodusDemo-Regular.woff") format("woff");
 }
 
-.headerWrapper {
-  display: flex;
-  justify-content: center;
-}
-
 .header {
-  color: #000000;
   display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 2rem;
-  z-index: 1;
+  grid-template-columns: 10vw 1fr 1fr 10vw;
   position: absolute;
-  width: 90vw;
+  width: 100vw;
 }
 
 .buttons {
   display: flex;
   justify-content: flex-end;
+  grid-column: 3;
 }
 
 .login {
   color: black;
   background-color: white;
   padding: 8px 14px;
-  border: 1px solid white;
 }
 
 .logo {
@@ -37,6 +28,7 @@
   padding-top: 5px;
   color: white;
   font-family: exodus;
+  grid-column: 2;
 }
 
 .about {
@@ -44,22 +36,23 @@
   text-decoration: none;
   color: white;
   padding: 8px 14px;
+  grid-column: 4;
+  justify-self: flex-end;
 }
 
-@media only screen and (min-width: 320px) {
+/* @media only screen and (min-width: 320px) {
   .logo {
     font-size: 4.4rem;
     padding-top: 5px;
   }
 
   .header {
-    grid-template-columns: 0fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .about {
     font-size: 1.6rem;
     height: 3.5rem;
-
   }
   .login {
     font-size: 1.6rem;
@@ -86,4 +79,4 @@
   .login {
     font-size: 1.6rem;
   }
-}
+} */

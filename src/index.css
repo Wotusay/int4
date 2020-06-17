@@ -2,6 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;700&display=swap");
 
+@font-face {
+  font-family: "exodus";
+  src: url("./fonts/AnyConv.com__ExodusDemo-Regular.woff2") format("woff2"),
+    url("./fonts/AnyConv.com__ExodusDemo-Regular.woff") format("woff");
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -15,5 +21,5 @@ html {
 
 body {
   font-family: sans-serif;
-  background: linear-gradient(262.97deg, #ef4b4b -4.77%, #ec8f6a 90.83%);
+  height: 100vh;
 }

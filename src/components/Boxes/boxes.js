@@ -47,8 +47,8 @@ const Boxes = () => {
             {id === 'adventure-box' ? 'Advontura box   €40' : id === 'romantic-box' ? 'Amura box  €40' : id === 'tropic-box' ? 'Tropicae box   €40' : <Redirect to={ROUTES.boxes.to + '/adventure-box'}  /> }
             </p>
             <div className={styles.buttons_wrapper}>
-                <Link className={styles.button_main}>Koop Box</Link>
-                <Link className={styles.button_sec}>Doe de test</Link>
+                <Link to={ROUTES.home} className={styles.button_main}>Koop Box</Link>
+                <Link to={ROUTES.home} className={styles.button_sec}>Doe de test</Link>
             </div>
             <p className={styles.info}>Hover over the items voor meer info</p>
         </div> </div>    

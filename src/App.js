@@ -23,10 +23,7 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
-          <Route exact strict path={ROUTES.home}>
-            <Home />
-          </Route>
-          <Route exact strict path={ROUTES.boxes.path}>
+          <Route exact path={ROUTES.boxes.path}>
             <Boxes />
           </Route>
           <Route exact strict path={ROUTES.login}>
@@ -40,7 +37,7 @@ function App() {
           <Route exact path={ROUTES.room}>
             <Room />
           </Route>
-          <Route exact path={ROUTES.box}>
+          <Route exact path={ROUTES.currentbox}>
             <CurrentBox />
           </Route>
 
@@ -52,6 +49,9 @@ function App() {
           </Route>
           <Route exact path={ROUTES.pictureDetail.path}>
             <PicturesDetail />
+          </Route>
+          <Route exact strict path={ROUTES.home}>
+            <Home />
           </Route>
           <Route>
             <NotFound />

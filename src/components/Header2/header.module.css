@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 10vw 1fr 1fr 10vw;
   width: 100vw;
+  z-index: 11;
   height: 10rem;
 }
 
@@ -45,7 +46,7 @@
 }
 
 .login:hover {
-  background-color: transparent;
-  border: 0.2rem solid white;
-  color: white;
+  background-color: unset;
+  border: 0.2rem solid black;
+  color: black;
 }

@@ -19,36 +19,43 @@ const CurrentBox = () => {
     // className={uiStore.currentBox.title === 'Tropicae box' ? styles.color_tropic : uiStore.currentBox.title === 'Advontura Box' ?  styles.color_adventure : styles.color_romantic}
     return (
       <>
-        <div>
-          <div className={styles.box}>
-            <img
-              className={styles.contentLeftImg}
-              src="/assets/current_box/plant_left.png"
-            ></img>
-            <div className={styles.contentLeft}>
-              <p className={styles.contentLeftTitle}>
-                Hallo <span>Eva & Mathias!</span>
-              </p>
-              <p className={styles.contentLeftIntro}>
-                Jullie kozen ervoor om een avontuurlijke reis te beleven met
-                onze Advontura Box. Deze doos zit vol met activiteiten die de
-                avontuurlijke kant van jullie huwelijk zeker op de proef zal
-                stellen. Waar wachten jullie nog op? It’s adventure time!
-              </p>
-              <button className={styles.contentLeftButton}>Open Box</button>
-            </div>
+        <div className={styles.box}>
+          <img
+            className={styles.contentLeftImg}
+            src="/assets/current_box/plant_left.png"
+          ></img>
+          <div className={styles.contentLeft}>
+            <p className={styles.contentLeftTitle}>
+              Hallo <span>Eva & Mathias!</span>
+            </p>
+            <p className={styles.contentLeftIntro}>
+              Jullie kozen ervoor om een avontuurlijke reis te beleven met onze{" "}
+              <span>Advontura Box.</span>
+            </p>
+            <p className={styles.contentLeftIntro1}>
+              Deze doos zit vol met activiteiten die de avontuurlijke kant van
+              jullie huwelijk zeker op de proef zal stellen.
+            </p>
+            <p className={styles.contentLeftIntro2}>
+              Waar wachten jullie nog op? 
+              It’s adventure time!
+            </p>
+            <p className={styles.contentLeftIntro3}>
+              It’s adventure time!
+            </p>
 
-            <div className={styles.contentRight}>
-              <img
-                className={styles.contentRightImg}
-                src="/assets/current_box/box.png"
-              ></img>
-            </div>
+            <button className={styles.contentLeftButton}>Open Box</button>
+          </div>
+
+          <div className={styles.contentRight}>
+            <img
+              className={styles.contentRightImg}
+              src="/assets/current_box/box.png"
+            ></img>
           </div>
         </div>
       </>
     );
-    // }
   });
 };
 

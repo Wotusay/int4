@@ -1,29 +1,21 @@
-/* .color_adventure {
-  background: linear-gradient(238.32deg, #f3c87a 0%, #f49399 94.44%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.color_romantic {
-  background: linear-gradient(262.97deg, #fee785 -4.77%, #ff5959 106.94%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.color_tropic {
-  background: linear-gradient(262.97deg, #529471 -4.77%, #f5f093 90.83%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
-
 .box {
   background: linear-gradient(238.32deg, #f3c87a 0%, #f49399 94.44%);
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-rows: 15% 1fr 10%;
+  height: 100vh;
+}
+
+.box_r {
+  display: grid;
+  background: linear-gradient(262.97deg, #fee785 -4.77%, #ff5959 106.94%);
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-rows: 15% 1fr 10%;
+  height: 100vh;
+}
+
+.box_t {
+  background: linear-gradient(262.97deg, #529471 -4.77%, #f5f093 90.83%);
   display: grid;
   grid-template-columns: 10% 1fr 1fr 10%;
   grid-template-rows: 15% 1fr 10%;
@@ -111,6 +103,12 @@ span {
   justify-self: flex-end;
   grid-column: 3 / span 4;
   grid-row: 2;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  
 }
 
 /* @media only screen and (min-width: 1440px) {

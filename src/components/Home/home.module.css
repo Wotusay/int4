@@ -18,24 +18,18 @@
   font-style: normal;
   color: black;
   font-weight: 800;
-  font-size: 8.5rem;
 }
 
 .desc {
-  font-size: 3.8rem;
   color: black;
-  width: 50.9rem;
   font-family: "Muli";
-  margin-top: 3.1rem;
 }
 
 .landing {
   display: grid;
   justify-content: center;
-  margin-top: 3rem;
   grid-template-columns: 10% 1fr 1fr 10%;
   grid-template-rows: 15% 1fr 10%;
-  margin-bottom: 33rem;
 }
 
 .plane {
@@ -46,21 +40,16 @@
 
 .planepic {
   position: absolute;
-  left: -13.9rem;
 }
 
 .box {
-    padding-top: 5rem;
     grid-template-columns: 10% 1fr 1fr 10%;
     grid-template-rows: 20rem 50rem ;
     display: grid;
-    background-image: url('/assets/background.svg');
     justify-content: center;
-    height: 92.2rem;
     background-repeat: no-repeat;
     background-size: 100vw;
     color: white;
-    font-size: 2rem;
     grid-column-gap: 6rem;
     margin-bottom: 3rem;
 }
@@ -71,11 +60,8 @@
 .title_white {
     font-family: "Playfair Display", serif;
     font-style: normal;
-    margin-left: -20rem;
-    margin-top: 3rem;
     color: white;
     font-weight: 800;
-    font-size: 8.5rem;
     grid-column: 2 / span 3;
     display: flex;
     justify-content: center;
@@ -256,6 +242,88 @@
     color: #211F1F;
 }
 
-.stars {
-    margin-left: 10rem;
-}   
+@media only screen and (min-width: 320px) {
+    .title {
+        font-size: 3.8rem;
+        width: 18.8rem;
+        margin-top: 3.1rem;
+        font-size: 2.4rem;
+      }
+
+
+      .titleWrapper {
+          z-index: 1;
+      }
+
+      .desc {
+        font-size: 1.6rem;
+        z-index: 10;
+        width: 18rem;
+        margin-top: 3.6rem;
+      }
+
+      .planepic {
+        top: 1rem;
+        left: -18.9rem;
+      }
+
+      .landing {
+        margin-top: unset;
+
+        margin-bottom: 10rem;
+      }
+
+      .title_white {
+        margin-left: -9rem;
+        margin-top: 13rem;
+        font-size: 2.4rem;
+    }
+
+    .box {
+    background-image: url('/assets/background-mobile.svg');
+    height: 100rem;
+    font-size: 1.6rem;
+    grid-column-gap: 6rem;
+}
+} 
+
+@media only screen and (min-width: 1440px) {
+    .stars {
+        margin-left: 10rem;
+    }  
+
+    .title {
+        font-size: 8.5rem;
+      }
+      .planepic {
+        left: -13.9rem;
+    }
+
+      .desc {
+        font-size: 3.8rem;
+        width: 50.9rem;
+        margin-top: 3.1rem;
+      }
+
+      .landing {
+        margin-top: 3rem;
+        margin-bottom: 33rem;
+      }
+      .title_white {
+        margin-left: -20rem;
+        margin-top: 3rem;
+        font-size: 8.5rem;
+    }
+
+    .box {
+
+        background-image: url('/assets/background.svg');
+
+        height: 92.2rem;
+    
+        font-size: 2rem;
+        grid-column-gap: 6rem;
+
+    }
+      
+} 

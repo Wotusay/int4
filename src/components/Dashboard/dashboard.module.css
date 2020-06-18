@@ -3,8 +3,7 @@
   background: linear-gradient(238.32deg, #f3c87a 0%, #f49399 94.44%);
   display: grid;
   grid-template-columns: 10% 1fr 10%;
-  grid-template-rows: 15% 1fr 10%;
-  height: 100vh;
+  grid-template-rows: 10% 1fr 7%;
 }
 
 .content {
@@ -15,12 +14,17 @@
   grid-template-columns: 20% 1fr 20%;
 }
 
+.span {
+  font-weight: bold;
+}
+
 .contentTitle {
   grid-row: 1;
   margin-top: 3rem;
   justify-self: center;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: Muli, sans-serif;
+  color: #211f1f;
 }
 
 .contentIntro {
@@ -34,7 +38,9 @@
 
 .contentText {
   margin-top: 4rem;
-  width: 60rem;
+  width: 70rem;
+  font-family: Muli, sans-serif;
+  color: #211f1f;
 }
 
 .imgWrapper {
@@ -45,8 +51,55 @@
 }
 
 .imgBox {
-  background-color: black;
-  width: 30rem;
-  height: 30rem;
   margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+}
+
+.imgButton {
+  margin: 0 auto;
+  margin-top: 3rem;
+  width: 70%;
+  height: 5rem;
+  border: 0.2rem solid black;
+  background-color: transparent;
+  font-size: 1.8rem;
+  font-family: Muli, sans-serif;
+  font-weight: bold;
+  justify-self: center;
+}
+
+.footer {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.footerItem {
+  color: white;
+}
+
+.active {
+  background-color: white;
+  color: #211f1f;
+  height: 100%;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1440px) {
+  .dashboard {
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 10% 1fr 7%;
+  }
 }

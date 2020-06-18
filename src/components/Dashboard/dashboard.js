@@ -10,7 +10,7 @@ const Dashboard = () => {
           <div className={styles.content}>
             <div className={styles.contentIntro}>
               <h1 className={styles.contentTitle}>
-                Welkom op jullie Dashboard!
+                Welkom op jullie <span className={styles.span}>Dashboard!</span>
               </h1>
               <p className={styles.contentText}>
                 Hier kunnen jullie doorklikken om zowel al jullie geplande
@@ -21,7 +21,10 @@ const Dashboard = () => {
 
             <div className={styles.imgWrapper}>
               <div className={styles.imgBox}>
-                <img className={styles.img} src=""></img>
+                <img
+                  className={styles.img}
+                  src="/assets/dashboard/activities.png "
+                ></img>
                 <button className={styles.imgButton}>
                   Jullie Activiteiten
                 </button>
@@ -31,6 +34,13 @@ const Dashboard = () => {
                 <button className={styles.imgButton}>Jullie Fotoboek</button>
               </div>
             </div>
+          </div>
+          <div className={styles.footer}>
+            <p className={styles.footerItem}>Activiteiten</p>
+            <p className={styles.footerItem} className={styles.active}>
+              Dashboard
+            </p>
+            <p className={styles.footerItem}>Fotoboek</p>
           </div>
         </div>
       </>

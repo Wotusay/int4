@@ -15,6 +15,7 @@ import Boxes from "./components/Boxes/boxes";
 import Home from "./components/Home/home";
 import NotFound from "./components/NotFound/not-found";
 import Dashboard from "./components/Dashboard/dashboard";
+import Activities from "./components/Activities/activities";
 
 function App() {
   const { uiStore } = useStores();
@@ -52,6 +53,9 @@ function App() {
           </Route>
           <Route exact strict path={ROUTES.home}>
             <Home />
+          </Route>
+          <Route exact strict path={ROUTES.activities}>
+            <Activities />
           </Route>
           <Route>
             <NotFound />

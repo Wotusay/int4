@@ -13,9 +13,10 @@ const Dashboard = () => {
                 Welkom op jullie <span className={styles.span}>Dashboard!</span>
               </h1>
               <p className={styles.contentText}>
-                Hier kunnen jullie doorklikken om zowel al jullie geplande
-                honeymoon-activiteiten te zien of om een kijkje te nemen in
-                jullie eigen gepersonaliseerd fotoboek.
+                Hier kunnen jullie doorklikken om zowel al jullie
+                <span> geplande honeymoon-activiteiten</span> te zien of om een
+                kijkje te nemen in jullie
+                <span> eigen gepersonaliseerd fotoboek.</span>
               </p>
             </div>
 
@@ -23,23 +24,26 @@ const Dashboard = () => {
               <div className={styles.imgBox}>
                 <img
                   className={styles.img}
-                  src="/assets/dashboard/activities.png "
+                  src="/assets/dashboard/activities.png"
+                  alt="Activities"
                 ></img>
                 <button className={styles.imgButton}>
                   Jullie Activiteiten
                 </button>
               </div>
               <div className={styles.imgBox}>
-                <img className={styles.img}></img>
+                <img
+                  alt="Photobook"
+                  src="/assets/dashboard/photobook.png"
+                  className={styles.img}
+                ></img>
                 <button className={styles.imgButton}>Jullie Fotoboek</button>
               </div>
             </div>
           </div>
           <div className={styles.footer}>
             <p className={styles.footerItem}>Activiteiten</p>
-            <p className={styles.footerItem} className={styles.active}>
-              Dashboard
-            </p>
+            <p className={styles.active}>Dashboard</p>
             <p className={styles.footerItem}>Fotoboek</p>
           </div>
         </div>

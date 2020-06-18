@@ -7,6 +7,7 @@ const ROUTES = {
   login: "/login",
   morningRoom: "/morningroom",
   dashboard: "/dashboard",
+  activities: "/activities",
   boxes: { path: "/boxes/:id", to: "/boxes" },
 };
 

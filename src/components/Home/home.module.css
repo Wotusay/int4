@@ -1,5 +1,6 @@
 .grid {
   padding-top: 10rem;
+  overflow: hidden;
 }
 
 .background {
@@ -17,21 +18,16 @@
   font-style: normal;
   color: black;
   font-weight: 800;
-  font-size: 8.5rem;
 }
 
 .desc {
-  font-size: 3.8rem;
   color: black;
-  width: 50.9rem;
   font-family: "Muli";
 }
 
 .landing {
   display: grid;
   justify-content: center;
-  /* grid-template-columns: 61rem 61rem ; */
-  margin-top: 3rem;
   grid-template-columns: 10% 1fr 1fr 10%;
   grid-template-rows: 15% 1fr 10%;
 }
@@ -39,9 +35,295 @@
 .plane {
   position: relative;
   grid-column: 3 / span 4;
+  margin-top: 3rem;
 }
 
 .planepic {
   position: absolute;
-  left: -13.9rem;
 }
+
+.box {
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-rows: 20rem 50rem ;
+    display: grid;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    color: white;
+    grid-column-gap: 6rem;
+    margin-bottom: 3rem;
+}
+
+
+
+
+.title_white {
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    color: white;
+    font-weight: 800;
+    grid-column: 2 / span 3;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.stackedbox {
+    grid-column: 2;
+    display: grid;
+    grid-gap: 1rem;
+
+    justify-content: center;
+    align-content: center;
+}
+
+.quiz {
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+}
+
+
+.button1 {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    color: black;
+    font-family: 'Muli', sans-serif;
+    background-color: white;
+    border: 0.2rem solid transparent;
+    width: 15.3rem;
+    height: 4.2rem;
+    margin-left: 25rem ;
+    margin-top: 1rem ;
+
+    transition: ease-in-out 0.2s;
+  }
+  
+  .button1:hover {
+    background-color: unset;
+    border: 0.2rem solid black;
+    color: black;
+  }
+
+
+.button2 {
+    text-decoration: none;
+    display: flex;
+    margin-top: 2rem ;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    color: black;
+    font-family: 'Muli', sans-serif;
+    background-color: white;
+    border: 0.2rem solid transparent;
+    width: 15.3rem;
+    height: 4.2rem;
+    margin-left: 19rem ;
+    transition: ease-in-out 0.2s;
+  }
+  
+  .button2:hover {
+    background-color: unset;
+    border: 0.2rem solid black;
+    color: black;
+  }
+
+  .subtitle {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 36px;
+    color: #211F1F;
+  }
+
+  .text {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    width: 51.5rem;
+    padding-top: 2rem;
+    color: #211F1F;
+  }
+
+  .gridpatern {
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
+    justify-content: center;
+  }
+  
+  .whatWrapper{ 
+      grid-column: 2;
+      margin-top: 10rem;
+  }
+
+
+  .pic1 {
+    position: absolute;
+    right: -17rem;
+  }
+
+  .pic2 {
+    grid-column: 1;
+    grid-row: 2;
+
+}
+
+.relativePos {
+    position: relative;
+    width: 75.1rem;
+    height: 71.9rem;
+}
+
+.gridpos {
+    grid-column: 3;
+    grid-row: 2;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.reviewtittle{
+    grid-column: 2 / span 3;
+    display: flex;
+    justify-content: center;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 900;
+    margin-bottom: 15rem;
+    font-size: 3.6rem;
+
+}
+
+.gridpatern_reviewers{ 
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
+    margin-left: -10rem;
+    justify-content: space-between;
+    margin-top: 17rem;
+    margin-bottom: 5rem;
+}
+
+.reviewers {
+    grid-column: 2 / span 3;
+    display: grid;
+    grid-gap: 5em;
+    justify-content: center;
+    grid-template-columns: repeat(3, 40rem);
+}
+
+.reviewpattern {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 25rem 8rem 3rem;
+}
+
+.text_rev {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    width: 35.5rem;
+    padding-top: 2rem;
+    color: #211F1F;
+}
+
+@media only screen and (min-width: 320px) {
+    .title {
+        font-size: 3.8rem;
+        width: 18.8rem;
+        margin-top: 3.1rem;
+        font-size: 2.4rem;
+      }
+
+
+      .titleWrapper {
+          z-index: 1;
+      }
+
+      .desc {
+        font-size: 1.6rem;
+        z-index: 10;
+        width: 18rem;
+        margin-top: 3.6rem;
+      }
+
+      .planepic {
+        top: 1rem;
+        left: -18.9rem;
+      }
+
+      .landing {
+        margin-top: unset;
+
+        margin-bottom: 10rem;
+      }
+
+      .title_white {
+        margin-left: -9rem;
+        margin-top: 13rem;
+        font-size: 2.4rem;
+    }
+
+    .box {
+    background-image: url('/assets/background-mobile.svg');
+    height: 100rem;
+    font-size: 1.6rem;
+    grid-column-gap: 6rem;
+}
+} 
+
+@media only screen and (min-width: 1440px) {
+    .stars {
+        margin-left: 10rem;
+    }  
+
+    .title {
+        font-size: 8.5rem;
+      }
+      .planepic {
+        left: -13.9rem;
+    }
+
+      .desc {
+        font-size: 3.8rem;
+        width: 50.9rem;
+        margin-top: 3.1rem;
+      }
+
+      .landing {
+        margin-top: 3rem;
+        margin-bottom: 33rem;
+      }
+      .title_white {
+        margin-left: -20rem;
+        margin-top: 3rem;
+        font-size: 8.5rem;
+    }
+
+    .box {
+
+        background-image: url('/assets/background.svg');
+
+        height: 92.2rem;
+    
+        font-size: 2rem;
+        grid-column-gap: 6rem;
+
+    }
+      
+} 

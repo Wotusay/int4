@@ -1,0 +1,14 @@
+.footer {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.footerItem {
+  color: white;
+}

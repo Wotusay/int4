@@ -4,7 +4,6 @@ import { useStores } from "../../hooks";
 import { useHistory } from "react-router-dom";
 import { useObserver } from "mobx-react-lite";
 import { ROUTES } from "../../consts";
-import Header from "../Header2/header";
 
 
 const CurrentBox = () => {
@@ -21,7 +20,6 @@ const CurrentBox = () => {
      } else {
     return (
       <>
-        <Header />
         <div className={styles.box}>
           <img
             alt='plant'

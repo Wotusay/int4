@@ -1,34 +1,41 @@
-
 .grid { 
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: 20rem 55rem;
-    height: 100vh;
-    
+    padding-top: 10rem;
+}
+
+.background {
+    background-color: white;
+    display: flex;
+    flex-flow: column;
 }
 
 .title {
     font-family: 'Playfair Display', serif;
     font-style: normal;
-    color: white;
+    color: black;
+    font-weight: 800;
     font-size: 8.5rem;
     
 }
 
-.pic {
-    width: 80rem;
-    height: 53rem;
-    background-image: url('/assets/bigboxopen.png');
-    background-repeat: no-repeat;
-}
-
 .desc {
-    font-size: 3.6rem;
-    color: white;
-
+    font-size: 3.8rem;
+    color: black;
+    width: 50.9rem;
+    font-family: 'Muli';
 }
 
-.indicator {
+.landing {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 61rem 61rem ;
+    margin-top: 3rem;
+}
 
+.plane {
+    position: relative;
+}
+
+.planepic{
+    position: absolute;
+    left: -1rem;
 }

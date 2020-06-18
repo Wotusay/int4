@@ -190,3 +190,28 @@
     top: 15rem;
 }
 
+@media only screen and (min-width: 320px) {
+    .wrapper {
+        width: 22rem;
+        margin-top: unset;
+    }
+
+    .pic9{
+        left: -8rem;
+        top: -9rem;
+        z-index: 0;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .wrapper {
+        width: 72rem;
+        margin-top: -20rem;
+
+    }
+
+    .pic9 {
+        left: unset;
+        top: unset;
+    }
+}

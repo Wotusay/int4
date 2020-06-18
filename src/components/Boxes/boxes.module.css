@@ -93,7 +93,6 @@
 }
 
 .info {
-    font-size: 1.8rem;
     display: flex;
     justify-content: center;
     font-weight: normal;
@@ -111,7 +110,7 @@
     text-decoration: none;
     padding: 8px 14px;
     font-size: 1.4rem;
-      color: white;
+    color: white;
     border: 1px solid #FFFFFF;
 }
 
@@ -134,4 +133,99 @@
     right:  0;
     bottom: 0;
 
+}
+
+@media only screen and (min-width: 320px) {
+    .info {
+        font-size: 1.6rem;
+    }
+    .button_main{
+        font-size: 1.6rem;
+    }
+    .button_sec{
+        font-size: 1.6rem;
+    }
+
+    .title { 
+        font-size: 2.4rem;
+        width: unset;
+    }
+
+    .adventure_wrapper {
+        grid-template-columns: 3rem 14rem 3rem;
+    grid-gap: 5rem;
+    padding-top: unset;
+
+    }
+
+    .romantic_wrapper {
+        grid-template-columns: 3rem 14rem 3rem;
+    grid-gap: 5rem;
+    padding-top: unset;
+
+    }
+
+    .tropic_wrapper {
+            grid-template-columns: 3rem 14rem 3rem;
+    grid-gap: 5rem;
+    padding-top: unset;
+    }
+    .info_wrapper {
+        padding-top: unset;
+    }
+
+    .pos {
+    position: absolute;
+    right: -34px;
+    top: 36px;
+    }
+    .button_prev {
+        z-index: 1;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .info {
+        font-size: 1.8rem;
+        
+    }
+
+
+    .pos {
+        position: initial;
+        right: unset;
+        top: unset;
+    }
+    
+    .button_main{
+        font-size: 1.6rem;
+    }
+    .button_sec{
+        font-size: 1.6rem;
+    }
+
+    .info_wrapper {
+        padding-top: 20rem;
+    }
+
+    .title { 
+        font-size: 4.8rem;
+        width: unset;
+    }
+
+    .adventure_wrapper {
+        grid-template-columns: 3rem 72rem 3rem;
+    grid-gap: 10rem;
+    }
+
+    .romantic_wrapper {
+        grid-template-columns: 3rem 72rem 3rem;
+    grid-gap: 10rem;
+    }
+
+    .tropic_wrapper {
+            grid-template-columns: 3rem 72rem 3rem;
+    grid-gap: 10rem;
+    padding-top: 10rem;
+    }
 }

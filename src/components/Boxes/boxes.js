@@ -5,9 +5,10 @@ import styles from "./boxes.module.css";
 import { useParams, useHistory,Link } from "react-router-dom";
 import AdventureBox from "../AdventBox/adventbox";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
-import { ROUTES } from "../../consts";
+import { ROUTES, mediaQueries } from "../../consts";
 import RomanBox from "../RomanBox/romanbox";
 import TropicBox from "../TropicBox/tropicbox";
+import MediaQuery from "react-responsive";
 
 const Boxes = () => {
     const {id} = useParams();
@@ -26,7 +27,12 @@ const Boxes = () => {
 
     return useObserver(() => (
         <>
+        <MediaQuery minDeviceWidth={mediaQueries.mobile} maxDeviceWidth={mediaQueries.tablet} >
+        {id === 'adventure-box' ? <> <img className={styles.leave1} alt="prop1" src="/assets/left-mobile.png" /> </>: id === 'romantic-box' ? <> <img className={styles.leave1} alt="prop1" src="/assets/romanticleft-mobile.png" />  </> : id === 'tropic-box' ? <> <img className={styles.leave1}  alt="prop2" src="/assets/tropicleft-mobile.png" /> </>: <Redirect to={ROUTES.boxes.to + '/adventure-box'}  /> }
+        </MediaQuery>
+        <MediaQuery minDeviceWidth={mediaQueries.tablet+1}>
         {id === 'adventure-box' ? <> <img className={styles.leave1} alt="prop1" src="/assets/adventurebox/leaves-bottom.png" />  <img className={styles.leave2}  alt="prop2" src="/assets/adventurebox/leaves-top.png" />  </>: id === 'romantic-box' ? <> <img className={styles.leave1} alt="prop1" src="/assets/romanticbox/left.png" />  <img className={styles.top}  alt="top" src="/assets/romanticbox/top.png" /> <img className={styles.right}  alt="right" src="/assets/romanticbox/right.png" />  </> : id === 'tropic-box' ? <> <img className={styles.leave2}  alt="prop2" src="/assets/tropicbox/top.png" /> <img className={styles.leave1}  alt="prop1" src="/assets/tropicbox/bottom.png" />  </>: <Redirect to={ROUTES.boxes.to + '/adventure-box'}  /> }
+        </MediaQuery>
 
         <div className={id === 'adventure-box' ? styles.adventure_wrapper : id === 'romantic-box' ? styles.romantic_wrapper : id === 'tropic-box' ? styles.tropic_wrapper : styles.wrapper}>
         <button onClick={e => handlePrevious(e)}  className={styles.button_prev}>

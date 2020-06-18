@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./adventbox.module.css"
 import { useObserver } from "mobx-react-lite";
+import MediaQuery from "react-responsive";
+import { mediaQueries } from "../../consts";
 
 const AdventureBox = () => {
     const text = {
@@ -136,7 +138,14 @@ const AdventureBox = () => {
     }
     return useObserver(() => (
         <>
+        
+
+        
         <div className={styles.wrapper}>
+            <MediaQuery maxDeviceWidth={mediaQueries.labtop-1}>
+                <img className={styles.pic9} src='/assets/adventure_box-mobile.png' alt='adventure-box'/>
+            </MediaQuery>
+            <MediaQuery minDeviceWidth={mediaQueries.labtop}>
             <img className={styles.pic1} width='352' height='139' alt='BoxMockup-bottom' src='/assets/adventurebox/BoxMockup-bottom.png' />
             <img className={styles.pic2} width='172' height='185' onMouseEnter={e => mouseHandler(e)} alt='Verrekijker' src='/assets/adventurebox/Verrekijker.png' />
             <img className={styles.pic3} width='100' height='144' onMouseEnter={e => mouseHandler(e)} alt='Compass' src='/assets/adventurebox/Compass.png'  />
@@ -147,6 +156,10 @@ const AdventureBox = () => {
             <img className={styles.pic8} width='199' height='230' onMouseEnter={e => mouseHandler(e)} alt='Map' src='/assets/adventurebox/Map.png'  />
             <img className={styles.pic9} width='712' height='604' alt='box-achterkant' src='/assets/adventurebox/box-achterkant.png'  />
             <p className='p'></p>
+            </MediaQuery>
+
+
+
   </div>
 
         </>

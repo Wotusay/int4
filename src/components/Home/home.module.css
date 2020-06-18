@@ -1,41 +1,47 @@
-.grid { 
-    padding-top: 10rem;
+.grid {
+  padding-top: 10rem;
 }
 
 .background {
-    background-color: white;
-    display: flex;
-    flex-flow: column;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+}
+
+.titleWrapper {
+    grid-column: 2;
 }
 
 .title {
-    font-family: 'Playfair Display', serif;
-    font-style: normal;
-    color: black;
-    font-weight: 800;
-    font-size: 8.5rem;
-    
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  color: black;
+  font-weight: 800;
+  font-size: 8.5rem;
 }
 
 .desc {
-    font-size: 3.8rem;
-    color: black;
-    width: 50.9rem;
-    font-family: 'Muli';
+  font-size: 3.8rem;
+  color: black;
+  width: 50.9rem;
+  font-family: "Muli";
 }
 
 .landing {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 61rem 61rem ;
-    margin-top: 3rem;
+  display: grid;
+  justify-content: center;
+  /* grid-template-columns: 61rem 61rem ; */
+  margin-top: 3rem;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-rows: 15% 1fr 10%;
 }
 
 .plane {
-    position: relative;
+  position: relative;
+  grid-column: 3 / span 4;
 }
 
-.planepic{
-    position: absolute;
-    left: -13.9rem;
+.planepic {
+  position: absolute;
+  left: -13.9rem;
 }

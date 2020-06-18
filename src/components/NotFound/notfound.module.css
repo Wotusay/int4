@@ -1,7 +1,5 @@
 .title {
     color: white;
-    font-size: 10rem;
-    width: 79rem;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -16,3 +14,19 @@
     align-self: center;
     height: 100vh;
 }
+
+@media only screen and (min-width: 320px) {
+   .title {
+    width: 20rem;
+    font-size: 7rem;
+
+   }
+  }
+
+
+@media only screen and (min-width: 768px) {
+    .title {
+        width: 79rem;
+        font-size: 10rem;
+    }
+   }

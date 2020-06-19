@@ -78,6 +78,7 @@ span {
 .contentLeftButton {
   grid-row: 6;
   grid-column: 1;
+  z-index: 4;
   width: 15rem;
   height: 6rem;
   justify-self: start;
@@ -89,15 +90,7 @@ span {
   font-weight: bold;
 }
 
-.contentLeftImg {
-  overflow: hidden;
-  position: relative;
-  grid-row: 6;
-  align-self: flex-end;
-  justify-self: flex-start;
-  grid-column: 1 / span 2;
-  right: 8rem;
-}
+
 
 .contentRight {
   justify-self: flex-end;
@@ -111,12 +104,148 @@ span {
   
 }
 
-/* @media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 320px) {
   .box {
-    background: linear-gradient(238.32deg, #f3c87a 0%, #f49399 94.44%);
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 20vh 1fr 1fr 20vh;
-    grid-template-rows: 20vh 1fr 1fr 10vh;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
+    height: unset;
+    overflow: hidden;
+
   }
-} */
+  
+  .box_r {
+    height: unset;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
+    overflow: hidden;
+
+  }
+  
+  .box_t {
+    height: unset;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
+    overflow: hidden;
+
+  }
+
+  .contentLeftTitle {
+    font-size: 2.4rem;
+
+}
+
+.contentLeftIntro {
+    font-size: 1.6rem;
+
+}
+
+.contentLeftIntro1 {
+    font-size: 1.6rem;
+
+}
+
+.contentLeftIntro2 {
+    font-size: 1.6rem;
+
+}
+
+.contentLeftIntro3 {
+    font-size: 1.6rem;
+
+}
+
+.contentLeftButton {
+  font-size: 1.8rem;
+  width: 15rem;
+  height: 4rem;
+}
+.contentRight {
+  position: relative;
+  height: 32rem;
+  grid-column: 3;
+  grid-row: 3;
+  justify-self: unset;
+
+}
+
+.contentRightImg {
+  width: auto;
+  left: -31rem;
+  top: -23rem;
+  position: absolute;
+}
+
+} 
+
+@media only screen and (min-width: 1440px) {
+
+  .contentRight{
+    position: unset;
+    height: unset;
+    justify-self: flex-end;
+    grid-column: 3 / span 4;
+    grid-row: 2;
+  }
+
+  .contentRightImg {
+    width: unset;
+    left: unset;
+    top: unset;
+    position: unset;
+  }
+
+  .box {
+    overflow: initial;
+
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
+    height: 100vh;
+
+  }
+  
+  .box_r {
+    overflow: initial;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
+    height: 100vh;
+
+  }
+  
+  .box_t {
+    overflow: initial;
+    height: 100vh;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
+  }
+
+  .contentLeftTitle {
+    font-size: 5rem;
+
+  }
+
+  .contentLeftIntro {
+      font-size: 2.4rem;
+
+  }
+
+  .contentLeftIntro1 {
+      font-size: 2.4rem;
+
+  }
+
+  .contentLeftIntro2 {
+      font-size: 2.4rem;
+ 
+  }
+
+  .contentLeftIntro3 {
+      font-size: 2.4rem;
+ 
+  }
+
+  .contentLeftButton {
+    font-size: 2rem;
+    width: 15rem;
+    height: 6rem;
+  }
+} 

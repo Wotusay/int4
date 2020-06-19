@@ -16,7 +16,7 @@ import Home from "./components/Home/home";
 import NotFound from "./components/NotFound/not-found";
 import Dashboard from "./components/Dashboard/dashboard";
 import Activities from "./components/Activities/activities";
-
+import MorningRoom from "./components/Room/MorningRoom/morningRoom";
 function App() {
   const { uiStore } = useStores();
   return useObserver(() => (
@@ -56,6 +56,9 @@ function App() {
           </Route>
           <Route exact strict path={ROUTES.activities}>
             <Activities />
+          </Route>
+          <Route exact strict path={ROUTES.morningroom}>
+            <MorningRoom />
           </Route>
           <Route>
             <NotFound />

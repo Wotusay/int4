@@ -27,9 +27,11 @@ const Dashboard = () => {
                   src="/assets/dashboard/activities.png"
                   alt="Activities"
                 ></img>
-                <button className={styles.imgButton}>
-                  Jullie Activiteiten
-                </button>
+                <div className={styles.imgButtonWrapper}>
+                  <button className={styles.imgButton}>
+                    Jullie Activiteiten
+                  </button>
+                </div>
               </div>
               <div className={styles.imgBox}>
                 <img
@@ -37,7 +39,11 @@ const Dashboard = () => {
                   src="/assets/dashboard/photobook.png"
                   className={styles.img}
                 ></img>
-                <button className={styles.imgButton}>Jullie Fotoboek</button>
+
+               
+                <div className={styles.imgButtonWrapper}>
+                  <button className={styles.imgButton}>Jullie Fotoboek</button>
+                </div>
               </div>
             </div>
           </div>

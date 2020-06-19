@@ -31,13 +31,6 @@
   text-align: left;
 }
 
-.imgWrapper {
-  margin-top: 2rem;
-}
-
-.imgBox {
-}
-
 .imgButtonWrapper {
   display: flex;
   justify-content: center;
@@ -47,8 +40,18 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: 2rem;
 }
 
+.imgBox {
+  display: grid;
+  grid-template-rows: 1fr 6rem;
+}
+
+.img {
+  justify-self: center;
+  align-self: flex-end;
+}
 .imgButton {
   margin-top: 2rem;
   border: 0.2rem solid black;
@@ -59,9 +62,17 @@
 
 .footer {
   position: relative;
-  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-row: 3;
 }
 
+@media only screen and (min-width: 768px) {
+  .imgWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+}

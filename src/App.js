@@ -24,6 +24,8 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
+
+
         <Route exact path={ROUTES.activities}>
           <Activities/>
           </Route>

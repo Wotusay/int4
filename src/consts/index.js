@@ -9,6 +9,7 @@ const ROUTES = {
   dashboard: "/dashboard",
   activities: "/activities",
   boxes: { path: "/boxes/:id", to: "/boxes" },
+  uploadpicture: "/uploadpicture",
 };
 
 const mediaQueries = {

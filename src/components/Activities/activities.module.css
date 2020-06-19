@@ -1,0 +1,58 @@
+.activities {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 10rem 1fr;
+}
+
+.content {
+  grid-row: 2;
+  background-color: white;
+  padding: 1rem;
+}
+
+.title {
+  color: black;
+  font-family: Muli, sans-serif;
+  font-size: 3rem;
+  text-align: left;
+}
+
+.intro {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.dates {
+  width: 30rem;
+  height: 30rem;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.boxMorning {
+  z-index: 5;
+  width: 10rem;
+  height: 10rem;
+  grid-column: 3 / span 6;
+  grid-row: 1;
+  background: linear-gradient(262.97deg, #fff890 0%, #f3c87a 100%);
+}
+
+.boxNoon {
+  z-index: 3;
+  grid-column: 2 / span 4;
+  grid-row: 1;
+  width: 10rem;
+  height: 10rem;
+  background: linear-gradient(262.97deg, #f49399 0%, #f3c87a 100%);
+}
+.boxNight {
+  z-index: 3;
+  grid-column: 6 / span 9;
+  grid-row: 1;
+  width: 10rem;
+  height: 10rem;
+  background: linear-gradient(262.97deg, #a1e3d8 0%, #f49399 100%);
+}

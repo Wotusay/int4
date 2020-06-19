@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./activities.module.css";
 import { useObserver } from "mobx-react-lite";
-import Footer from "../Footer/footer";
 
 const Activities = () => {
   return useObserver(() => (
@@ -21,7 +20,6 @@ const Activities = () => {
             <div className={styles.boxNight}></div>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   ));

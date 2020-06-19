@@ -1,7 +1,7 @@
 .dashboard {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 10rem 1fr 10rem;
+  grid-template-rows: 10rem 1fr
 }
 
 .content {
@@ -61,11 +61,11 @@
 }
 
 .footer {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-row: 3;
+  bottom: 0;
 }
 
 @media only screen and (min-width: 768px) {

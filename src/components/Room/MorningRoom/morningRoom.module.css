@@ -1,3 +1,78 @@
-.morningRoom {
-    
+.room {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 8rem 16rem 1fr;
+  background: linear-gradient(220deg, #f3c87a 0%, #fff890 100%);
+}
+
+.contentIntro {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  grid-row: 2;
+}
+
+.contentTitle {
+  margin-top: 2rem;
+  color: black;
+  font-family: Muli, sans-serif;
+  font-size: 3rem;
+  text-align: left;
+}
+
+.contentText {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  grid-row: 3;
+}
+
+.imgBox {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.imgLeft {
+  justify-self: flex-start;
+  align-self: flex-end;
+  overflow: hidden;
+}
+
+.imgRight {
+  justify-self: flex-end;
+  align-self: flex-end;
+  overflow: hidden;
+  transform: translateX(6rem);
+}
+
+.imgButton {
+  margin-top: 2rem;
+  border: 0.2rem solid black;
+  width: 20rem;
+  height: 4rem;
+  background-color: transparent;
+}
+
+.footer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .imgWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-top: 2rem;
+  }
 }

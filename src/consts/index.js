@@ -6,6 +6,8 @@ const ROUTES = {
   currentbox: "/currentbox",
   login: "/login",
   morningRoom: "/morningroom",
+  afternoonRoom: "/afternoonroom",
+  nightRoom: "/nightroom",
   dashboard: "/dashboard",
   activities: "/activities",
   boxes: { path: "/boxes/:id", to: "/boxes" },

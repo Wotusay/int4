@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./home.module.css";
 import { Link } from "react-router-dom";
+import { ROUTES } from "../../consts";
 
 const Home = () => {
   return (
@@ -36,7 +37,7 @@ const Home = () => {
 
               </picture>
               <p className={styles.action}>Bekijk ons assortiment van boxen </p>
-              <Link className={styles.button1}>Bekijk alle boxen</Link>
+              <Link to={ROUTES.boxes.path} className={styles.button1}>Bekijk alle boxen</Link>
             </div>
             <div className={styles.quiz} >
               <picture>

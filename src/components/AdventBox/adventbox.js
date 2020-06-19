@@ -43,7 +43,6 @@ const AdventureBox = () => {
 
             console.log(targetClass)
             if (targetClass.includes('pic2')) {
-                console.log('this is pic2')
                 p.classList.add(stylesForText.pic1)
                 p.innerHTML = text.pic1;
                 p.classList.remove(stylesForText.none);
@@ -56,7 +55,6 @@ const AdventureBox = () => {
 
             }
             if (targetClass.includes('pic3')) {
-                console.log('this is pic3')
                 p.classList.add(stylesForText.pic2)
                 
                 p.classList.remove(stylesForText.none);
@@ -70,7 +68,6 @@ const AdventureBox = () => {
                 p.innerHTML = text.pic2
             }
             if (targetClass.includes('pic4')) {
-                console.log('this is pic4')
                 p.classList.add(stylesForText.pic3)
                 p.classList.remove(stylesForText.none);
                 p.classList.remove(stylesForText.pic1);
@@ -83,7 +80,6 @@ const AdventureBox = () => {
                 p.innerHTML = text.pic3
             }
             if (targetClass.includes('pic5')) {
-                console.log('this is pic5')
                 p.classList.add(stylesForText.pic4)
                 p.innerHTML = text.pic4
                 p.classList.remove(stylesForText.none);
@@ -97,7 +93,6 @@ const AdventureBox = () => {
                 
             }
             if (targetClass.includes('pic6')) {
-                console.log('this is pic6')
                 p.innerHTML = text.pic5
                 p.classList.remove(stylesForText.none);
                 p.classList.add(stylesForText.pic5)
@@ -109,7 +104,6 @@ const AdventureBox = () => {
                 p.classList.remove(stylesForText.pic7);
             }
             if (targetClass.includes('pic7')) {
-                console.log('this is pic7')
                 p.innerHTML = text.pic6
                 p.classList.remove(stylesForText.none);
                 p.classList.remove(stylesForText.pic1);
@@ -121,7 +115,6 @@ const AdventureBox = () => {
                 p.classList.add(stylesForText.pic6)
             }
             if (targetClass.includes('pic8')) {
-                console.log('this is pic8')
                 p.innerHTML = text.pic7
                 p.classList.remove(stylesForText.none);
                 p.classList.remove(stylesForText.pic1);

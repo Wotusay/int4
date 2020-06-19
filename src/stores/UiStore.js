@@ -9,9 +9,7 @@ class UiStore {
   }
 
   login = async () => {
-      this.loginState = true;
-      console.log('logged in');
-    
+      this.loginState = true;    
   }
 
   logout = () => {

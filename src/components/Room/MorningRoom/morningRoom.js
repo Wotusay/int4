@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./morningRoom.module.css";
+import Indicator from "../../Indicator/indicator";
 
 const MorningRoom = () => {
   return (
@@ -13,27 +14,21 @@ const MorningRoom = () => {
           </p>
         </div>
 
-        <div className={styles.imgWrapper}>
-          <div className={styles.imgBox}>
-            <img
-              className={styles.imgRight}
-              src="/assets/room/morning_room/yoga.png"
-              alt="Activities"
-            ></img>
-          </div>
-          <div className={styles.imgBox}>
-            <img
-              className={styles.imgLeft}
-              src="/assets/room/morning_room/guitar.png"
-              alt="Activities"
-            ></img>
-          </div>
+        <div className={styles.imgBoxYoga}>
+          {/* <Indicator className={styles.indicator} /> */}
+          <img
+            className={styles.imgYoga}
+            src="/assets/room/morning_room/yoga.png"
+            alt="Activities"
+          ></img>
         </div>
-      </div>
-      <div className={styles.footer}>
-        <p className={styles.footerItem}>Activiteiten</p>
-        <p className={styles.active}>Dashboard</p>
-        <p className={styles.footerItem}>Fotoboek</p>
+        <div className={styles.imgBoxGuitar}>
+          <img
+            className={styles.imgGuitar}
+            src="/assets/room/morning_room/guitar.png"
+            alt="Activities"
+          ></img>
+        </div>
       </div>
     </>
   );

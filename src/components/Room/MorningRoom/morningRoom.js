@@ -4,7 +4,7 @@ import styles from "./morningRoom.module.css";
 const MorningRoom = () => {
   return (
     <>
-      <div className={styles.wrapper}>
+      <div className={styles.morningRoom}>
         <h1 className={styles.title}>MorningRoom</h1>
       </div>
     </>

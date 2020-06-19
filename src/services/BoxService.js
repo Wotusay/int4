@@ -1,10 +1,25 @@
 import "firebase/firestore";
 import { boxConverter } from "../models/box";
+import { activityConverter } from "../models/activity";
 
 class BoxService {
     constructor(firebase) {
         this.db = firebase.firestore();
     }
+
+    getBoxActivities = async (onChange, boxCode)=> {
+        let data = [];
+        await this.db.collectionGroup(onChange)
+        .where("boxCode", "==", boxCode).withConverter(activityConverter).get()
+        .then(function(querySnapShot) {
+            querySnapShot.forEach(doc => {
+                if (doc !== undefined) {
+                    data.push(doc.data());
+                }
+            })
+        });
+        return data;
+    };
 
 
     getBoxWithCode = async code => {
@@ -13,7 +28,6 @@ class BoxService {
     .then(function(querySnapShot) {
         querySnapShot.forEach(doc =>  {
           if (doc !== undefined) {
-            console.log(doc.data())
             data = doc.data();
           } if (doc === undefined) {
               console.log('nothing found');
@@ -24,6 +38,7 @@ class BoxService {
         console.log("Error getting documents: ", error);
     });
     ;
+
 
     return data;
 }

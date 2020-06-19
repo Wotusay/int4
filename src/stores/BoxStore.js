@@ -6,6 +6,16 @@ class BoxStore {
         this.rootStore = rootStore;
         this.boxService = new BoxService(this.rootStore.firebase);
         this.boxes = [];
+        this.activities = [];
+    }
+
+    onActivitiesChanged =  activities => {
+        this.addActivities(activities);
+    }
+
+    addActivities = activity => {
+        this.activities.push(activity);
+        this.rootStore.uiStore.setCurrentActivities(activity);
     }
 
     onBoxesChanged = box => {
@@ -19,6 +29,11 @@ class BoxStore {
         }
       };
 
+      getActivities = async (time, code) => {
+              const result =  await this.boxService.getBoxActivities('ochtend-activiteiten','3403 - XPD2  - SPA1 - DPE2');
+              this.onActivitiesChanged(result);
+      }
+
     addBoxes = async box => {
         this.boxes.push(box);
         this.rootStore.uiStore.setCurrentBox(box);
@@ -28,7 +43,9 @@ class BoxStore {
 
 decorate(BoxStore, {
     boxes: observable,
-    addBoxes: action
+    addBoxes: action,
+    activities:observable,
+    addActivities: action,
   });
 
 export default BoxStore;

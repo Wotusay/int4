@@ -3,7 +3,8 @@ import styles from "./currentBox.module.css";
 import { useStores } from "../../hooks";
 import { useHistory } from "react-router-dom";
 import { useObserver } from "mobx-react-lite";
-import { ROUTES } from "../../consts";
+import { ROUTES, mediaQueries } from "../../consts";
+import MediaQuery from "react-responsive";
 
 
 const CurrentBox = () => {
@@ -47,24 +48,31 @@ const CurrentBox = () => {
 
           <div className={styles.contentRight}>
 
-          {uiStore.currentBox.title === 'Advontura Box' ?       
-          <img
-              className={styles.contentRightImg}
+          {uiStore.currentBox.title === 'Advontura Box' ?
+          
+          <picture className={styles.contentRightImg}>
+          <source media="(min-width: 1440px)" srcset="/assets/current_box/box.png" />
+          <source media="(min-width: 320px)" srcset="/assets/current_box/box-mobile.png" />
+          <img style={{width: 'auto'}}
               src="/assets/current_box/box.png"
               alt="box"
-            /> : uiStore.currentBox.title === 'Amare box' ?          
-            <img
-            className={styles.contentRightImg}
-            src="/assets/current_box/box-r.png"
-            alt="box"
-          />: 
-          <img
-          className={styles.contentRightImg}
-          src="/assets/current_box/box-t.png"
-          alt="box"
-        />}
+            /> </picture>: uiStore.currentBox.title === 'Amare box' ?          
+            <picture className={styles.contentRightImg}>
+            <source media="(min-width: 1440px)" srcset="/assets/current_box/box-r.png" />
+            <source media="(min-width: 320px)" srcset="/assets/current_box/box-r-mobile.png" />
+            <img style={{width: 'auto'}}
+                src="/assets/current_box/box-r.png"
+                alt="box"
+              /> </picture>: 
+              <picture className={styles.contentRightImg}>
+          <source media="(min-width: 1440px)" srcset="/assets/current_box/box-t.png" />
+          <source media="(min-width: 320px)" srcset="/assets/current_box/box-t-mobile.png" />
+          <img style={{width: 'auto'}}
+              src="/assets/current_box/box-t.png"
+              alt="box"
+            /> </picture>}
           </div>
-
+          <MediaQuery minDeviceWidth={mediaQueries.tablet}>
           {uiStore.currentBox.title === 'Advontura Box' ?       
           <img
               className={styles.bottom}
@@ -80,7 +88,7 @@ const CurrentBox = () => {
           className={styles.bottom}
           src="/assets/tropicbox/bottom.png"
           alt="prop"
-        />}
+        />}</MediaQuery>
         </div>
       </>
     );

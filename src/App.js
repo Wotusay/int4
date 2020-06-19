@@ -24,6 +24,12 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
+        <Route exact path={ROUTES.activities}>
+          <Activities/>
+          </Route>
+        <Route exact path={ROUTES.morningRoom}>
+          <MorningRoom/>
+          </Route>
           <Route exact path={ROUTES.boxes.path}>
             <Boxes />
           </Route>
@@ -53,12 +59,6 @@ function App() {
           </Route>
           <Route exact strict path={ROUTES.home}>
             <Home />
-          </Route>
-          <Route exact strict path={ROUTES.activities}>
-            <Activities />
-          </Route>
-          <Route exact strict path={ROUTES.morningroom}>
-            <MorningRoom />
           </Route>
           <Route>
             <NotFound />

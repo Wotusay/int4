@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./morningRoom.module.css";
-//import Indicator from "../../Indicator/indicator";
+import Indicator from "../../Indicator/indicator";
 import Footer from "../../Footer/footer";
 
 const MorningRoom = () => {
@@ -8,10 +8,12 @@ const MorningRoom = () => {
     <>
       <div className={styles.room}>
         <div className={styles.contentIntro}>
-          <h1 className={styles.contentTitle}>Goedemorgen Eva & Mathias!</h1>
+          <h1 className={styles.contentTitle}>
+            Goedemorgen <span>Eva & Mathias!</span>{" "}
+          </h1>
           <p className={styles.contentText}>
             Hier bevindt zich een overzicht van jullie honeymoon-activiteiten
-            die we aanraden om ‘s morgens te doen.
+            die we aanraden om <span>‘s morgens</span> te doen.
           </p>
         </div>
 
@@ -33,9 +35,12 @@ const MorningRoom = () => {
             />
           </picture>
         </div>
+        <div className={styles.indicator}>
+          <Indicator />
+        </div>
 
         <div className={styles.imgBoxYoga}>
-          <picture className={styles.contentRightImg}>
+          <picture>
             <source
               media="(min-width: 768px)"
               srcset="/assets/room/morning_room/yoga_desktop.png"
@@ -52,7 +57,7 @@ const MorningRoom = () => {
           </picture>
         </div>
         <div className={styles.imgBoxGuitar}>
-          <picture className={styles.contentRightImg}>
+          <picture>
             <source
               media="(min-width: 768px)"
               srcset="/assets/room/morning_room/guitar_desktop.png"
@@ -68,7 +73,6 @@ const MorningRoom = () => {
             />{" "}
           </picture>
         </div>
-        <Footer />
       </div>
     </>
   );

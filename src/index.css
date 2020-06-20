@@ -20,11 +20,15 @@ html {
 }
 
 body {
-  background: linear-gradient(268.43deg, #EF4B4B -4.77%, #EC8F6A 90.83%);
+  background: linear-gradient(268.43deg, #ef4b4b -4.77%, #ec8f6a 90.83%);
   font-family: sans-serif;
   height: 100vh;
 }
 
 .hidden {
   display: none;
+}
+
+span {
+  font-weight: bold;
 }

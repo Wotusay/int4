@@ -14,7 +14,12 @@ const Indicator = () => {
   };
   return (
     <>
-      <Lottie options={defaultOptions} height={70} width={70} />
+      <Lottie
+        className={styles.indicator}
+        options={defaultOptions}
+        height={70}
+        width={70}
+      />
     </>
   );
 };

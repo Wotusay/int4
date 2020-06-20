@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./afternoonRoom.module.css";
 import Indicator from "../../Indicator/indicator";
-import Footer from "../../Footer/footer";
 
 const AfternoonRoom = () => {
   return (
@@ -13,7 +12,7 @@ const AfternoonRoom = () => {
           </h1>
           <p className={styles.contentText}>
             Hier bevindt zich een overzicht van jullie honeymoon-activiteiten
-            die we aanraden om <span>‘s morgens</span> te doen.
+            die we aanraden om <span>‘s middags</span> te doen.
           </p>
         </div>
 
@@ -21,7 +20,7 @@ const AfternoonRoom = () => {
           <picture className={styles.contentRightImg}>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/morning_room/bullets.png"
+              srcset="/assets/room/afternoon_room/background.png"
             />
 
             <source
@@ -30,20 +29,20 @@ const AfternoonRoom = () => {
             />
             <img
               style={{ width: "auto" }}
-              src="/assets/room/morning_room/bullets.png"
+              src="/assets/room/afternoon_room/background.png"
               alt="box"
             />
           </picture>
         </div>
-        <div className={styles.indicator}>
+        {/* <div className={styles.indicator}>
           <Indicator />
-        </div>
+        </div> */}
 
-        <div className={styles.imgBoxYoga}>
+        <div className={styles.imgBoxPizza}>
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/morning_room/yoga_desktop.png"
+              srcset="/assets/room/afternoon_room/pizza_desktop.png"
             />
             <source
               media="(min-width: 320px)"
@@ -51,16 +50,16 @@ const AfternoonRoom = () => {
             />
             <img
               style={{ width: "auto" }}
-              src="/assets/room/morning_room/yoga_desktop.png"
+              src="/assets/room/afternoon_room/pizza_desktop.png"
               alt="box"
             />{" "}
           </picture>
         </div>
-        <div className={styles.imgBoxGuitar}>
+        <div className={styles.imgBoxWalk}>
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/morning_room/guitar_desktop.png"
+              srcset="/assets/room/afternoon_room/walk_desktop.png"
             />
             <source
               media="(min-width: 320px)"
@@ -68,7 +67,25 @@ const AfternoonRoom = () => {
             />
             <img
               style={{ width: "auto" }}
-              src="/assets/room/morning_room/guitar_desktop.png"
+              src="/assets/room/afternoon_room/walk_desktop.png"
+              alt="box"
+            />{" "}
+          </picture>
+        </div>
+
+        <div className={styles.imgBoxJenga}>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="/assets/room/afternoon_room/jenga_desktop.png"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="/assets/room/morning_room/guitar_mobile.png"
+            />
+            <img
+              style={{ width: "auto" }}
+              src="/assets/room/afternoon_room/jenga_desktop.png"
               alt="box"
             />{" "}
           </picture>

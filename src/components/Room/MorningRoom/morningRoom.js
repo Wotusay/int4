@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./morningRoom.module.css";
 import Indicator from "../../Indicator/indicator";
-import Footer from "../../Footer/footer";
 
 const MorningRoom = () => {
   return (

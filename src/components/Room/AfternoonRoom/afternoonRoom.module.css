@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 8rem 16rem 1fr 1fr;
-  background: linear-gradient(220deg, #f3c87a 0%, #fff890 100%);
+  background: linear-gradient(220deg, #f3c87a 0%, #f49399 100%);
 }
 
 .contentIntro {
@@ -33,15 +33,12 @@
   overflow: hidden;
 }
 
-.imgBoxYoga {
+.imgBoxPizza {
   grid-row: 6;
   overflow: hidden;
   justify-self: flex-end;
 }
-.imgBoxGuitar {
-  grid-row: 7;
-  overflow: hidden;
-  align-self: flex-end;
+.imgBoxWalk {
 }
 .imgGuitar {
   justify-self: flex-start;
@@ -104,7 +101,7 @@
   }
 
   .contentIntro {
-    grid-row: 4;
+    grid-row: 3;
     grid-column: 5 / span 11;
   }
 
@@ -123,7 +120,7 @@
   }
 
   .imgBoxBg {
-    grid-row: 11;
+    grid-row: 8;
     grid-column: 5;
     z-index: 1;
     position: absolute;
@@ -131,9 +128,9 @@
     justify-self: normal;
   }
 
-  .imgBoxYoga {
-    grid-row: 11;
-    grid-column: 1;
+  .imgBoxPizza {
+    grid-row: 6;
+    grid-column: 3;
     z-index: 2;
     transform: translateX(-10rem);
     position: absolute;
@@ -142,13 +139,22 @@
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
   }
-  .imgBoxGuitar {
+  .imgBoxWalk {
     grid-row: 10;
+    z-index: 2;
+    grid-column: 8;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .imgBoxJenga {
+    grid-row: 8;
     z-index: 2;
     grid-column: 14;
     position: absolute;
     overflow: hidden;
     justify-self: flex-end;
+    align-self: flex-end;
   }
 
   .indicator {

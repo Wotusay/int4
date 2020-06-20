@@ -8,6 +8,7 @@
   height: 6rem;
   margin-top: 4rem;
   background: linear-gradient(262.97deg, #f3c87a -4.77%, #f49399 90.83%);
+  z-index: 80;
 }
 
 .active {

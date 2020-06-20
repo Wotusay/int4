@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./morningRoom.module.css";
 //import Indicator from "../../Indicator/indicator";
+import Footer from "../../Footer/footer";
 
 const MorningRoom = () => {
   return (
@@ -14,21 +15,60 @@ const MorningRoom = () => {
           </p>
         </div>
 
+        <div className={styles.imgBoxBg}>
+          <picture className={styles.contentRightImg}>
+            <source
+              media="(min-width: 768px)"
+              srcset="/assets/room/morning_room/bullets.png"
+            />
+
+            <source
+              media="(min-width: 320px)"
+              srcset="/assets/room/morning_room/empty.png"
+            />
+            <img
+              style={{ width: "auto" }}
+              src="/assets/room/morning_room/bullets.png"
+              alt="box"
+            />
+          </picture>
+        </div>
+
         <div className={styles.imgBoxYoga}>
-          {/* <Indicator className={styles.indicator} /> */}
-          <img
-            className={styles.imgYoga}
-            src="/assets/room/morning_room/yoga.png"
-            alt="Activities"
-          ></img>
+          <picture className={styles.contentRightImg}>
+            <source
+              media="(min-width: 768px)"
+              srcset="/assets/room/morning_room/yoga_desktop.png"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="/assets/room/morning_room/yoga_mobile.png"
+            />
+            <img
+              style={{ width: "auto" }}
+              src="/assets/room/morning_room/yoga_desktop.png"
+              alt="box"
+            />{" "}
+          </picture>
         </div>
         <div className={styles.imgBoxGuitar}>
-          <img
-            className={styles.imgGuitar}
-            src="/assets/room/morning_room/guitar.png"
-            alt="Activities"
-          ></img>
+          <picture className={styles.contentRightImg}>
+            <source
+              media="(min-width: 768px)"
+              srcset="/assets/room/morning_room/guitar_desktop.png"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="/assets/room/morning_room/guitar_mobile.png"
+            />
+            <img
+              style={{ width: "auto" }}
+              src="/assets/room/morning_room/guitar_desktop.png"
+              alt="box"
+            />{" "}
+          </picture>
         </div>
+        <Footer />
       </div>
     </>
   );

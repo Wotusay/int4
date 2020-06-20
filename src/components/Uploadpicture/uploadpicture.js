@@ -11,8 +11,6 @@ const UploadPicture = () => {
         <div className={styles.dashboard}>  
         <BackBlack/>
           <div className={styles.content}>
-            
-            <div className={styles.contentIntro}>
               <p className={styles.title}>
                 Proficiat Eva & Mathias!
               </p>
@@ -25,6 +23,7 @@ const UploadPicture = () => {
                 </p>
 
                     <form className={styles.form}>
+                        <button className={styles.upload}>Upload hier je foto</button>
                         <input className={styles.input} type="file" />
                     </form>
 
@@ -36,7 +35,6 @@ const UploadPicture = () => {
                     Volgende Stap
                     </Link>
                 </div>
-            </div>
           </div>
           <Footer />
         </div>

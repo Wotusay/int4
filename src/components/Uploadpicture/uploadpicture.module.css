@@ -3,83 +3,80 @@
     grid-template-columns: 100vw;
     grid-template-rows: 10rem 1fr;
     background: linear-gradient(262.97deg, #f3c87a -4.77%, #f49399 90.83%);
+    font-family: 'Muli';
   }
-  
+
   .content {
     grid-row: 2;
     background-color: white;
     padding: 3rem;
-  }
-  
-  .contentIntro {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1.5rem;
-  }
-  
-  .contentTitle {
-    margin-top: 2rem;
-    color: black;
-    font-family: Muli, sans-serif;
-    font-size: 3rem;
-    text-align: left;
-  }
-  
-  .contentText {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    text-align: left;
-  }
-  
-  .imgButtonWrapper {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .imgWrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 2rem;
-    padding-bottom: 3rem;
-  }
-  
-  .imgBox {
     display: grid;
-    grid-template-rows: 1fr 6rem;
+    grid-template-rows: 8rem 6rem 4rem 33rem;
+    justify-content: center;
+    height: 100vh;
   }
-  
-  .img {
-    justify-self: center;
-    align-self: flex-end;
-  }
-  .imgButton {
-    margin-top: 2rem;
-    border: 0.2rem solid black;
-    width: 20rem;
-    height: 4rem;
-    background-color: transparent;
-  }
-  
-  
-  
-  @media only screen and (min-width: 768px) {
-    .imgWrapper {
+
+  .title {
+      font-size: 4.8rem;
       display: flex;
-      justify-content: space-evenly;
-      flex-direction: row;
-      margin-top: 2rem;
-    }
-  
-    .dashboard {
-      display: grid;
-      grid-template-columns: 100vw;
-      grid-template-rows: 10rem 1fr 1fr;
-      height: 100vh;
-    }
-    .content {
-      height: 80vh;
-    }
+      justify-content: center;
+      font-weight: bold;
+
   }
-  
+
+  .info {
+      font-size: 2.4rem;
+      display: flex;
+      justify-content: center;
+      width: 70rem;
+      text-align: center;
+      
+  }
+
+  .subtitle {
+      font-size: 3.4rem;
+      color: #EF5951;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+  }
+
+
+  .button_right {
+      text-decoration: none;
+  }
+
+  .button_left {
+    text-decoration: none;
+}
+
+    .form {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .input {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    .upload {
+        color: white;
+        background-image: url();
+        border-radius: 21px;
+        border: none;
+        width: 32.5rem;
+        height: 28.7rem;
+        margin-left: 20rem;
+        font-size: 2rem;   
+        font-weight: bold; 
+        padding-top: 23rem;        
+        
+        font-family: 'Muli';
+
+    }

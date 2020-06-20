@@ -19,6 +19,7 @@ import Activities from "./components/Activities/activities";
 import MorningRoom from "./components/Room/MorningRoom/morningRoom";
 import AfternoonRoom from "./components/Room/AfternoonRoom/afternoonRoom";
 import NightRoom from "./components/Room/NightRoom/nightRoom";
+import ActivityDetail from "./components/ActivityDetail/activitydetail";
 function App() {
   const { uiStore } = useStores();
   return useObserver(() => (
@@ -26,8 +27,9 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
-
-
+        <Route exact path={ROUTES.activityDetail.path}>
+          <ActivityDetail/>
+          </Route>
         <Route exact path={ROUTES.activities}>
           <Activities/>
           </Route>

@@ -1,0 +1,86 @@
+.background {
+    background: linear-gradient(238.32deg, #F3C87A 0%, #FFF890 94.44%);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
+    overflow: hidden;
+}
+
+.right {
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ z-index: 0;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.contentleft {
+    z-index: 1;
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    font-family: 'Muli';
+    margin-top: 12rem;
+    color: #333333;
+    grid-gap: 1rem;
+
+}
+
+span {
+    font-weight: bold;
+}
+
+.title {
+    font-size: 4.8rem;
+}
+
+.subtitle {
+    font-size: 3.6rem;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+}
+
+.duration {
+    color: #EF4B4B;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.desc {
+    font-size: 24px;
+}
+
+.info {
+    font-size: 24px;
+}
+
+.button_left {
+    background-color: white;
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.9rem;
+    font-weight: bold;
+    padding: 1rem;
+
+}
+
+.button_right { 
+    border: 2px solid #FFFFFF;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.9rem;    
+    padding: 0.8rem;
+
+}
+
+@media only screen and (min-width: 320px) {
+  
+  } 

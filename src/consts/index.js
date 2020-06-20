@@ -12,6 +12,8 @@ const ROUTES = {
   activities: "/activities",
   boxes: { path: "/boxes/:id", to: "/boxes" },
   uploadpicture: "/uploadpicture",
+  activityDetail: { path: "/activitydetail/:id", to: "/activitydetail/" },
+
 };
 
 const mediaQueries = {

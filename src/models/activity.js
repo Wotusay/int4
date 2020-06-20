@@ -2,7 +2,7 @@ import { v4 } from "uuid";
 import { decorate, observable, action } from "mobx";
 
 class Activity {
-    constructor({ id = v4(), store,description , duration, complete = false, title, city, info,boxCode  }) {
+    constructor({ id = v4(), store,description , duration, complete = false, title, city, info,boxCode, pic, time  }) {
         this.id =  id;
         this.store= store;
         this.title= title;
@@ -11,7 +11,9 @@ class Activity {
         this.complete= complete;
         this.city =city;
         this.info = info;
-        this.boxCode =boxCode
+        this.boxCode =boxCode;
+        this.time = time;
+        this.pic = pic
     }
     
     activityDone() {
@@ -34,7 +36,9 @@ const activityConverter = {
         info: activity.info,
         boxCode: activity.boxCode,
         duration: activity.duration,
-        description: activity.description
+        description: activity.description,        
+        time: activity.time,
+        pic: activity.pic
 
       };
     },
@@ -47,8 +51,9 @@ const activityConverter = {
         city: data.city,
         boxCode: data.boxCode,
         duration: data.duration,
-        description: data.description
-
+        description: data.description,  
+        time: data.time,
+        pic: data.pic
       });
     }
   };

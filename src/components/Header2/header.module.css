@@ -38,7 +38,7 @@
   margin-left: 2rem;
   font-size: 1.8rem;
   color: black;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   background-color: white;
   width: 8rem;
   height: 3.5rem;
@@ -49,4 +49,15 @@
   background-color: unset;
   border: 0.2rem solid black;
   color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 6vw 1fr 1fr 6vw;
+    width: 100vw;
+    z-index: 11;
+    height: 10rem;
+  }
 }

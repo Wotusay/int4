@@ -1,6 +1,7 @@
 import React from "react";
 import { useObserver } from "mobx-react-lite";
 import styles from "./dashboard.module.css";
+import Footer from "../Footer/footer";
 
 const Dashboard = () => {
   return useObserver(() => {
@@ -40,18 +41,13 @@ const Dashboard = () => {
                   className={styles.img}
                 ></img>
 
-               
                 <div className={styles.imgButtonWrapper}>
                   <button className={styles.imgButton}>Jullie Fotoboek</button>
                 </div>
               </div>
             </div>
           </div>
-          <div className={styles.footer}>
-            <p className={styles.footerItem}>Activiteiten</p>
-            <p className={styles.active}>Dashboard</p>
-            <p className={styles.footerItem}>Fotoboek</p>
-          </div>
+          <Footer />
         </div>
       </>
     );

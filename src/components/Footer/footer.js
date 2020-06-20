@@ -7,9 +7,11 @@ const Footer = () => {
     return (
       <>
         <div className={styles.footer}>
-          <p className={styles.footerItem}>Activiteiten</p>
-          <p className={styles.active}>Dashboard</p>
-          <p className={styles.footerItem}>Fotoboek</p>
+          <div className={styles.footerWidth}>
+            <p className={styles.footerItem}>Activiteiten</p>
+            <p className={styles.active}>Dashboard</p>
+            <p className={styles.footerItem}>Fotoboek</p>
+          </div>
         </div>
       </>
     );

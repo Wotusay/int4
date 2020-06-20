@@ -9,35 +9,39 @@ class BoxStore {
         this.activities = [];
     }
 
-    onActivitiesChanged =  activities => {
+    onActivitiesChanged = activities => {
         this.addActivities(activities);
-    }
+    };
 
     addActivities = activity => {
         this.activities.push(activity);
         this.rootStore.uiStore.setCurrentActivities(activity);
-    }
+    };
 
     onBoxesChanged = box => {
         this.addBoxes(box)
-    }
+    };
 
     getBoxes = async code => {
         if(code !== undefined) {
         const result = await this.boxService.getBoxWithCode(code);
         this.onBoxesChanged(result);
         }
-      };
+    };
 
-      getActivities = async (time, code) => {
-              const result =  await this.boxService.getBoxActivities('ochtend-activiteiten','3403 - XPD2  - SPA1 - DPE2');
-              this.onActivitiesChanged(result);
-      }
+    getActivities = async (time, code) => {
+            const result =  await this.boxService.getBoxActivities('ochtend-activiteiten','3403 - XPD2  - SPA1 - DPE2');
+            this.onActivitiesChanged(result);
+    };
+
+    getActivitiesById = id => {
+        this.activities.find(activity => activity.id === id);
+    };
 
     addBoxes = async box => {
         this.boxes.push(box);
         this.rootStore.uiStore.setCurrentBox(box);
-    }
+    };
 
 }
 

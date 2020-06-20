@@ -1,0 +1,85 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem 1fr;
+    background: linear-gradient(262.97deg, #f3c87a -4.77%, #f49399 90.83%);
+  }
+  
+  .content {
+    grid-row: 2;
+    background-color: white;
+    padding: 3rem;
+  }
+  
+  .contentIntro {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+  }
+  
+  .contentTitle {
+    margin-top: 2rem;
+    color: black;
+    font-family: Muli, sans-serif;
+    font-size: 3rem;
+    text-align: left;
+  }
+  
+  .contentText {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-align: left;
+  }
+  
+  .imgButtonWrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .imgWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  
+  .imgBox {
+    display: grid;
+    grid-template-rows: 1fr 6rem;
+  }
+  
+  .img {
+    justify-self: center;
+    align-self: flex-end;
+  }
+  .imgButton {
+    margin-top: 2rem;
+    border: 0.2rem solid black;
+    width: 20rem;
+    height: 4rem;
+    background-color: transparent;
+  }
+  
+  
+  
+  @media only screen and (min-width: 768px) {
+    .imgWrapper {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      margin-top: 2rem;
+    }
+  
+    .dashboard {
+      display: grid;
+      grid-template-columns: 100vw;
+      grid-template-rows: 10rem 1fr 1fr;
+      height: 100vh;
+    }
+    .content {
+      height: 80vh;
+    }
+  }
+  

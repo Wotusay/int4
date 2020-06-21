@@ -5,7 +5,6 @@ import Picture from "../Picture/picture";
 import styles from "./photobook.module.css";
 import { ROUTES } from "../../consts";
 import { Link } from "react-router-dom";
-import Back from "../Back/back";
 import Footer from "../Footer/footer";
 //import { storage } from "../../services/FirebaseService";
 

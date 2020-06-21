@@ -57,7 +57,7 @@ const PizzaConfigurator = () => {
               <button className={styles.button}>Ananas</button>
             </div>
           </div>
-          <img className={styles.pizza} src="/assets/pizza/pizza.png"></img>
+          <img alt="Pizza" className={styles.pizza} src="/assets/pizza/pizza.png"></img>
         </div>
       </div>
     </>

@@ -10,7 +10,7 @@
 }
 
 .titleWrapper {
-    grid-column: 2;
+  grid-column: 2;
 }
 
 .title {
@@ -36,6 +36,7 @@
   position: relative;
   grid-column: 3 / span 4;
   margin-top: 3rem;
+  justify-self: flex-end;
 }
 
 .planepic {
@@ -43,445 +44,428 @@
 }
 
 .box {
-    grid-template-columns: 10% 1fr 1fr 10%;
-    grid-template-rows: 20rem 50rem ;
-    display: grid;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    color: white;
-    grid-column-gap: 6rem;
-    margin-bottom: 3rem;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-rows: 20rem 50rem;
+  display: grid;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  color: white;
+  grid-column-gap: 6rem;
+  margin-bottom: 3rem;
 }
 
-
-
-
 .title_white {
-    font-family: "Playfair Display", serif;
-    font-style: normal;
-    color: white;
-    font-weight: 800;
-    grid-column: 2 / span 3;
-    display: flex;
-    justify-content: center;
-    align-self: center;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  color: white;
+  font-weight: 800;
+  grid-column: 2 / span 3;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 .stackedbox {
-    display: grid;
-    grid-gap: 1rem;
-    justify-content: center;
-    align-content: center;
+  display: grid;
+  grid-gap: 1rem;
+  justify-content: center;
+  align-content: center;
 }
 
 .quiz {
-    display: grid;
-    grid-gap: 1rem;
-    justify-content: center;
-    align-content: center;
+  display: grid;
+  grid-gap: 1rem;
+  justify-content: center;
+  align-content: center;
 }
 
 .action {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-
 .button1 {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 2rem;
-    font-size: 1.8rem;
-    color: black;
-    font-family: 'Muli', sans-serif;
-    background-color: white;
-    border: 0.2rem solid transparent;
-    width: 15.3rem;
-    height: 4.2rem;
-    margin-left: 25rem ;
-    margin-top: 1rem ;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  color: black;
+  font-family: "Muli", sans-serif;
+  background-color: white;
+  border: 0.2rem solid transparent;
+  width: 15.3rem;
+  height: 4.2rem;
+  margin-left: 25rem;
+  margin-top: 1rem;
 
-    transition: ease-in-out 0.2s;
-  }
-  
-  .button1:hover {
-    background-color: unset;
-    border: 0.2rem solid black;
-    color: black;
-  }
+  transition: ease-in-out 0.2s;
+}
 
+.button1:hover {
+  background-color: unset;
+  border: 0.2rem solid black;
+  color: black;
+}
 
 .button2 {
-    text-decoration: none;
-    display: flex;
-    margin-top: 2rem ;
-    align-items: center;
-    justify-content: center;
-    margin-left: 2rem;
-    font-size: 1.8rem;
-    color: black;
-    font-family: 'Muli', sans-serif;
-    background-color: white;
-    border: 0.2rem solid transparent;
-    width: 15.3rem;
-    height: 4.2rem;
-    margin-left: 19rem ;
-    transition: ease-in-out 0.2s;
-  }
-  
-  .button2:hover {
-    background-color: unset;
-    border: 0.2rem solid black;
-    color: black;
+  text-decoration: none;
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  color: black;
+  font-family: "Muli", sans-serif;
+  background-color: white;
+  border: 0.2rem solid transparent;
+  width: 15.3rem;
+  height: 4.2rem;
+  margin-left: 19rem;
+  transition: ease-in-out 0.2s;
+}
+
+.button2:hover {
+  background-color: unset;
+  border: 0.2rem solid black;
+  color: black;
+}
+
+.subtitle {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 36px;
+  color: #211f1f;
+}
+
+.text {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: normal;
+  padding-top: 2rem;
+  color: #211f1f;
+}
+
+.gridpatern {
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-rows: 15% 1fr 10%;
+  justify-content: center;
+}
+
+.whatWrapper {
+  grid-column: 2;
+}
+
+.pic1 {
+  position: absolute;
+  right: -17rem;
+}
+
+.pic2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.relativePos {
+  position: relative;
+  width: 75.1rem;
+  height: 71.9rem;
+}
+
+.gridpos {
+  grid-column: 3;
+  grid-row: 2;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.reviewtittle {
+  grid-column: 2 / span 3;
+  display: flex;
+  justify-content: center;
+  font-family: Muli;
+  font-style: normal;
+  font-weight: 900;
+  margin-bottom: 15rem;
+  font-size: 3.6rem;
+}
+
+.gridpatern_reviewers {
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-rows: 15% 1fr 10%;
+  margin-left: -10rem;
+  justify-content: space-between;
+  margin-top: 17rem;
+  margin-bottom: 5rem;
+}
+
+.reviewers {
+  grid-column: 2 / span 3;
+  display: grid;
+  grid-gap: 5em;
+  justify-content: center;
+  grid-template-columns: repeat(3, 40rem);
+}
+
+.reviewpattern {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 25rem 8rem 3rem;
+}
+
+.text_rev {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  width: 35.5rem;
+  padding-top: 2rem;
+  color: #211f1f;
+}
+
+@media only screen and (min-width: 320px) {
+  .title {
+    font-size: 3.8rem;
+    width: 18.8rem;
+    margin-top: 3.1rem;
+    font-size: 2.4rem;
   }
 
-  .subtitle {
-    font-family: 'Muli';
-    font-style: normal;
-    font-weight: bolder;
-    font-size: 36px;
-    color: #211F1F;
+  .titleWrapper {
+    z-index: 1;
   }
 
-  .text {
-    font-family: 'Muli';
-    font-style: normal;
-    font-weight: normal;
-    padding-top: 2rem;
-    color: #211F1F;
+  .desc {
+    font-size: 1.6rem;
+    z-index: 10;
+    width: 18rem;
+    margin-top: 3.6rem;
   }
 
-  .gridpatern {
+  .planepic {
+    position: relative;
+    grid-column: 2 / span 3;
+    grid-row: 1;
+    justify-self: flex-end;
+  }
+
+
+  .landing {
+    margin-top: unset;
     display: grid;
-    grid-template-columns: 10% 1fr 1fr 10%;
-    grid-template-rows: 15% 1fr 10%;
     justify-content: center;
-  }
-  
-  .whatWrapper{ 
-      grid-column: 2;
+    grid-template-columns: 5vw 1fr 1fr 5vw;
+    grid-template-rows: 15% 1fr 10%;
+    margin-bottom: 10rem;
   }
 
+  .title_white {
+    margin-left: -4rem;
+    margin-top: 18rem;
+    font-size: 2.4rem;
+  }
+
+  .box {
+    background-image: url("/assets/background-mobile.svg");
+    height: 100rem;
+
+    font-size: 1.6rem;
+    grid-column-gap: 1rem;
+  }
+
+  .stackedbox {
+    grid-column: 2 / span 3;
+    margin-top: -8rem;
+  }
+
+  .quiz {
+    grid-column: 2 / span 3;
+    margin-top: -17rem;
+  }
+
+  .button1 {
+    margin-left: 7rem;
+  }
+  .button2 {
+    margin-left: 5rem;
+  }
+
+  .relativePos {
+    width: 30.1rem;
+    height: 33.7rem;
+    grid-row: 2;
+    grid-column: 2 / span 3;
+  }
+
+  .whatWrapper {
+    grid-column: 2 / span 3;
+    margin-top: 5rem;
+  }
+  .text {
+    font-size: 16px;
+    width: 26.3rem;
+  }
+
+  .pic1 {
+    right: unset;
+    top: 30rem;
+  }
+
+  .pic2 {
+    grid-row: 3;
+    margin-top: -6rem;
+  }
+
+  .gridpos {
+    margin-top: -11rem;
+  }
+
+  .gridpatern_reviewers {
+    margin-top: 29rem;
+    margin-left: -2rem;
+  }
+  .reviewtittle {
+    margin-bottom: unset;
+    font-size: 2.5rem;
+  }
+
+  .reviewers {
+    grid-template-rows: repeat(3, 37rem);
+    grid-template-columns: unset;
+    grid-gap: unset;
+  }
+
+  .reviewpattern {
+    grid-template-rows: 18rem 6rem 2rem;
+    margin-top: -11rem;
+  }
+
+  .text_rev {
+    font-size: 16px;
+    width: unset;
+    padding-top: unset;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .stars {
+    margin-left: 10rem;
+  }
+
+  .text_rev {
+    padding-top: 2rem;
+
+    font-size: 18px;
+    width: 35.5rem;
+  }
+
+  .reviewpattern {
+    grid-template-rows: 25rem 8rem 3rem;
+    margin-top: unset;
+  }
+
+  .reviewers {
+    grid-gap: 5rem;
+
+    grid-template-rows: unset;
+    grid-template-columns: repeat(3, 40rem);
+  }
+
+  .reviewtittle {
+    margin-bottom: 15rem;
+    font-size: 3.6rem;
+  }
+
+  .gridpatern_reviewers {
+    margin-top: 17rem;
+    margin-left: -10rem;
+  }
+
+  .gridpos {
+    margin-top: unset;
+  }
+
+  .pic2 {
+    grid-row: 2;
+    margin-top: unset;
+  }
 
   .pic1 {
     position: absolute;
     right: -17rem;
+    top: unset;
   }
 
-  .pic2 {
-    grid-column: 1;
-    grid-row: 2;
+  .title {
+    font-size: 8.5rem;
+  }
+  .planepic {
+    left: -13.9rem;
+  }
 
-}
+  .desc {
+    font-size: 3.8rem;
+    width: 50.9rem;
+    margin-top: 3.1rem;
+  }
 
-.relativePos {
-    position: relative;
+  .landing {
+    margin-top: 3rem;
+    margin-bottom: 33rem;
+  }
+  .title_white {
+    margin-left: -20rem;
+    margin-top: 16rem;
+    font-size: 8.5rem;
+  }
+
+  .whatWrapper {
+    margin-top: 10rem;
+    grid-column: 2;
+  }
+  .box {
+    background-image: url("/assets/background.svg");
+
+    height: 92.2rem;
+
+    font-size: 2rem;
+    grid-column-gap: 6rem;
+  }
+  .stackedbox {
+    grid-column: 2;
+    margin-top: unset;
+  }
+
+  .quiz {
+    grid-column: auto;
+    margin-top: unset;
+  }
+
+  .relativePos {
     width: 75.1rem;
     height: 71.9rem;
-}
 
-.gridpos {
-    grid-column: 3;
-    grid-row: 2;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-}
+    grid-row: unset;
+    grid-column: unset;
+  }
 
-.reviewtittle{
-    grid-column: 2 / span 3;
-    display: flex;
-    justify-content: center;
-    font-family: Muli;
-    font-style: normal;
-    font-weight: 900;
-    margin-bottom: 15rem;
-    font-size: 3.6rem;
+  .button1 {
+    margin-left: 25rem;
+  }
 
-}
+  .button2 {
+    margin-left: 19rem;
+  }
 
-.gridpatern_reviewers{ 
-    display: grid;
-    grid-template-columns: 10% 1fr 1fr 10%;
-    grid-template-rows: 15% 1fr 10%;
-    margin-left: -10rem;
-    justify-content: space-between;
-    margin-top: 17rem;
-    margin-bottom: 5rem;
-}
-
-.reviewers {
-    grid-column: 2 / span 3;
-    display: grid;
-    grid-gap: 5em;
-    justify-content: center;
-    grid-template-columns: repeat(3, 40rem);
-}
-
-.reviewpattern {
-    display: grid;
-    justify-content: center;
-    grid-template-rows: 25rem 8rem 3rem;
-}
-
-.text_rev {
-    font-family: 'Muli';
-    font-style: normal;
-    font-weight: normal;
+  .text {
     font-size: 18px;
-    width: 35.5rem;
-    padding-top: 2rem;
-    color: #211F1F;
+    width: 51.5rem;
+  }
 }
-
-@media only screen and (min-width: 320px) {
-    .title {
-        font-size: 3.8rem;
-        width: 18.8rem;
-        margin-top: 3.1rem;
-        font-size: 2.4rem;
-      }
-
-
-      .titleWrapper {
-          z-index: 1;
-      }
-
-      .desc {
-        font-size: 1.6rem;
-        z-index: 10;
-        width: 18rem;
-        margin-top: 3.6rem;
-      }
-
-      .planepic {
-        top: 1rem;
-        left: -18.9rem;
-      }
-
-      .landing {
-        margin-top: unset;
-
-        margin-bottom: 10rem;
-      }
-
-      .title_white {
-        margin-left: -4rem;
-        margin-top: 18rem;
-        font-size: 2.4rem;
-    }
-
-    .box {
-    background-image: url('/assets/background-mobile.svg');
-    height: 100rem;
-    
-    font-size: 1.6rem;
-    grid-column-gap: 1rem;
-    }
-
-    .stackedbox {
-        grid-column: 2 / span 3;
-        margin-top: -8rem;
-    }
-
-    .quiz {
-        grid-column: 2 / span 3;
-        margin-top: -17rem;
-
-    }
-
-    .button1 {
-        margin-left: 7rem;
-    }
-    .button2 {
-        margin-left: 5rem ; 
-    }
-
-    .relativePos {
-        width: 30.1rem;
-        height: 33.7rem;
-        grid-row: 2;
-        grid-column: 2 / span 3;
-    }
-
-    .whatWrapper {
-        grid-column: 2  / span 3;
-        margin-top: 5rem;
-    }
-    .text {
-        font-size: 16px;
-        width: 26.3rem;      
-    }
-
-    .pic1 {
-        right: unset;
-        top: 30rem;
-    }
-    
-    .pic2 {
-        grid-row: 3;
-        margin-top: -6rem;
-    }
-
-    .gridpos {
-        margin-top: -11rem;
-    }
-
-    .gridpatern_reviewers {
-        margin-top: 29rem;        
-        margin-left: -2rem;
-
-    }
-    .reviewtittle {
-        margin-bottom: unset;
-        font-size: 2.5rem;
-    }
-
-    .reviewers {
-        grid-template-rows: repeat(3, 37rem);
-        grid-template-columns: unset;
-        grid-gap: unset;
-
-    }
-
-    .reviewpattern {
-        grid-template-rows: 18rem 6rem 2rem;
-        margin-top: -11rem;
-    
-    }
-
-    .text_rev {
-        font-size: 16px;
-        width: unset;
-        padding-top: unset;
-
-    }
-} 
-
-@media only screen and (min-width: 1440px) {
-    .stars {
-        margin-left: 10rem;
-    }  
-
-    .text_rev {
-        padding-top: 2rem;
-
-        font-size: 18px;
-        width: 35.5rem;
-    }
-
-    .reviewpattern {
-        grid-template-rows: 25rem 8rem 3rem;
-        margin-top: unset;
-
-    }
-
-    .reviewers {
-        grid-gap: 5rem;
-
-        grid-template-rows: unset;
-        grid-template-columns: repeat(3, 40rem);
-    }
-
-    .reviewtittle {
-        margin-bottom: 15rem;
-        font-size: 3.6rem;
-    }
-
-    .gridpatern_reviewers {
-        margin-top: 17rem;
-        margin-left: -10rem;
-    }
-
-    .gridpos {
-        margin-top: unset;
-    }
-
-    .pic2 {
-        grid-row: 2;
-        margin-top: unset;
-
-    }
-
-    .pic1{
-        position: absolute;
-        right: -17rem;
-        top: unset;
-
-    }
-
-    .title {
-        font-size: 8.5rem;
-      }
-      .planepic {
-        left: -13.9rem;
-    }
-
-      .desc {
-        font-size: 3.8rem;
-        width: 50.9rem;
-        margin-top: 3.1rem;
-      }
-
-      .landing {
-        margin-top: 3rem;
-        margin-bottom: 33rem;
-      }
-      .title_white {
-        margin-left: -20rem;
-        margin-top: 16rem;        
-        font-size: 8.5rem;
-    }
-
-    
-    
-    .whatWrapper {
-        margin-top: 10rem;
-        grid-column: 2;
-    }
-    .box {
-
-        background-image: url('/assets/background.svg');
-
-        height: 92.2rem;
-    
-        font-size: 2rem;
-        grid-column-gap: 6rem;
-
-    }
-    .stackedbox {
-        grid-column: 2 ;
-        margin-top: unset;
-    }
-
-    .quiz {
-        grid-column: auto;
-        margin-top: unset;
-
-    }
-    
-    .relativePos {
-        width: 75.1rem;
-         height: 71.9rem;
-
-         grid-row: unset;
-         grid-column:unset;
-    }
-
-    .button1 {
-        margin-left: 25rem ;
-
-    }
-
-    .button2 {
-        margin-left: 19rem ; 
-    }
-
-    .text {
-        font-size: 18px;
-        width: 51.5rem;
-      }
-} 

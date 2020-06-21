@@ -1,62 +1,173 @@
-.grid {
+.dashboard {
     display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem 1fr;
+    background: linear-gradient(262.97deg, #f3c87a -4.77%, #f49399 90.83%);
+    font-family: 'Muli';
+  }
+
+  .content {
+    grid-row: 2;
+    background-color: white;
+    padding: 3rem;
+    display: grid;
+    grid-template-rows: 8rem 33rem 4rem;
     justify-content: center;
-    align-content: center;
-    color: #000000;
+    grid-gap: 2rem;
+    height: 90vh;
+    overflow: auto;
+  }
 
+  .subtitle {
+      font-size: 3.4rem;
+      color: #EF5951;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+  }
+
+
+  .button_right {
+      text-decoration: none;
+      color: white;
+      font-size: 1.9rem;
+      padding: 1rem;
+      font-weight: bold;
+      background-color: #211F1F;
+  }
+
+  .button_left {
+      color: #211F1F;
+      font-size: 1.9rem;
+      border: solid 2px #211F1F;
+      padding: 1rem;
+      font-weight: bold;
+    text-decoration: none;
 }
 
-.return {
-    padding: 2rem;
-}
-
-.back:hover{
-    color: salmon;
-}
-
-.text {
-    width:30rem;
-    padding: 1rem;
-}
-
-.title {
-   display: flex;
-   justify-content: center;
-}
-
-@media only screen and (min-width: 320px) {
-    .grid {
-        padding: 1rem;
-        grid-gap: 1rem;
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
     }
 
-    .title {
-        font-size: 2rem;
+    .input {
+        padding-top: 1rem;
+        border: none;
+        border-bottom: solid 1px #F3C87A;
+        font-size: 1.9rem;
+        font-family: 'Muli';
+        width: 36rem;
+        margin-left: 4rem;
+        background-color: transparent;
     }
 
-    .text {
-        width: unset;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .grid {
-        grid-template-rows: 3rem 1fr 2rem;
-        padding: 1rem;
+    .img {
+        border-radius: 5rem;
+        margin-left: 2rem;
+        border: solid 7px #f3c87a;
+        box-shadow: 7px 8px 16px rgba(0, 0, 0, 0.25);
     }
 
-    .title{ 
-        font-size: 3rem;
+
+    @media only screen and (min-width: 320px) {
+        .content {
+            grid-template-rows: 3rem 30rem 4rem;
+            height: 53rem;
+            padding-top: 7rem;
+            margin-bottom: 7rem;
+          }
+
+        .buttons {
+            display: grid;
+            justify-content: center;
+        }
+
+        .button_right {
+            display: flex;
+            justify-content: center;
+            font-size: 1.6rem;
+            padding: 1rem;
+            grid-row: 1;
+
+        }
+      
+        .button_left {
+            font-size: 1.6rem;
+            display: flex;
+            justify-content: center;
+            border: solid 2px #211F1F;
+            padding: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.8rem;
+    }
+
+    .input {
+        padding-top: 1rem;
+        font-size: 1.6rem;
+        width: 28.6rem;
+        margin-left: 1rem;
 
     }
 
-    .text {
-        width:30rem;
-        padding: 1rem;
+    .img {
+        border-radius: 5rem;
+        margin-left: 1rem;
+        border: solid 7px #f3c87a;
+        width: 28.2rem;
+        height: 22.6rem;
+    }
+      }
+
+
+
+    @media only screen and (min-width: 1440px) {
+        .content {
+            grid-template-rows: 3rem 42rem 4rem;
+            height: 90vh;
+            padding-top: 13rem;
+            grid-gap: 3rem;
+            margin-bottom: unset;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .subtitle {
+            font-size: 3.4rem;
+        }
+
+        .button_right {
+            grid-row: unset;
+            font-size: 1.9rem;
+            padding: 1rem;
+   
+        }
+      
+        .button_left {
+            font-size: 1.9rem;
+            border: solid 2px #211F1F;
+            padding: 1rem;
+   
+      }
+
+      .input {
+        padding-top: 1rem;
+        font-size: 1.9rem;
+        width: 36rem;
+        margin-left: 2rem;
+
     }
 
-}
-
-@media only screen and (min-width: 1440px) {
-
-}
+    .img {
+        border-radius: 5rem;
+        margin-left: 1rem;
+        border: solid 7px #f3c87a;
+        width: 41.2rem;
+        height: 36.3rem;
+    }
+    }

@@ -1,44 +1,51 @@
 import React from "react";
-import { useStores } from "../../hooks";
-import { useParams } from "react-router-dom";
+//import { useStores } from "../../hooks";
+import {  Link } from "react-router-dom";
 import styles from "./picturedetail.module.css";
 
 import { useObserver } from "mobx-react-lite";
-import Back from "../Back/back";
-import MediaQuery from "react-responsive";
-import { mediaQueries } from "../../consts";
+
+import Footer from "../Footer/footer";
+import BackBlack from "../BackBlack/backblack";
 
 
 
 const PicturesDetail = () => {
-    const {id} = useParams();
-    const {pictureStore} = useStores();
+    //const {id} = useParams();
+    //const {pictureStore} = useStores();
     return useObserver(() => {
-        const picture = pictureStore.resolvePicture(id);
-        if (!picture) return <p>Loading ...</p>;
+       // const picture = pictureStore.resolvePicture(id);
+        //if (!picture) return <p>Loading ...</p>;
     ;
 
 
 
     return (
 <>
-
-        <section className={styles.return}>
-        <Back/>
- 
-        <div className={styles.grid}>
-            <h2 className={styles.title}>
+    <div className={styles.dashboard}>  
+        <BackBlack/>
+          <div className={styles.content}>
+                <p className={styles.subtitle}>
                 Activiteit naam
-            </h2>       
-            <MediaQuery maxDeviceWidth={mediaQueries.tablet} >
-                <img className={styles.pic} width="294" height="183" src={picture.urls.regular} alt={picture.alt_description}/>
-            </MediaQuery>
-            <MediaQuery maxDeviceWidth={mediaQueries.desktop} minDeviceWidth={mediaQueries.tablet+1}>
-                <img className={styles.pic} width="718.18" height="363.35" src={picture.urls.regular} alt={picture.alt_description}/>
-            </MediaQuery>
-     
-            <p className={styles.text}> {picture.alt_description} </p> 
-        </div> </section>
+                </p>
+                <div className={styles.pic}>
+                    <img alt="placeholder" className={styles.img} src='/assets/img-placeholder.png' />
+                    <form >
+                        <input className={styles.input} value="Romantisch avondje" type='text' placeholder="Schrijf hier een korte beschrijving ..." />
+                    </form>
+                </div>
+                <div className={styles.buttons}>                    
+                <Link className={styles.button_right}>
+                    Downloaden
+                    </Link>
+                    <Link className={styles.button_left}>
+                    Verwijderen
+                    </Link>
+
+                </div>
+          </div>
+        </div>
+        <Footer/>
         </>
     )
         

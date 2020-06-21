@@ -1,11 +1,16 @@
 import React from "react";
 import styles from "./afternoonRoom.module.css";
 import Indicator from "../../Indicator/indicator";
+import Back from "../../Back/back";
 
 const AfternoonRoom = () => {
   return (
     <>
       <div className={styles.room}>
+        <div className={styles.back}>
+          <Back />
+        </div>
+
         <div className={styles.contentIntro}>
           <h1 className={styles.contentTitle}>
             Goedemorgen <span>Eva & Mathias!</span>{" "}
@@ -17,7 +22,7 @@ const AfternoonRoom = () => {
         </div>
 
         <div className={styles.imgBoxBg}>
-          <picture className={styles.contentRightImg}>
+          <picture >
             <source
               media="(min-width: 768px)"
               srcset="/assets/room/afternoon_room/background.png"
@@ -34,11 +39,11 @@ const AfternoonRoom = () => {
             />
           </picture>
         </div>
-        {/* <div className={styles.indicator}>
-          <Indicator />
-        </div> */}
 
         <div className={styles.imgBoxPizza}>
+          <div className={styles.indicatorPizza}>
+            <Indicator />
+          </div>
           <picture>
             <source
               media="(min-width: 768px)"
@@ -46,7 +51,7 @@ const AfternoonRoom = () => {
             />
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/morning_room/yoga_mobile.png"
+              srcset="/assets/room/afternoon_room/pizza_mobile.png"
             />
             <img
               style={{ width: "auto" }}
@@ -56,6 +61,9 @@ const AfternoonRoom = () => {
           </picture>
         </div>
         <div className={styles.imgBoxWalk}>
+          <div className={styles.indicatorWalk}>
+            <Indicator />
+          </div>
           <picture>
             <source
               media="(min-width: 768px)"
@@ -63,7 +71,7 @@ const AfternoonRoom = () => {
             />
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/morning_room/guitar_mobile.png"
+              srcset="/assets/room/afternoon_room/walk_mobile.png"
             />
             <img
               style={{ width: "auto" }}
@@ -74,6 +82,9 @@ const AfternoonRoom = () => {
         </div>
 
         <div className={styles.imgBoxJenga}>
+          <div className={styles.indicatorJenga}>
+            <Indicator />
+          </div>
           <picture>
             <source
               media="(min-width: 768px)"
@@ -81,7 +92,7 @@ const AfternoonRoom = () => {
             />
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/morning_room/guitar_mobile.png"
+              srcset="/assets/room/afternoon_room/jenga_mobile.png"
             />
             <img
               style={{ width: "auto" }}

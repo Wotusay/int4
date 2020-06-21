@@ -12,7 +12,7 @@ const Login = () => {
     uiStore.setCurrentCode(code);
     e.preventDefault();
     uiStore.login();
-    if(code !== '3403 - XPD2  - SPA1 - DPE2' || code !== '6056 - XPD3  - SPA4 - DPE9' || code !== '8737 - XPD4  - SPB4 - D3RP') {
+    if(code !== '3403 - XPD2 - SPA1 - DPE2' || code !== '6056 - XPD3 - SPA4 - DPE9' || code !== '8737 - XPD4 - SPB4 - D3RP') {
       setBadCode('Verkeerde code');
       console.log('bad code');
     }
@@ -31,7 +31,7 @@ const Login = () => {
             value={code}
             type="text"
             className={styles.loginInput}
-            placeholder="3403 - XPD2  - SPA1 - DPE2"
+            placeholder="3403 - XPD2 - SPA1 - DPE2"
             onChange={(e) => setCode(e.currentTarget.value)}
           ></input>
           <div className={styles.loginButtonWrapper}>

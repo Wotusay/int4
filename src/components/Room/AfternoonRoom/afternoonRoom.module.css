@@ -5,16 +5,23 @@
   background: linear-gradient(220deg, #f3c87a 0%, #f49399 100%);
 }
 
+.back {
+  position: absolute;
+  grid-row: 1;
+  grid-column: 2;
+}
+
 .contentIntro {
   display: flex;
   flex-direction: column;
   margin-left: 1.5rem;
   grid-row: 2;
+  margin-top: 4rem;
 }
 
 .contentTitle {
   margin-top: 2rem;
-  color: black;
+  color: #211f1f;
   font-family: Muli, sans-serif;
   font-size: 3rem;
   text-align: left;
@@ -25,28 +32,54 @@
   font-size: 1.5rem;
   font-weight: lighter;
   text-align: left;
-}
-
-.imgBox {
-  display: grid;
-  grid-template-rows: 1fr;
-  overflow: hidden;
+  color: #211f1f;
 }
 
 .imgBoxPizza {
-  grid-row: 6;
+  grid-row: 3;
   overflow: hidden;
   justify-self: flex-end;
+  align-self: flex-start;
 }
+
+.indicatorPizza {
+  z-index: 5;
+  position: relative;
+  top: 25rem;
+  right: 3rem;
+}
+
 .imgBoxWalk {
+  overflow: hidden;
+  align-self: flex-start;
 }
-.imgGuitar {
+
+.indicatorWalk {
+  z-index: 5;
+  position: relative;
+  top: 16rem;
+}
+
+.imgBoxJenga {
+  right: 10rem;
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+.indicatorJenga {
+  z-index: 5;
+  position: relative;
+  top: 20rem;
+  left: 5rem;
+}
+
+.imgWalk {
   justify-self: flex-start;
   align-self: flex-end;
   overflow: hidden;
 }
 
-.imgYoga {
+.imgJenga {
   justify-self: flex-end;
   align-self: flex-end;
   overflow: hidden;
@@ -59,10 +92,6 @@
   width: 20rem;
   height: 4rem;
   background-color: transparent;
-}
-
-.indicator {
-  grid-row: 2;
 }
 
 .footer {
@@ -106,7 +135,7 @@
   }
 
   .contentTitle {
-    color: black;
+    color: #211F1F;
     font-family: Muli, sans-serif;
     font-size: 5rem;
     text-align: left;
@@ -117,19 +146,20 @@
     font-size: 2rem;
     font-weight: lighter;
     text-align: left;
+    color: #211F1F;
+    font-family: Muli, sans-serif;
   }
 
   .imgBoxBg {
-    grid-row: 8;
-    grid-column: 5;
+    grid-row: 10 / span 20;
+    grid-column: 5 / span 30;
     z-index: 1;
-    position: absolute;
+    position: relative;
     overflow: hidden;
-    justify-self: normal;
   }
 
   .imgBoxPizza {
-    grid-row: 6;
+    grid-row: 7;
     grid-column: 3;
     z-index: 2;
     transform: translateX(-10rem);
@@ -139,28 +169,43 @@
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
   }
+
+  .indicatorPizza {
+    z-index: 5;
+    position: relative;
+    top: 25rem;
+    right: 3rem;
+  }
+
   .imgBoxWalk {
-    grid-row: 10;
+    grid-row: 9;
     z-index: 2;
     grid-column: 8;
     position: absolute;
     overflow: hidden;
   }
 
+  .indicatorWalk {
+    z-index: 5;
+    position: relative;
+    top: 16rem;
+  }
+
   .imgBoxJenga {
     grid-row: 8;
     z-index: 2;
-    grid-column: 14;
+    grid-column: 17;
     position: absolute;
     overflow: hidden;
     justify-self: flex-end;
     align-self: flex-end;
+    right: 0rem;
   }
 
-  .indicator {
+  .indicatorJenga {
     z-index: 5;
     position: relative;
-    grid-row: 15;
-    grid-column: 2;
+    top: 26rem;
+    left: 5rem;
   }
 }

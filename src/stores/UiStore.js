@@ -17,18 +17,18 @@ class UiStore {
     this.empty();
   };
 
-  setCurrentBox = (box) => {
+  setCurrentBox = box => {
     this.currentBox = box;
   };
 
-  setCurrentCode = async (code) => {
+  setCurrentCode = async code => {
     this.currentCode = code;
     await this.searchWithCode(code);
     //dit komt uit de database
     //stringfy het element anders lukt het niet hij heeft het mee als een []
   };
 
-  searchWithCode = async (code) => {
+  searchWithCode = async code => {
     await this.rootStore.boxStore.getBoxes(code);
   };
 

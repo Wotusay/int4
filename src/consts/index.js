@@ -13,6 +13,8 @@ const ROUTES = {
   boxes: { path: "/boxes/:id", to: "/boxes" },
   uploadpicture: "/uploadpicture",
   activityDetail: { path: "/activitydetail/:id", to: "/activitydetail/" },
+  picturePreview: { path: "/picturepreview/:id", to: "/picturepreview/" },
+
 
 };
 

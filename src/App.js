@@ -21,6 +21,7 @@ import AfternoonRoom from "./components/Room/AfternoonRoom/afternoonRoom";
 import NightRoom from "./components/Room/NightRoom/nightRoom";
 import ActivityDetail from "./components/ActivityDetail/activitydetail";
 import UploadPicture from "./components/Uploadpicture/uploadpicture";
+import PicturePreview from "./components/PicturePreview/picturepreview";
 function App() {
   const { uiStore } = useStores();
   return useObserver(() => (
@@ -28,6 +29,9 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
+        <Route exact path={ROUTES.picturePreview.path}>
+          <PicturePreview/>
+          </Route>
         <Route exact path={ROUTES.activityDetail.path}>
           <ActivityDetail/>
           </Route>

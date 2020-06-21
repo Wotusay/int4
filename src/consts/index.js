@@ -1,7 +1,7 @@
 const ROUTES = {
   home: "/",
   pictureDetail: { path: "/pictures/:id", to: "/pictures/" },
-  picturebook: "/picturebook",
+  photobook: "/photobook",
   room: "/room",
   currentbox: "/currentbox",
   login: "/login",

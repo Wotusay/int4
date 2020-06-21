@@ -81,7 +81,7 @@ function App() {
             <CurrentBox />
           </Route>
 
-          <Route exact path={ROUTES.picturebook}>
+          <Route exact path={ROUTES.photobook}>
             <Photobook />
           </Route>
           <Route exact path={ROUTES.dashboard}>

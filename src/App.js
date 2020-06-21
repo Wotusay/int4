@@ -24,6 +24,7 @@ import UploadPicture from "./components/Uploadpicture/uploadpicture";
 import PicturePreview from "./components/PicturePreview/picturepreview";
 import UploadComplete from "./components/Uploadcomplete/uploadcomplete";
 import PizzaConfigurator from "./components/Configurator/configurator";
+import Quiz from "./components/Quiz/quiz";
 
 function App() {
   const { uiStore } = useStores();
@@ -32,6 +33,9 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
+          <Route exact path={ROUTES.quiz}>
+            <Quiz />
+          </Route>
           <Route exact path={ROUTES.pizzaconfigurator}>
             <PizzaConfigurator />
           </Route>

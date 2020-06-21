@@ -6,7 +6,6 @@ import { useStores } from "../../hooks/index";
 import { useObserver } from "mobx-react-lite";
 import MediaQuery from "react-responsive";
 
-
 const Header = () => {
   const { uiStore } = useStores();
   const history = useHistory();
@@ -24,21 +23,38 @@ const Header = () => {
           to={ROUTES.home}
           style={{ textDecoration: "none" }}
         >
-            <MediaQuery maxDeviceWidth={mediaQueries.desktop} minDeviceWidth={mediaQueries.tablet}>
+          <MediaQuery
+            maxDeviceWidth={mediaQueries.desktop}
+            minDeviceWidth={mediaQueries.tablet}
+          >
             <h1 className={styles.logo}>HoneyHome</h1>
-            </MediaQuery>
-            <MediaQuery maxDeviceWidth={mediaQueries.tablet-1}>
+          </MediaQuery>
+          <MediaQuery maxDeviceWidth={mediaQueries.tablet - 1}>
             <h1 className={styles.logo}>H</h1>
-            </MediaQuery>
+          </MediaQuery>
         </Link>
         <div className={styles.nav}>
-          <NavLink  style={{textDecoration: "none"}} activeStyle={{borderBottom: "solid 1px white" }} to={ROUTES.boxes.path} className={styles.navItem}>Boxes</NavLink>
-          <p className={styles.navItem}>Quiz</p>
-          <Link 
+          <NavLink
+            style={{ textDecoration: "none" }}
+            activeStyle={{ borderBottom: "solid 1px white" }}
+            to={ROUTES.boxes.path}
+            className={styles.navItem}
+          >
+            Boxes
+          </NavLink>
+          <Link
+            className={styles.navItem}
+            to={ROUTES.quiz}
+            style={{ textDecoration: "none" }}
+          >
+            <p className={styles.navItem}>Quiz</p>
+          </Link>
+
+          <Link
             onClick={(e) => handleLogin(e)}
             className={styles.login}
             to={ROUTES.login}
-            style={{ textDecoration: "none"}}
+            style={{ textDecoration: "none" }}
           >
             {uiStore.loginState === true ? "Logout" : "Login"}
           </Link>

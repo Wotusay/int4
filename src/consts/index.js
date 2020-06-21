@@ -16,6 +16,7 @@ const ROUTES = {
   picturePreview: { path: "/picturepreview/:id", to: "/picturepreview/" },
   uploadComplete: "/uploadcomplete",
   pizzaconfigurator: "/pizzaconfigurator",
+  quiz: "/quiz",
 };
 
 const mediaQueries = {

@@ -55,7 +55,7 @@
   .header {
     position: absolute;
     display: grid;
-    grid-template-columns: 6vw 1fr 1fr 6vw;
+    grid-template-columns: 5vw 1fr 1fr 5vw;
     width: 100vw;
     z-index: 11;
     height: 10rem;

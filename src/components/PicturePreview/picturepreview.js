@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./picturepreview.module.css"
 import { useObserver } from "mobx-react-lite";
-import Footer from "../Footer/footer";
 import { Link } from "react-router-dom";
 import BackBlack from "../BackBlack/backblack";
 
@@ -14,7 +13,9 @@ const PicturePreview = () => {
                 <p className={styles.subtitle}>
                 Activiteit naam - Foto uploaden
                 </p>
+                <div>
 
+                </div>
                 <div className={styles.buttons}>
                     <Link className={styles.button_left}>
                     Ga terug naar de activiteiten
@@ -24,7 +25,6 @@ const PicturePreview = () => {
                     </Link>
                 </div>
           </div>
-          <Footer />
         </div>
         </>
     ));

@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./uploadpicture.module.css"
 import { useObserver } from "mobx-react-lite";
-import Footer from "../Footer/footer";
 import { Link } from "react-router-dom";
 import BackBlack from "../BackBlack/backblack";
 
@@ -36,7 +35,6 @@ const UploadPicture = () => {
                     </Link>
                 </div>
           </div>
-          <Footer />
         </div>
         </>
     ));

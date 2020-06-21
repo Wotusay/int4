@@ -1,11 +1,12 @@
 import React from "react";
 //import { useStores } from "../../hooks";
 import { useObserver } from "mobx-react-lite";
-//import Picture from "../Picture/picture";
+import Picture from "../Picture/picture";
 import styles from "./photobook.module.css";
-//import { ROUTES } from "../../consts";
-//import { Link } from "react-router-dom";
-//import Back from "../Back/back";
+import { ROUTES } from "../../consts";
+import { Link } from "react-router-dom";
+import Back from "../Back/back";
+import Footer from "../Footer/footer";
 //import { storage } from "../../services/FirebaseService";
 
 const Photobook = () => {
@@ -38,40 +39,51 @@ const Photobook = () => {
   //   );
   // };
 
-  return useObserver(() => (
-    // <section>
-    //   <h1 className={styles.title}>Photobook</h1>
-    //   <Back />
-    //   <ul className={styles.grid}>
-    //     {pictureStore.pictures.map((picture) => (
-    //       <li key={picture.id}>
-    //         <Link to={ROUTES.pictureDetail.to + picture.id}>
-    //           <Picture picture={picture} />
-    //         </Link>
-    //       </li>
-    //     ))}
-    //     <li>
-    //       <input type="file" onChange={handleChange}></input>
-    //       <button onClick={handleUpload}>Upload</button>
-    //       <progress value={progress} max="100"></progress>
-    //     </li>
-    //   </ul>
-    // </section>
-    <>
-      <div className={styles.photobook}>
-        <p className={styles.title}>Photobook</p>
-        <div className={styles.imgWrapper}>
-          <div className={styles.fakeImg}></div>
-          <div className={styles.fakeImg}></div>
-          <div className={styles.fakeImg}></div>
-          <div className={styles.fakeImg}></div>
-          <div className={styles.fakeImg}></div>
-          <div className={styles.fakeImg}></div>
-          <div className={styles.fakeImg}></div>
-          <div className={styles.fakeImg}></div>
-          <div className={styles.fakeImg}></div>
-        </div>
-      </div>
+
+  const picture = {id: 123, pic: '/assets/img-placeholder.png'}
+
+  return useObserver(() => (  
+  <>
+     <section className={styles.dashboard}>
+       <div className={styles.content}> 
+       <p className={styles.title}>Hier zien jullie Fotoboek! </p>
+       <p className={styles.info}>Dit is een overzicht van alle sfeerfoto’s tijdens jullie honeymoon-activiteiten.
+        Klik op een foto om het in detail te zien. </p>
+       <ul className={styles.pics}>
+         <li>
+             <Link to={ROUTES.pictureDetail.to + picture.id}>
+               <Picture picture={picture} />
+             </Link>
+           </li> 
+           <li>
+             <Link to={ROUTES.pictureDetail.to + picture.id}>
+               <Picture picture={picture} />
+             </Link>
+           </li> 
+           <li>
+             <Link to={ROUTES.pictureDetail.to + picture.id}>
+               <Picture picture={picture} />
+             </Link>
+           </li>  <li>
+             <Link to={ROUTES.pictureDetail.to + picture.id}>
+               <Picture picture={picture} />
+             </Link>
+           </li>  <li>
+             <Link to={ROUTES.pictureDetail.to + picture.id}>
+               <Picture picture={picture} />
+             </Link>
+           </li>  <li>
+             <Link to={ROUTES.pictureDetail.to + picture.id}>
+               <Picture picture={picture} />
+             </Link>
+           </li> 
+       </ul>    
+
+         </div> 
+         <Footer/>
+     </section>
+    
+
     </>
   ));
 };

@@ -11,7 +11,7 @@
     background-color: white;
     padding: 3rem;
     display: grid;
-    grid-template-rows: 8rem 6rem 4rem 33rem 4rem;
+    grid-template-rows: 8rem 33rem 4rem;
     justify-content: center;
     grid-gap: 2rem;
     height: 90vh;
@@ -50,11 +50,30 @@
         justify-content: space-evenly;
     }
 
+    .input {
+        padding-top: 1rem;
+        border: none;
+        border-bottom: solid 1px #F3C87A;
+        font-size: 1.9rem;
+        font-family: 'Muli';
+        width: 36rem;
+        margin-left: 4rem;
+        background-color: transparent;
+    }
+
+    .img {
+        border-radius: 5rem;
+        margin-left: 2rem;
+        border: solid 7px #f3c87a;
+        box-shadow: 7px 8px 16px rgba(0, 0, 0, 0.25);
+    }
+
 
     @media only screen and (min-width: 320px) {
         .content {
-            grid-template-rows: 6rem 6rem 2rem 19rem 4rem;
-            height: 60rem;
+            grid-template-rows: 3rem 30rem 4rem;
+            height: 53rem;
+            padding-top: 7rem;
           }
 
         .buttons {
@@ -78,19 +97,45 @@
             border: solid 2px #211F1F;
             padding: 1rem;
       }
+
+      .subtitle {
+        font-size: 1.8rem;
+    }
+
+    .input {
+        padding-top: 1rem;
+        font-size: 1.6rem;
+        width: 28.6rem;
+        margin-left: 1rem;
+
+    }
+
+    .img {
+        border-radius: 5rem;
+        margin-left: 1rem;
+        border: solid 7px #f3c87a;
+        width: 28.2rem;
+        height: 22.6rem;
+    }
       }
 
 
 
     @media only screen and (min-width: 1440px) {
         .content {
-            grid-template-rows: 8rem 6rem 4rem 33rem 4rem;
+            grid-template-rows: 3rem 42rem 4rem;
             height: 90vh;
+            padding-top: 13rem;
+            grid-gap: 3rem;
         }
 
         .buttons {
             display: flex;
             justify-content: space-evenly;
+        }
+
+        .subtitle {
+            font-size: 3.4rem;
         }
 
         .button_right {
@@ -106,4 +151,21 @@
             padding: 1rem;
    
       }
+
+      .input {
+        padding-top: 1rem;
+        font-size: 1.9rem;
+        width: 36rem;
+        margin-left: 4rem;
+
+    }
+
+    .img {
+        border-radius: 5rem;
+        margin-left: 2rem;
+        border: solid 7px #f3c87a;
+        width: 41.2rem;
+        height: 36.3rem;
+
+    }
     }

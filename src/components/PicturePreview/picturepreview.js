@@ -14,9 +14,9 @@ const PicturePreview = () => {
                 Activiteit naam - Foto uploaden
                 </p>
                 <div className={styles.pic}>
-                    <img className={styles.img} src='/assets/img-placeholder.png' />
+                    <img alt="placeholder" className={styles.img} src='/assets/img-placeholder.png' />
                     <form >
-                        <input type='text' placeholder="Schrijf hier een korte beschrijving ..." />
+                        <input className={styles.input} type='text' placeholder="Schrijf hier een korte beschrijving ..." />
                     </form>
                 </div>
                 <div className={styles.buttons}>

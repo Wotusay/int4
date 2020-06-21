@@ -21,6 +21,7 @@
     font-size: 1.6rem;
     margin: 1rem;
     margin-top: 3rem;
+    width: 9rem;
   }
 }
 
@@ -36,5 +37,6 @@
   .back__btn {
     font-size: 2rem;
     margin: 4rem;
+    width: 11rem;
   }
 }

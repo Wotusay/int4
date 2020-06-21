@@ -148,10 +148,10 @@
       
         .button_left {
             font-size: 1.6rem;
-            display: flex;
-            justify-content: center;
             border: solid 2px #211F1F;
             padding: 1rem;
+            margin-right: unset;
+            margin-top: 1rem;
       }
       }
 
@@ -210,6 +210,7 @@
             font-size: 1.9rem;
             border: solid 2px #211F1F;
             padding: 1rem;
-   
+            margin-right: 3rem;
+            margin-top: unset;
       }
     }

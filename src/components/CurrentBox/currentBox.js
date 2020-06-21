@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./currentBox.module.css";
 import { useStores } from "../../hooks";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { useObserver } from "mobx-react-lite";
 import { ROUTES, mediaQueries } from "../../consts";
 import MediaQuery from "react-responsive";
@@ -43,7 +43,7 @@ const CurrentBox = () => {
             </p>
             <p className={styles.contentLeftIntro3}>It’s {uiStore.currentBox.title === 'Advontura Box' ? 'adventure' : uiStore.currentBox.title === 'Amare box' ? 'love' : 'tropic'} time!</p>
 
-            <button className={styles.contentLeftButton}>Open Box</button>
+            <Link to={ROUTES.dashboard} className={styles.contentLeftButton}>Open Box</Link>
           </div>
 
           <div className={styles.contentRight}>

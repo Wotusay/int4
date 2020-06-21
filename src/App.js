@@ -23,6 +23,8 @@ import ActivityDetail from "./components/ActivityDetail/activitydetail";
 import UploadPicture from "./components/Uploadpicture/uploadpicture";
 import PicturePreview from "./components/PicturePreview/picturepreview";
 import UploadComplete from "./components/Uploadcomplete/uploadcomplete";
+import PizzaConfigurator from "./components/Configurator/configurator";
+
 function App() {
   const { uiStore } = useStores();
   return useObserver(() => (
@@ -30,29 +32,32 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
-        <Route exact path={ROUTES.uploadComplete}>
-          <UploadComplete/>
+          <Route exact path={ROUTES.pizzaconfigurator}>
+            <PizzaConfigurator />
           </Route>
-        <Route exact path={ROUTES.picturePreview.path}>
-          <PicturePreview/>
+          <Route exact path={ROUTES.uploadComplete}>
+            <UploadComplete />
           </Route>
-        <Route exact path={ROUTES.activityDetail.path}>
-          <ActivityDetail/>
+          <Route exact path={ROUTES.picturePreview.path}>
+            <PicturePreview />
           </Route>
-        <Route exact path={ROUTES.activities}>
-          <Activities/>
+          <Route exact path={ROUTES.activityDetail.path}>
+            <ActivityDetail />
+          </Route>
+          <Route exact path={ROUTES.activities}>
+            <Activities />
           </Route>
           <Route exact path={ROUTES.uploadpicture}>
-          <UploadPicture/>
+            <UploadPicture />
           </Route>
           <Route exact path={ROUTES.nightRoom}>
-          <NightRoom/>
+            <NightRoom />
           </Route>
           <Route exact path={ROUTES.afternoonRoom}>
-          <AfternoonRoom/>
+            <AfternoonRoom />
           </Route>
-        <Route exact path={ROUTES.morningRoom}>
-          <MorningRoom/>
+          <Route exact path={ROUTES.morningRoom}>
+            <MorningRoom />
           </Route>
           <Route exact path={ROUTES.boxes.path}>
             <Boxes />

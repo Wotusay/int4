@@ -22,6 +22,7 @@ import NightRoom from "./components/Room/NightRoom/nightRoom";
 import ActivityDetail from "./components/ActivityDetail/activitydetail";
 import UploadPicture from "./components/Uploadpicture/uploadpicture";
 import PicturePreview from "./components/PicturePreview/picturepreview";
+import UploadComplete from "./components/Uploadcomplete/uploadcomplete";
 function App() {
   const { uiStore } = useStores();
   return useObserver(() => (
@@ -29,6 +30,9 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
+        <Route exact path={ROUTES.uploadComplete}>
+          <UploadComplete/>
+          </Route>
         <Route exact path={ROUTES.picturePreview.path}>
           <PicturePreview/>
           </Route>

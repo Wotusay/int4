@@ -14,6 +14,7 @@ const ROUTES = {
   uploadpicture: "/uploadpicture",
   activityDetail: { path: "/activitydetail/:id", to: "/activitydetail/" },
   picturePreview: { path: "/picturepreview/:id", to: "/picturepreview/" },
+  uploadComplete: "/uploadcomplete",
 
 
 };

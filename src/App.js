@@ -20,6 +20,7 @@ import MorningRoom from "./components/Room/MorningRoom/morningRoom";
 import AfternoonRoom from "./components/Room/AfternoonRoom/afternoonRoom";
 import NightRoom from "./components/Room/NightRoom/nightRoom";
 import ActivityDetail from "./components/ActivityDetail/activitydetail";
+import UploadPicture from "./components/Uploadpicture/uploadpicture";
 function App() {
   const { uiStore } = useStores();
   return useObserver(() => (
@@ -32,6 +33,9 @@ function App() {
           </Route>
         <Route exact path={ROUTES.activities}>
           <Activities/>
+          </Route>
+          <Route exact path={ROUTES.uploadpicture}>
+          <UploadPicture/>
           </Route>
           <Route exact path={ROUTES.nightRoom}>
           <NightRoom/>

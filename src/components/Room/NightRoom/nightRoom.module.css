@@ -5,11 +5,18 @@
   background: linear-gradient(220deg, #a1e3d8 0%, #f49399 100%);
 }
 
+.back {
+  position: absolute;
+  grid-row: 1;
+  grid-column: 2;
+}
+
 .contentIntro {
   display: flex;
   flex-direction: column;
   margin-left: 1.5rem;
   grid-row: 2;
+  margin-top: 4rem;
 }
 
 .contentTitle {
@@ -27,16 +34,37 @@
   text-align: left;
 }
 
-.imgBox {
-  display: grid;
-  grid-template-rows: 1fr;
+.imgBoxTent {
   overflow: hidden;
 }
 
-.imgBoxPizza {
-  grid-row: 6;
+.imgBoxFire {
   overflow: hidden;
-  justify-self: flex-end;
+}
+
+.imgBoxTelescope {
+  overflow: hidden;
+}
+
+.indicatorTelescope {
+  z-index: 5;
+  position: relative;
+  top: 22rem;
+  right: 3rem;
+}
+
+.indicatorFire {
+  z-index: 5;
+  position: relative;
+  top: 20rem;
+  left: 3rem;
+}
+
+.indicatorTent {
+  z-index: 5;
+  position: relative;
+  top: 20rem;
+  right: 3rem;
 }
 
 .imgGuitar {
@@ -58,18 +86,6 @@
   width: 20rem;
   height: 4rem;
   background-color: transparent;
-}
-
-.indicator {
-  grid-row: 2;
-}
-
-.footer {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -127,7 +143,7 @@
     justify-self: normal;
   }
 
-  .imgBoxPizza {
+  .imgBoxTent {
     grid-row: 6;
     grid-column: 2;
     z-index: 2;
@@ -138,7 +154,13 @@
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
   }
-  .imgBoxWalk {
+  .indicatorTent {
+    z-index: 5;
+    position: relative;
+    top: 25rem;
+    right: 3rem;
+  }
+  .imgBoxFire {
     grid-row: 10;
     z-index: 2;
     grid-column: 8;
@@ -146,7 +168,14 @@
     overflow: hidden;
   }
 
-  .imgBoxJenga {
+  .indicatorFire {
+    z-index: 5;
+    position: relative;
+    top: 25rem;
+    right: 3rem;
+  }
+
+  .imgBoxTelescope {
     grid-row: 8;
     z-index: 2;
     grid-column: 14;
@@ -156,10 +185,10 @@
     align-self: flex-end;
   }
 
-  .indicator {
+  .indicatorTelescope {
     z-index: 5;
     position: relative;
-    grid-row: 15;
-    grid-column: 2;
+    top: 25rem;
+    right: 3rem;
   }
 }

@@ -2,6 +2,8 @@ import React from "react";
 import { useObserver } from "mobx-react-lite";
 import styles from "./dashboard.module.css";
 import Footer from "../Footer/footer";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../consts";
 
 const Dashboard = () => {
   return useObserver(() => {
@@ -23,26 +25,30 @@ const Dashboard = () => {
 
             <div className={styles.imgWrapper}>
               <div className={styles.imgBox}>
+                <picture className={styles.img}>
+                <source media="(min-width: 1440px)" srcset="/assets/dashboard/activities.png"/>
+                <source media="(min-width: 320px)" srcset="/assets/dashboard/activities-mobile.png"/>
                 <img
-                  className={styles.img}
+                  style={{width: "auto"}}
                   src="/assets/dashboard/activities.png"
                   alt="Activities"
-                ></img>
+                /></picture>
                 <div className={styles.imgButtonWrapper}>
-                  <button className={styles.imgButton}>
+                  <Link to={ROUTES.activities} className={styles.imgButton}>
                     Jullie Activiteiten
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className={styles.imgBox}>
+                <picture>
                 <img
                   alt="Photobook"
                   src="/assets/dashboard/photobook.png"
                   className={styles.img}
-                ></img>
-
+                />
+                </picture>
                 <div className={styles.imgButtonWrapper}>
-                  <button className={styles.imgButton}>Jullie Fotoboek</button>
+                  <Link to={ROUTES.photobook} className={styles.imgButton}>Jullie Fotoboek</Link>
                 </div>
               </div>
             </div>

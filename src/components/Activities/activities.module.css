@@ -3,6 +3,8 @@
   grid-template-columns: 5vw 90vw 5vw;
   grid-template-rows: 10rem 1fr;
   height: 100vh;
+  background: linear-gradient(262.97deg, #f3c87a -4.77%, #f49399 90.83%);
+
 }
 
 .content {

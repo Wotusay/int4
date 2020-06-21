@@ -1,11 +1,15 @@
 import React from "react";
 import styles from "./morningRoom.module.css";
 import Indicator from "../../Indicator/indicator";
+import Back from "../../Back/back";
 
 const MorningRoom = () => {
   return (
     <>
       <div className={styles.room}>
+        <div className={styles.back}>
+          <Back />
+        </div>
         <div className={styles.contentIntro}>
           <h1 className={styles.contentTitle}>
             Goedemorgen <span>Eva & Mathias!</span>{" "}
@@ -34,11 +38,11 @@ const MorningRoom = () => {
             />
           </picture>
         </div>
-        <div className={styles.indicator}>
-          <Indicator />
-        </div>
 
         <div className={styles.imgBoxYoga}>
+          <div className={styles.indicatorYoga}>
+            <Indicator />
+          </div>
           <picture>
             <source
               media="(min-width: 768px)"
@@ -56,6 +60,9 @@ const MorningRoom = () => {
           </picture>
         </div>
         <div className={styles.imgBoxGuitar}>
+          <div className={styles.indicatorGuitar}>
+            <Indicator />
+          </div>
           <picture>
             <source
               media="(min-width: 768px)"

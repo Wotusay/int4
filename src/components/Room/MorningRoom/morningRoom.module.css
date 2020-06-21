@@ -5,6 +5,12 @@
   background: linear-gradient(220deg, #f3c87a 0%, #fff890 100%);
 }
 
+.back {
+  position: absolute;
+  grid-row: 1;
+  grid-column: 2;
+}
+
 .contentIntro {
   display: flex;
   flex-direction: column;
@@ -132,16 +138,25 @@
   }
 
   .imgBoxYoga {
-    grid-row: 11;
+    grid-row: 10;
     grid-column: 1;
     z-index: 2;
     transform: translateX(-10rem);
     position: absolute;
     overflow: hidden;
     justify-self: normal;
+    align-self: flex-end;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
   }
+
+  .indicatorYoga {
+    z-index: 5;
+    position: relative;
+    top: 22rem;
+    right: 3rem;
+  }
+
   .imgBoxGuitar {
     grid-row: 10;
     z-index: 2;
@@ -149,6 +164,13 @@
     position: absolute;
     overflow: hidden;
     justify-self: flex-end;
+  }
+
+  .indicatorGuitar {
+    z-index: 5;
+    position: relative;
+    top: 46rem;
+    left: 4rem;
   }
 
   .indicator {

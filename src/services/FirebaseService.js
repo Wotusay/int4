@@ -14,6 +14,5 @@ if (!firebase.app.length) {
   firebase.initializeApp(firebaseConfig);
 }
 
-
 const storage = firebase.storage();
 export { storage };

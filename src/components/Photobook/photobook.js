@@ -10,50 +10,50 @@ import { storage } from "../../services/FirebaseService";
 import NewPhoto from "./newPhoto";
 
 const Photobook = () => {
+  const storageRef = storage.ref();
+  const listRef = storageRef.child("images/");
+  const [loaded, setLoaded] = useState(false);
+  let images = [];
+
+  listRef.listAll().then(function (result) {
+    result.items.forEach(function (imageRef) {
+      imageRef.getDownloadURL().then(function (url) {
+        images.push(url);
+        setLoaded(true);
+      });
+    });
+  });
+
+  console.log(images);
   const picture = { id: 123, pic: "/assets/img-placeholder.png" };
 
-  return useObserver(() => (
-    <>
-      <section className={styles.dashboard}>
-        <div className={styles.content}>
-          <p className={styles.title}>Hier zien jullie Fotoboek! </p>
-          <p className={styles.info}>
-            Dit is een overzicht van alle sfeerfoto’s tijdens jullie
-            honeymoon-activiteiten. Klik op een foto om het in detail te zien.{" "}
-          </p>
-          <ul className={styles.pics}>
-            <li>
-              <Link to={ROUTES.pictureDetail.to + picture.id}>
-                <Picture picture={picture} />
-              </Link>
-            </li>
-            <li>
-              <Link to={ROUTES.pictureDetail.to + picture.id}>
-                <Picture picture={picture} />
-              </Link>
-            </li>
-            <li>
-              <Link to={ROUTES.pictureDetail.to + picture.id}>
-                <Picture picture={picture} />
-              </Link>
-            </li>{" "}
-            <li>
-              <Link to={ROUTES.pictureDetail.to + picture.id}>
-                <Picture picture={picture} />
-              </Link>
-            </li>{" "}
-            <li>
-              <Link to={ROUTES.pictureDetail.to + picture.id}>
-                <Picture picture={picture} />
-              </Link>
-            </li>
-            <NewPhoto />
-          </ul>
-        </div>
-        <Footer />
-      </section>
-    </>
-  ));
+  return useObserver(() =>
+    loaded === true ? (
+      <>
+        <section className={styles.dashboard}>
+          <div className={styles.content}>
+            <p className={styles.title}>Hier zien jullie Fotoboek! </p>
+            <p className={styles.info}>
+              Dit is een overzicht van alle sfeerfoto’s tijdens jullie
+              honeymoon-activiteiten. Klik op een foto om het in detail te zien.{" "}
+            </p>
+            <ul className={styles.pics}>
+                <img src={images[0]} />
+              <li>
+                <Link to={ROUTES.pictureDetail.to + picture.id}>
+                  <Picture picture={picture} />
+                </Link>
+              </li>
+              <NewPhoto />
+            </ul>
+          </div>
+          <Footer />
+        </section>
+      </>
+    ) : (
+      <p className={styles.loading}>Aan het laden...</p>
+    )
+  );
 };
 
 export default Photobook;

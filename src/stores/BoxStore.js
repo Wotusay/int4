@@ -9,11 +9,11 @@ class BoxStore {
         this.activities = [];
     }
 
+
+
     onActivitiesChanged = activities => {
         this.addActivities(activities);
     };
-
-
 
     onBoxesChanged = box => {
         this.addBoxes(box)
@@ -33,20 +33,20 @@ class BoxStore {
             console.log(result);
     };
 
-    getActivitiesById = id => {
-        this.activities.find(activity => activity.id === id);
-    };
+
 
     addBoxes = async box => {
         this.boxes.push(box);
         this.rootStore.uiStore.setCurrentBox(box);
     };  
-      
-    addActivities = async activity => {
-        this.activities.push(activity);
-        this.rootStore.uiStore.setCurrentActivities(activity);
+
+    addActivities = async activities => {
+        activities.map(activity => this.activities.push(activity));
+        this.rootStore.uiStore.setCurrentActivities(activities);
     };
 
+    getActivitiesById = id => this.activities.find(activity => activity.id === id);
+    
 }
 
 decorate(BoxStore, {

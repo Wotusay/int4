@@ -3,24 +3,37 @@ import { useObserver } from 'mobx-react-lite';
 import styles from "./activitydetail.module.css"
 import Back from '../Back/back';
 import { ROUTES } from '../../consts';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useHistory } from 'react-router-dom';
+import { useStores } from '../../hooks';
 
 const ActivityDetail = () => {
-    return useObserver(() => (
+    const { id } = useParams();
+    const { boxStore, uiStore } = useStores();
+    const activity = boxStore.getActivitiesById(id);
+    console.log(activity)
+
+    return useObserver(() => {
+            if (uiStore.currentBox === undefined) {
+            if (!activity) {
+                return <> <Back /> <p className="loading"> Activiteit is niet gevonden </p> </>;
+              }
+            }
+              else { 
+          return (
         <>
         <div>
             <Back/>
             <div className={styles.background}>
             <div className={styles.contentleft}>
-            <p className={styles.title}> Op bezoek in <span>New York City!</span></p>
+                <p className={styles.title}> Op bezoek in <span> {activity.city}!</span></p>
                 <div>
-                <p className={styles.subtitle} >Broadway</p>
-                <p className={styles.duration}>Duurtijd: 30 mins </p></div>
+                <p className={styles.subtitle} >{activity.title}</p>
+                <p className={styles.duration}>Duurtijd: {activity.duration} mins </p></div>
                 <p className={styles.desc}>
-                Beeld jullie in dat jullie zich bevinden in het befaamde  Broadway en geef een privé concert aan elkaar. Muziek wordt wel eens de ‘love language’ genoemd, waar je uw emoties mee kan uiten of opwekken. Zingen neemt de stress weg en bevordert het slapen.
+                {activity.description}                
                 </p>
                 <p className={styles.info}>
-                Ontdek het innerlijk zangtalent in jezelf en je partner.  Vergeet niet om foto’s te nemen van elkaars privé concert, zodat je deze kan uploaden in jullie fotoboek. 
+                {activity.info}                
                 </p>
                 <div className={styles.wrapper}>
                     <Link to={ROUTES.home} className={styles.button_left}>Begin de activiteit</Link>
@@ -28,12 +41,13 @@ const ActivityDetail = () => {
                 </div>
             </div></div>
         </div>
+        <div className={styles.relative}>
         <picture className={styles.right}>
-        <source media="(min-width: 1440px)" srcset="/assets/india.png" />
-        <source media="(min-width: 320px)" srcset="/assets/india-mobile.png" />
+        <source media="(min-width: 1440px)" srcset={`${activity.pic}.png`} />
+        <source media="(min-width: 320px)" srcset={`${activity.pic}-mobile.png`} />
+        <img alt='india' style={{width: 'auto'}} src={`${activity.pic}.png`} />
+        </picture>  </div>
 
-        <img alt='india' style={{width: 'auto'}} src="/assets/india.png"/>
-        </picture>
         <picture className={styles.left}>
         <source media="(min-width: 1440px)" srcset="/assets/leaf-top.png" />
         <source media="(min-width: 320px)" srcset="/assets/leaf-top-mobile.png" />
@@ -41,7 +55,7 @@ const ActivityDetail = () => {
         </picture>
         </>
 
-    ));
+          )}});
 }
 
 export default ActivityDetail;

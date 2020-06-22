@@ -87,9 +87,7 @@ span {
         grid-template-columns: 10% 1fr 10%;
     }
     .right {
-        position: absolute;
-        bottom: unset;
-        top: 56.2rem;       
+        position: absolute;    
     }
 
     .contentleft {
@@ -118,7 +116,7 @@ span {
     }
 
     .contentleft {
-        grid-template-rows: 6rem 4rem 18rem 13rem 6rem;
+        grid-template-rows: 6rem 4rem max-content auto 6rem;
     }
     
     .wrapper {
@@ -137,11 +135,15 @@ span {
         padding: 1.8rem;
     }
     
-
+    .relative {
+        position: relative;
+    }
   } 
 
   @media only screen and (min-width: 1440px) {
-
+    .relative {
+        position: relative;
+    }
     .button_left {
         font-size: 1.9rem;
         padding: 1rem;

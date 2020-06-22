@@ -61,9 +61,10 @@ const MorningRoom = () => {
 
         <div className={styles.imgBoxYoga}>
           <div className={styles.indicatorYoga}>
-            <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[0].id }>
+            <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[1].id }>
             <Indicator /></Link>
           </div>
+          
           <picture>
             <source
               media="(min-width: 768px)"
@@ -82,7 +83,8 @@ const MorningRoom = () => {
         </div>
         <div className={styles.imgBoxGuitar}>
           <div className={styles.indicatorGuitar}>
-            <Indicator />
+            <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[0].id}>
+            <Indicator /></Link>
           </div>
           <picture>
             <source

@@ -2,11 +2,21 @@ import React from "react";
 import { useObserver } from "mobx-react-lite";
 import styles from "./dashboard.module.css";
 import Footer from "../Footer/footer";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { ROUTES } from "../../consts";
+import { useStores } from "../../hooks";
 
 const Dashboard = () => {
+  const {uiStore} = useStores();
+  const history = useHistory();
   return useObserver(() => {
+    console.log(uiStore.currentBox)
+    if (uiStore.currentBox === undefined) {
+      history.push(ROUTES.login)
+      return (
+        <p> loading ...</p>
+      )
+    } else {
     return (
       <>
         <div className={styles.dashboard}>
@@ -57,7 +67,7 @@ const Dashboard = () => {
         </div>
       </>
     );
-  });
+  }});
 };
 
 export default Dashboard;

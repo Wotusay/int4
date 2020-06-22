@@ -2,9 +2,17 @@ import React from "react";
 import styles from "./nightRoom.module.css";
 import Indicator from "../../Indicator/indicator";
 import Back from "../../Back/back";
+import { useStores } from "../../../hooks";
+import { useObserver } from "mobx-react-lite";
 
 const NightRoom = () => {
-  return (
+  const {boxStore, uiStore} = useStores();
+  const currentBox = uiStore.currentBox;
+  const time = 'night-activiteiten'
+  boxStore.getActivities(time, uiStore.currentCode);
+  console.log(currentBox);
+  console.log(boxStore.activities);
+  return useObserver ( () => (
     <>
       <div className={styles.room}>
         <div className={styles.back}>
@@ -105,7 +113,7 @@ const NightRoom = () => {
         </div>
       </div>
     </>
-  );
+  ));
 };
 
 export default NightRoom;

@@ -2,12 +2,8 @@ const ROUTES = {
   home: "/",
   pictureDetail: { path: "/pictures/:id", to: "/pictures/" },
   photobook: "/photobook",
-  room: "/room",
   currentbox: "/currentbox",
   login: "/login",
-  morningRoom: "/morningroom",
-  afternoonRoom: "/afternoonroom",
-  nightRoom: "/nightroom",
   dashboard: "/dashboard",
   activities: "/activities",
   boxes: { path: "/boxes/:id", to: "/boxes" },
@@ -17,6 +13,7 @@ const ROUTES = {
   uploadComplete: "/uploadcomplete",
   pizzaconfigurator: "/pizzaconfigurator",
   quiz: "/quiz",
+  room: {path: "/room/:id", to: "/room/"},
 };
 
 const mediaQueries = {

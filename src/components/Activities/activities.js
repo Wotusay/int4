@@ -2,11 +2,22 @@ import React from "react";
 import styles from "./activities.module.css";
 import { useObserver } from "mobx-react-lite";
 import Footer from "../Footer/footer";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { ROUTES } from "../../consts";
+import { useStores } from "../../hooks";
 
 const Activities = () => {
-  return useObserver(() => (
+  const {uiStore} = useStores();
+  const history = useHistory();
+  return useObserver(() => {
+    console.log(uiStore.currentBox)
+    if (uiStore.currentBox === undefined) {
+      history.push(ROUTES.login)
+      return (
+        <p> loading ...</p>
+      )
+    } else {
+    return (
     <>
       <div className={styles.activities}>
         <div className={styles.content}>
@@ -31,7 +42,7 @@ const Activities = () => {
               />
               </picture>
        
-              <Link to={ROUTES.morningRoom} className={styles.button}>
+              <Link to={ROUTES.room.to + 'ochtend'} className={styles.button}>
                 Bekijk ochtendactiviteiten
               </Link>
             </div>
@@ -46,7 +57,7 @@ const Activities = () => {
               />
               </picture>
          
-              <Link to={ROUTES.afternoonRoom}  className={styles.button}>
+              <Link to={ROUTES.room.to + 'middag'}  className={styles.button}>
                 Bekijk middagactiviteiten
               </Link>
             </div>
@@ -62,7 +73,7 @@ const Activities = () => {
               />
               </picture>
             
-              <Link to={ROUTES.nightRoom} className={styles.button}>
+              <Link to={ROUTES.room.to + 'avond'} className={styles.button}>
                 Bekijk avondactiviteiten
               </Link>
             </div>
@@ -71,7 +82,7 @@ const Activities = () => {
         <Footer />
       </div>
     </>
-  ));
+  )}});
 };
 
 export default Activities;

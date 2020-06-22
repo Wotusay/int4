@@ -16,9 +16,6 @@ import Home from "./components/Home/home";
 import NotFound from "./components/NotFound/not-found";
 import Dashboard from "./components/Dashboard/dashboard";
 import Activities from "./components/Activities/activities";
-import MorningRoom from "./components/Room/MorningRoom/morningRoom";
-import AfternoonRoom from "./components/Room/AfternoonRoom/afternoonRoom";
-import NightRoom from "./components/Room/NightRoom/nightRoom";
 import ActivityDetail from "./components/ActivityDetail/activitydetail";
 import UploadPicture from "./components/Uploadpicture/uploadpicture";
 import PicturePreview from "./components/PicturePreview/picturepreview";
@@ -54,14 +51,8 @@ function App() {
           <Route exact path={ROUTES.uploadpicture}>
             <UploadPicture />
           </Route>
-          <Route exact path={ROUTES.nightRoom}>
-            <NightRoom />
-          </Route>
-          <Route exact path={ROUTES.afternoonRoom}>
-            <AfternoonRoom />
-          </Route>
-          <Route exact path={ROUTES.morningRoom}>
-            <MorningRoom />
+          <Route exact path={ROUTES.room.path}>
+            <Room />
           </Route>
           <Route exact path={ROUTES.boxes.path}>
             <Boxes />

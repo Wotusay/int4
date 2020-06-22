@@ -2,9 +2,19 @@ import React from "react";
 import styles from "./afternoonRoom.module.css";
 import Indicator from "../../Indicator/indicator";
 import Back from "../../Back/back";
+import { useObserver } from "mobx-react-lite";
+import { useStores } from "../../../hooks";
 
 const AfternoonRoom = () => {
-  return (
+  const {boxStore, uiStore} = useStores();
+  const currentBox = uiStore.currentBox;
+  const time = 'middag-activiteiten'
+  boxStore.getActivities(time, uiStore.currentCode);
+  console.log(currentBox);
+  console.log(boxStore.activities);
+
+
+  return useObserver (() => ( 
     <>
       <div className={styles.room}>
         <div className={styles.back}>
@@ -103,7 +113,7 @@ const AfternoonRoom = () => {
         </div>
       </div>
     </>
-  );
+  ));
 };
 
 export default AfternoonRoom;

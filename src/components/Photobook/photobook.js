@@ -13,7 +13,7 @@ import { get } from "mobx";
 const Photobook = () => {
   const storageRef = storage.ref();
   const listRef = storageRef.child("images/");
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(true);
 
   // listRef.listAll().then(function (result) {
   //   result.items.forEach(function (imageRef) {
@@ -30,14 +30,14 @@ const Photobook = () => {
     getList.items.forEach((imageRef) => {
       imageRef.getDownloadURL().then((url) => {
         images.push(url);
-        console.log(url);
       });
     });
 
-    return images
+    return images;
   };
 
-  const result =  getImages(); 
+  const result = async () => await getImages();
+
   console.log(result);
 
   return useObserver(() => {
@@ -53,9 +53,7 @@ const Photobook = () => {
                 zien.{" "}
               </p>
               <ul className={styles.pics}>
-                <li>
-                  <img src={images[0]} />
-                </li>
+                {result.map((item) => console.log(item))}
                 {/* <li>
                   <Link to={ROUTES.pictureDetail.to + picture.id}>
                     <Picture picture={picture} />

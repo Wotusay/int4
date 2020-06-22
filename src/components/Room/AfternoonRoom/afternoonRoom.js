@@ -4,20 +4,23 @@ import Indicator from "../../Indicator/indicator";
 import Back from "../../Back/back";
 import { useObserver } from "mobx-react-lite";
 import { useStores } from "../../../hooks";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../consts";
 
 const AfternoonRoom = () => {
   const {boxStore, uiStore} = useStores();
-  const currentBox = uiStore.currentBox;
   const time = 'middag-activiteiten'
-  boxStore.getActivities(time, uiStore.currentCode);
-  console.log(currentBox);
-  console.log(boxStore.activities);
-  const currentActivities =  uiStore.currentActivities;
-  console.log(currentActivities[0]);
 
+    return useObserver(() => {
+      if (uiStore.currentActivities === undefined) {
+        boxStore.getActivities(time, uiStore.currentCode);    
+        return (
+          <p className="loading"> loading ...</p>
+        )
+      } else {
 
-  return useObserver (() => ( 
-    <>
+      return (
+       <> 
       <div className={styles.room}>
         <div className={styles.back}>
           <Back />
@@ -54,7 +57,9 @@ const AfternoonRoom = () => {
 
         <div className={styles.imgBoxPizza}>
           <div className={styles.indicatorPizza}>
-            <Indicator />
+            <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[1].id}> <Indicator />
+            </Link>
+           
           </div>
           <picture>
             <source
@@ -74,7 +79,9 @@ const AfternoonRoom = () => {
         </div>
         <div className={styles.imgBoxWalk}>
           <div className={styles.indicatorWalk}>
-            <Indicator />
+            <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[2].id} ><Indicator />
+            </Link>
+            
           </div>
           <picture>
             <source
@@ -95,7 +102,8 @@ const AfternoonRoom = () => {
 
         <div className={styles.imgBoxJenga}>
           <div className={styles.indicatorJenga}>
-            <Indicator />
+            <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[2].id} >
+            <Indicator /></Link>
           </div>
           <picture>
             <source
@@ -115,7 +123,7 @@ const AfternoonRoom = () => {
         </div>
       </div>
     </>
-  ));
-};
+    )}});
+  };
 
 export default AfternoonRoom;

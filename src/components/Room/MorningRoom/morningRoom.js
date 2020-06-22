@@ -11,11 +11,6 @@ const MorningRoom = () => {
   const { uiStore,boxStore } = useStores();
   const time = 'ochtend-activiteiten';
 
-
-
-
-
-
     return useObserver(() => {
       if (uiStore.currentActivities === undefined) {
         boxStore.getActivities(time, uiStore.currentCode);    

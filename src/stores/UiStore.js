@@ -41,6 +41,10 @@ class UiStore {
     this.currentBox = undefined;
   }
 
+  emptyActivities() {
+    this.currentActivities = undefined
+  }
+
   get checker() {
     if (this.currentBox !== undefined) {
       return this.currentBox.code;
@@ -59,6 +63,7 @@ decorate(UiStore, {
   setCurrentCode: action,
   empty: action,
   checker: computed,
+  emptyActivities: action
 });
 
 export default UiStore;

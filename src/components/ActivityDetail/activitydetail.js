@@ -23,7 +23,7 @@ const ActivityDetail = () => {
         <>
         <div>
             <Back/>
-            <div className={styles.background}>
+            <div className={activity.time === 'middag' ? styles.background_m : activity.time === 'avond' ? styles.background_n : styles.background}>
             <div className={styles.contentleft}>
                 <p className={styles.title}> Op bezoek in <span> {activity.city}!</span></p>
                 <div>

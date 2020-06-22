@@ -7,6 +7,23 @@
     overflow: hidden;
 }
 
+.background_m {
+    background: linear-gradient(262.34deg, #F49399 0%, #F3C87A 98.01%); 
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
+    overflow: hidden;
+}
+
+.background_n {
+    background: linear-gradient(261.04deg, #A1E3D8 0%, #F49399 94.44%);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-rows: 15% 1fr 10%;
+    overflow: hidden;
+}
 .right {
  position: absolute;
  bottom: 0;
@@ -86,6 +103,14 @@ span {
         height: 82.4rem;
         grid-template-columns: 10% 1fr 10%;
     }
+    .background_m {
+        height: 82.4rem;
+        grid-template-columns: 10% 1fr 10%;
+    }
+    .background_n {
+        height: 82.4rem;
+        grid-template-columns: 10% 1fr 10%;
+    }
     .right {
         position: absolute;    
     }
@@ -159,6 +184,15 @@ span {
         grid-template-columns: 10% 1fr 1fr 10%;
     }
 
+    .background_m {
+        height: 100vh;
+        grid-template-columns: 10% 1fr 1fr 10%;
+    }
+
+    .background_n {
+        height: 100vh;
+        grid-template-columns: 10% 1fr 1fr 10%;
+    }
     .wrapper {
         display: unset;
     }

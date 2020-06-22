@@ -4,15 +4,21 @@ import Indicator from "../../Indicator/indicator";
 import Back from "../../Back/back";
 import { useStores } from "../../../hooks";
 import { useObserver } from "mobx-react-lite";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../consts";
 
 const NightRoom = () => {
   const {boxStore, uiStore} = useStores();
-  const currentBox = uiStore.currentBox;
-  const time = 'night-activiteiten'
-  boxStore.getActivities(time, uiStore.currentCode);
-  console.log(currentBox);
-  console.log(boxStore.activities);
-  return useObserver ( () => (
+  const time = 'avond-activiteiten'
+  return useObserver(() => {
+    if (uiStore.currentActivities === undefined) {
+      boxStore.getActivities(time, uiStore.currentCode);    
+      return (
+        <p className="loading"> loading ...</p>
+      )
+    } else {
+
+    return (
     <>
       <div className={styles.room}>
         <div className={styles.back}>
@@ -52,7 +58,9 @@ const NightRoom = () => {
 
         <div className={styles.imgBoxTent}>
           <div className={styles.indicatorTent}>
-            <Indicator />
+           <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[0].id} ><Indicator />
+           </Link> 
+            
           </div>
           <picture>
             <source
@@ -72,7 +80,9 @@ const NightRoom = () => {
         </div>
         <div className={styles.imgBoxFire}>
           <div className={styles.indicatorFire}>
-            <Indicator />
+            <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[1].id}><Indicator />
+            </Link>
+            
           </div>
           <picture>
             <source
@@ -93,7 +103,9 @@ const NightRoom = () => {
 
         <div className={styles.imgBoxTelescope}>
           <div className={styles.indicatorTelescope}>
-            <Indicator />
+            <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[2].id}><Indicator />
+            </Link>
+            
           </div>
           <picture>
             <source
@@ -113,7 +125,7 @@ const NightRoom = () => {
         </div>
       </div>
     </>
-  ));
-};
+    )}});
+  };
 
 export default NightRoom;

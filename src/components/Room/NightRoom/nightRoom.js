@@ -20,7 +20,7 @@ const NightRoom = () => {
         </div>
         <div className={styles.contentIntro}>
           <h1 className={styles.contentTitle}>
-            Goedemorgen <span>Eva & Mathias!</span>{" "}
+            Goedemorgen <span>{uiStore.currentBox.userId === '255' ? 'Eva & Mathias!' : uiStore.currentBox.userId === '882' ? 'Jeffrey & Rosa' : uiStore.currentBox.userId === '256' ? 'Willem & Laura' : '' }</span>{" "}
           </h1>
           <p className={styles.contentText}>
             Hier bevindt zich een overzicht van jullie honeymoon-activiteiten

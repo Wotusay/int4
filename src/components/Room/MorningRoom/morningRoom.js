@@ -11,12 +11,19 @@ const MorningRoom = () => {
   const {boxStore, uiStore} = useStores();
   const currentBox = uiStore.currentBox;
   const time = 'ochtend-activiteiten'
-  boxStore.getActivities(time, uiStore.currentCode);
-  console.log(currentBox);
-  console.log(boxStore.activities);
+  let currentActivities = [];
 
 
-  
+  const setActivities = async () => {
+    await boxStore.getActivities(time, uiStore.currentCode);
+    currentActivities =  uiStore.currentActivities;
+    console.log(currentActivities[0]);
+    console.log(currentActivities);
+    console.log(currentBox);
+    return currentActivities;
+  }
+
+    setActivities();
 
   return useObserver ( () => (
     <>
@@ -26,7 +33,7 @@ const MorningRoom = () => {
         </div>
         <div className={styles.contentIntro}>
           <h1 className={styles.contentTitle}>
-            Goedemorgen <span>Eva & Mathias!</span>{" "}
+            Goedemorgen <span>{uiStore.currentBox.userId === '255' ? 'Eva & Mathias!' : uiStore.currentBox.userId === '882' ? 'Jeffrey & Rosa' : uiStore.currentBox.userId === '256' ? 'Willem & Laura' : '' }</span>{" "}
           </h1>
           <p className={styles.contentText}>
             Hier bevindt zich een overzicht van jullie honeymoon-activiteiten
@@ -55,7 +62,7 @@ const MorningRoom = () => {
 
         <div className={styles.imgBoxYoga}>
           <div className={styles.indicatorYoga}>
-            <Link to={ROUTES.activityDetail.to + '1'}>
+            <Link to={ROUTES.activityDetail.to + '1' }>
             <Indicator /></Link>
           </div>
           <picture>

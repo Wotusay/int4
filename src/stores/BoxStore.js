@@ -13,10 +13,7 @@ class BoxStore {
         this.addActivities(activities);
     };
 
-    addActivities = activity => {
-        this.activities.push(activity);
-        this.rootStore.uiStore.setCurrentActivities(activity);
-    };
+
 
     onBoxesChanged = box => {
         this.addBoxes(box)
@@ -43,6 +40,11 @@ class BoxStore {
     addBoxes = async box => {
         this.boxes.push(box);
         this.rootStore.uiStore.setCurrentBox(box);
+    };  
+      
+    addActivities = async activity => {
+        this.activities.push(activity);
+        this.rootStore.uiStore.setCurrentActivities(activity);
     };
 
 }

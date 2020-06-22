@@ -6,7 +6,7 @@ class UiStore {
     this.rootStore = rootStore;
     this.currentBox = undefined;
     this.loginState = false;
-    this.currentActivities = undefined;
+    this.currentActivities = [];
   }
 
   login = async () => {
@@ -14,7 +14,7 @@ class UiStore {
   };
 
   setCurrentActivities = activities => {
-    this.currentActivities = activities
+    this.currentActivities = activities;
   }
 
   logout = () => {

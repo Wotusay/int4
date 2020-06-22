@@ -4,14 +4,23 @@ import { useObserver } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 import BackBlack from "../BackBlack/backblack";
 import { useStores } from "../../hooks";
+import Picture from "../../models/picture";
 
 const UploadPicture = () => {
     const {pictureStore} = useStores();
 
-    const handleInput = e => {
+    const handleInput = async e => {
         e.preventDefault();
         const file =  e.target.files[0];
-        pictureStore.uploadFile(file);
+        const p = new Picture({store: pictureStore });
+        try {  
+            const newPic = await pictureStore.uploadFile(file, p);
+            console.log(newPic);
+
+        }
+        catch (error) {
+            console.log(error);
+        }
     }
 
     return useObserver(() => (

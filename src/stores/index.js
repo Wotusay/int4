@@ -1,7 +1,7 @@
 import * as firebase from "firebase/app";
 import BoxStore from "./BoxStore";
 import UiStore from "./UiStore";
-import PhotobookStore from "./PhotobookStore";
+import PictureStore from "./PictureStore";
 
 class RootStore {
   constructor() {
@@ -18,6 +18,7 @@ class RootStore {
     this.firebase = firebase.initializeApp(firebaseConfig);
     this.uiStore = new UiStore(this);
     this.boxStore = new BoxStore(this);
+    this.pictureStore = new PictureStore(this);
   }
 }
 const getCurrenTimeStamp = () => {

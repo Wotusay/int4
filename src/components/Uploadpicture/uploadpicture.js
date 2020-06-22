@@ -3,8 +3,17 @@ import styles from "./uploadpicture.module.css"
 import { useObserver } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 import BackBlack from "../BackBlack/backblack";
+import { useStores } from "../../hooks";
 
 const UploadPicture = () => {
+    const {pictureStore} = useStores();
+
+    const handleInput = e => {
+        e.preventDefault();
+        const file =  e.target.files[0];
+        pictureStore.uploadFile(file);
+    }
+
     return useObserver(() => (
         <>
         <div className={styles.dashboard}>  
@@ -23,7 +32,7 @@ const UploadPicture = () => {
 
                     <form className={styles.form}>
                         <button className={styles.upload}>Upload hier je foto</button>
-                        <input className={styles.input} type="file" />
+                        <input onInput={(e) => handleInput(e)} className={styles.input} type="file" />
                     </form>
 
                 <div className={styles.buttons}>

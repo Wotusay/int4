@@ -15,45 +15,65 @@ const Photobook = () => {
   const [loaded, setLoaded] = useState(false);
   let images = [];
 
-  listRef.listAll().then(function (result) {
-    result.items.forEach(function (imageRef) {
-      imageRef.getDownloadURL().then(function (url) {
+  // listRef.listAll().then(function (result) {
+  //   result.items.forEach(function (imageRef) {
+  //     imageRef.getDownloadURL().then(function (url) {
+  //       images.push(url);
+  //     });
+  //   });
+  //   setLoaded(true);
+  // });
+
+  const getImages = async () => {
+    const getList = await listRef.listAll();
+    getList.items.forEach((imageRef) => {
+      imageRef.getDownloadURL().then((url) => {
         images.push(url);
-        setLoaded(true);
+        console.log(url);
       });
     });
+  };
+
+  console.log(images[0]);
+
+  getImages();
+
+  return useObserver(() => {
+    if (loaded === true) {
+      return (
+        <>
+          <section className={styles.dashboard}>
+            <div className={styles.content}>
+              <p className={styles.title}>Hier zien jullie Fotoboek! </p>
+              <p className={styles.info}>
+                Dit is een overzicht van alle sfeerfoto’s tijdens jullie
+                honeymoon-activiteiten. Klik op een foto om het in detail te
+                zien.{" "}
+              </p>
+              <ul className={styles.pics}>
+                <li>
+                  <img src={images[0]} />
+                </li>
+                {/* <li>
+                  <Link to={ROUTES.pictureDetail.to + picture.id}>
+                    <Picture picture={picture} />
+                  </Link>
+                </li> */}
+                <NewPhoto />
+              </ul>
+            </div>
+            <Footer />
+          </section>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <p className={styles.loading}>Laden...</p>
+        </>
+      );
+    }
   });
-
-  console.log(images);
-  const picture = { id: 123, pic: "/assets/img-placeholder.png" };
-
-  return useObserver(() =>
-    loaded === true ? (
-      <>
-        <section className={styles.dashboard}>
-          <div className={styles.content}>
-            <p className={styles.title}>Hier zien jullie Fotoboek! </p>
-            <p className={styles.info}>
-              Dit is een overzicht van alle sfeerfoto’s tijdens jullie
-              honeymoon-activiteiten. Klik op een foto om het in detail te zien.{" "}
-            </p>
-            <ul className={styles.pics}>
-                <img src={images[0]} />
-              <li>
-                <Link to={ROUTES.pictureDetail.to + picture.id}>
-                  <Picture picture={picture} />
-                </Link>
-              </li>
-              <NewPhoto />
-            </ul>
-          </div>
-          <Footer />
-        </section>
-      </>
-    ) : (
-      <p className={styles.loading}>Aan het laden...</p>
-    )
-  );
 };
 
 export default Photobook;

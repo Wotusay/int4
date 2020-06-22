@@ -37,7 +37,6 @@ decorate(Picture, {
     height: observable,
     width: observable,
     urls:observable,
-  
     updateFromJson: action,
     asJson: computed
   });

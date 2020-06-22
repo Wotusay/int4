@@ -45,10 +45,25 @@
   overflow: hidden;
   justify-self: flex-end;
 }
+
+.indicatorYoga {
+  z-index: 5;
+  position: relative;
+  top: 15rem;
+  right: 3rem;
+}
+
 .imgBoxGuitar {
   grid-row: 7;
   overflow: hidden;
   align-self: flex-end;
+}
+
+.indicatorGuitar {
+  z-index: 5;
+  position: relative;
+  top: 20rem;
+  left: 3rem;
 }
 .imgGuitar {
   justify-self: flex-start;
@@ -69,10 +84,6 @@
   width: 20rem;
   height: 4rem;
   background-color: transparent;
-}
-
-.indicator {
-  grid-row: 2;
 }
 
 .footer {

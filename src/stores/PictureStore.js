@@ -3,11 +3,9 @@ import { decorate, observable, action } from "mobx";
 //import Picture from "../models/picture";
 
 class PictureStore {
-    constructor() {
+  constructor() {}
 
-    }
-      
+
 }
 
-  
-  export default PictureStore;
+export default PictureStore;

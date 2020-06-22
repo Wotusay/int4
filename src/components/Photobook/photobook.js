@@ -11,67 +11,42 @@ import NewPhoto from "./newPhoto";
 import { get } from "mobx";
 
 const Photobook = () => {
-  const storageRef = storage.ref();
-  const listRef = storageRef.child("images/");
-  const [loaded, setLoaded] = useState(true);
+  // const storageRef = storage.ref();
+  // const listRef = storageRef.child("images/");
+  // const [loaded, setLoaded] = useState(true);
 
-  // listRef.listAll().then(function (result) {
-  //   result.items.forEach(function (imageRef) {
-  //     imageRef.getDownloadURL().then(function (url) {
+  // const getImages = async () => {
+  //   const getList = await listRef.listAll();
+  //   getList.items.forEach((imageRef) => {
+  //     imageRef.getDownloadURL().then((url) => {
+  //       image.push(url);
   //       images.push(url);
   //     });
   //   });
-  //   setLoaded(true);
-  // });
-  let image = [];
 
-  const getImages = async () => {
-    let images = [];
-    const getList = await listRef.listAll();
-    getList.items.forEach((imageRef) => {
-      imageRef.getDownloadURL().then((url) => {
-        image.push(url);
-        images.push(url);
-      });
-    });
+  //   return images;
+  // };
+  // getImages();
 
-    return images;
-  };
-  getImages();
+  // console.log(image);
 
-  console.log(image);
+  return useObserver(() => (
 
-  return useObserver(() => {
-    if (image.length == 1) {
+      <section className={styles.dashboard}>
+        <div className={styles.content}>
+          <p className={styles.title}>Hier zien jullie Fotoboek! </p>
+          <p className={styles.info}>
+            Dit is een overzicht van alle sfeerfoto’s tijdens jullie
+            honeymoon-activiteiten. Klik op een foto om het in detail te zien.
+          </p>
+          <ul className={styles.pics}>
+          
+          </ul>
+        </div>
+        <Footer />
+      </section>
 
-      return (
-        <>
-          <section className={styles.dashboard}>
-            <div className={styles.content}>
-              <p className={styles.title}>Hier zien jullie Fotoboek! </p>
-              <p className={styles.info}>
-                Dit is een overzicht van alle sfeerfoto’s tijdens jullie
-                honeymoon-activiteiten. Klik op een foto om het in detail te
-                zien.{" "}
-              </p>
-              <ul className={styles.pics}>
-                {image.map(item => (  <>
-                  <img src={item} /> </>
-                 ) )}
-              </ul>
-            </div>
-            <Footer />
-          </section>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <p className={styles.loading}>Laden...</p>
-        </>
-      );
-    }
-  });
+  ));
 };
 
 export default Photobook;

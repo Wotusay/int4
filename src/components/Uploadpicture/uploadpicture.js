@@ -1,21 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./uploadpicture.module.css"
 import { useObserver } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 import BackBlack from "../BackBlack/backblack";
 import { useStores } from "../../hooks";
 import Picture from "../../models/picture";
+import { ROUTES } from "../../consts";
 
 const UploadPicture = () => {
     const {pictureStore} = useStores();
+    const [newPic,setNewPic] =useState(''); 
 
     const handleInput = async e => {
         e.preventDefault();
         const file =  e.target.files[0];
         const p = new Picture({store: pictureStore });
         try {  
-            const newPic = await pictureStore.uploadFile(file, p);
-            console.log(newPic);
+            const pictureRef = await pictureStore.uploadFile(file, p);
+            console.log(pictureRef.id)
+            setNewPic(pictureRef.id);
+            pictureStore.getPictures();
+            console.log(newPic)
 
         }
         catch (error) {
@@ -48,7 +53,7 @@ const UploadPicture = () => {
                     <Link className={styles.button_left}>
                     Ga terug naar de activiteiten
                     </Link>
-                    <Link className={styles.button_right}>
+                    <Link to={ROUTES.picturePreview.to + newPic} className={styles.button_right}>
                     Volgende Stap
                     </Link>
                 </div>

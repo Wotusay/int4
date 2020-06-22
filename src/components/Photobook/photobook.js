@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { useStores } from "../../hooks";
+import React from "react";
+//import { useStores } from "../../hooks";
 import { useObserver } from "mobx-react-lite";
-import Picture from "../Picture/picture";
+//import Picture from "../Picture/picture";
 import styles from "./photobook.module.css";
-import { ROUTES } from "../../consts";
-import { Link } from "react-router-dom";
+//import { ROUTES } from "../../consts";
+//import { Link } from "react-router-dom";
 import Footer from "../Footer/footer";
-import { storage } from "../../services/FirebaseService";
-import NewPhoto from "./newPhoto";
-import { get } from "mobx";
+//import { storage } from "../../services/FirebaseService";
+//import NewPhoto from "./newPhoto";
+//import { get } from "mobx";
 
 const Photobook = () => {
   // const storageRef = storage.ref();

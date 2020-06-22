@@ -6,11 +6,16 @@ class UiStore {
     this.rootStore = rootStore;
     this.currentBox = undefined;
     this.loginState = false;
+    this.currentActivities = undefined;
   }
 
   login = async () => {
     this.loginState = true;
   };
+
+  setCurrentActivities = activities => {
+    this.currentActivities = activities
+  }
 
   logout = () => {
     this.loginState = false;
@@ -50,6 +55,7 @@ decorate(UiStore, {
   currentBox: observable,
   loginState: observable,
   login: action,
+  currentActivities: observable,
   setCurrentCode: action,
   empty: action,
   checker: computed,

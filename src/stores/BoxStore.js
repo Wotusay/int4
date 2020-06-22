@@ -30,8 +30,10 @@ class BoxStore {
     };
 
     getActivities = async (time, code) => {
-            const result =  await this.boxService.getBoxActivities('ochtend-activiteiten','3403 - XPD2  - SPA1 - DPE2');
+            console.log(time , code);
+            const result =  await this.boxService.getBoxActivities(time,code);
             this.onActivitiesChanged(result);
+            console.log(result);
     };
 
     getActivitiesById = id => {
@@ -48,7 +50,7 @@ class BoxStore {
 decorate(BoxStore, {
     boxes: observable,
     addBoxes: action,
-    activities:observable,
+    activities: observable,
     addActivities: action,
   });
 

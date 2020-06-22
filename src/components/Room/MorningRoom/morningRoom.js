@@ -2,9 +2,23 @@ import React from "react";
 import styles from "./morningRoom.module.css";
 import Indicator from "../../Indicator/indicator";
 import Back from "../../Back/back";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../consts";
+import { useStores } from "../../../hooks";
+import { useObserver } from "mobx-react-lite";
 
 const MorningRoom = () => {
-  return (
+  const {boxStore, uiStore} = useStores();
+  const currentBox = uiStore.currentBox;
+  const time = 'ochtend-activiteiten'
+  boxStore.getActivities(time, uiStore.currentCode);
+  console.log(currentBox);
+  console.log(boxStore.activities);
+
+
+  
+
+  return useObserver ( () => (
     <>
       <div className={styles.room}>
         <div className={styles.back}>
@@ -41,7 +55,8 @@ const MorningRoom = () => {
 
         <div className={styles.imgBoxYoga}>
           <div className={styles.indicatorYoga}>
-            <Indicator />
+            <Link to={ROUTES.activityDetail.to + '1'}>
+            <Indicator /></Link>
           </div>
           <picture>
             <source
@@ -81,7 +96,7 @@ const MorningRoom = () => {
         </div>
       </div>
     </>
-  );
+  ));
 };
 
 export default MorningRoom;

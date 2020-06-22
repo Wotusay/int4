@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 import Footer from "../Footer/footer";
 import { storage } from "../../services/FirebaseService";
 import NewPhoto from "./newPhoto";
+import { get } from "mobx";
 
 const Photobook = () => {
   const storageRef = storage.ref();
   const listRef = storageRef.child("images/");
   const [loaded, setLoaded] = useState(false);
-  let images = [];
 
   // listRef.listAll().then(function (result) {
   //   result.items.forEach(function (imageRef) {
@@ -25,6 +25,7 @@ const Photobook = () => {
   // });
 
   const getImages = async () => {
+    let images = [];
     const getList = await listRef.listAll();
     getList.items.forEach((imageRef) => {
       imageRef.getDownloadURL().then((url) => {
@@ -32,11 +33,12 @@ const Photobook = () => {
         console.log(url);
       });
     });
+
+    return images
   };
 
-  console.log(images[0]);
-
-  getImages();
+  const result =  getImages(); 
+  console.log(result);
 
   return useObserver(() => {
     if (loaded === true) {

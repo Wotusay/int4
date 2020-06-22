@@ -23,25 +23,27 @@ const Photobook = () => {
   //   });
   //   setLoaded(true);
   // });
+  let image = [];
 
   const getImages = async () => {
     let images = [];
     const getList = await listRef.listAll();
     getList.items.forEach((imageRef) => {
       imageRef.getDownloadURL().then((url) => {
+        image.push(url);
         images.push(url);
       });
     });
 
     return images;
   };
+  getImages();
 
-  const result = async () => await getImages();
-
-  console.log(result);
+  console.log(image);
 
   return useObserver(() => {
-    if (loaded === true) {
+    if (image.length == 1) {
+
       return (
         <>
           <section className={styles.dashboard}>
@@ -53,13 +55,9 @@ const Photobook = () => {
                 zien.{" "}
               </p>
               <ul className={styles.pics}>
-                {result.map((item) => console.log(item))}
-                {/* <li>
-                  <Link to={ROUTES.pictureDetail.to + picture.id}>
-                    <Picture picture={picture} />
-                  </Link>
-                </li> */}
-                <NewPhoto />
+                {image.map(item => (  <>
+                  <img src={item} /> </>
+                 ) )}
               </ul>
             </div>
             <Footer />

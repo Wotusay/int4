@@ -13,7 +13,7 @@ const ROUTES = {
   uploadComplete: "/uploadcomplete",
   pizzaconfigurator: "/pizzaconfigurator",
   quiz: "/quiz",
-  room: {path: "/room/:id", to: "/room/"},
+  kamer: {path: "/room/:id", to: "/room/"},
 };
 
 const mediaQueries = {

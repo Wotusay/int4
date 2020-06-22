@@ -12,11 +12,10 @@ const Room = () => {
   const { uiStore } = useStores();
   const history = useHistory(); 
   return useObserver(() => {
-    console.log(uiStore.currentBox)
     if (uiStore.currentBox === undefined) {
       history.push(ROUTES.login)
       return (
-        <p className="loading"> loading ...</p>
+        <p> loading ...</p>
       )
     } else {
     return (

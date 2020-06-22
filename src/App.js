@@ -51,7 +51,7 @@ function App() {
           <Route exact path={ROUTES.uploadpicture}>
             <UploadPicture />
           </Route>
-          <Route exact path={ROUTES.room.path}>
+          <Route exact path={ROUTES.kamer.path}>
             <Room />
           </Route>
           <Route exact path={ROUTES.boxes.path}>
@@ -64,9 +64,6 @@ function App() {
             ) : (
               <Login />
             )}
-          </Route>
-          <Route exact path={ROUTES.room}>
-            <Room />
           </Route>
           <Route exact path={ROUTES.currentbox}>
             <CurrentBox />

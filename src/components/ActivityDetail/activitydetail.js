@@ -3,7 +3,7 @@ import { useObserver } from 'mobx-react-lite';
 import styles from "./activitydetail.module.css"
 import Back from '../Back/back';
 import { ROUTES } from '../../consts';
-import { Link, useParams, useHistory } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useStores } from '../../hooks';
 
 const ActivityDetail = () => {

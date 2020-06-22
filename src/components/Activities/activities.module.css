@@ -80,15 +80,22 @@
 }
 
 .button {
-  border: none;
   margin: 2rem;
-  width: 20rem;
-  height: 4rem;
   background-color: white;
   color: black;
   font-family: Muli, sans-serif;
   font-size: 1.6rem;
+  text-decoration: none;
+  padding: 1rem;
+  transition: all 0.2s;
 }
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+
 
 @media only screen and (min-width: 768px) {
   .dates {
@@ -133,6 +140,23 @@
     height: 22rem;
     background: linear-gradient(262.97deg, #a1e3d8 0%, #f49399 100%);
   }
+
+  .title {
+    font-size: 3rem;
+  }
+  
+  .intro {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    width: unset;
+
+  }
+
+  .introWrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
 }
 
 @media only screen and (min-width: 945px) {
@@ -151,8 +175,8 @@
     flex-direction: column;
     margin: 2rem;
     z-index: 5;
-    width: 28rem;
-    height: 28rem;
+    width: 38.3rem;
+    height: 41rem;
     background: linear-gradient(262.97deg, #fff890 0%, #f3c87a 100%);
   }
 
@@ -163,8 +187,8 @@
     flex-direction: column;
     margin: 2rem;
     z-index: 3;
-    width: 28rem;
-    height: 28rem;
+    width: 38.3rem;
+    height: 41rem;
     background: linear-gradient(262.97deg, #f49399 0%, #f3c87a 100%);
   }
   .boxNight {
@@ -174,8 +198,30 @@
     flex-direction: column;
     margin: 2rem;
     z-index: 3;
-    width: 28rem;
-    height: 28rem;
+    width: 38.3rem;
+    height: 41rem;
     background: linear-gradient(262.97deg, #a1e3d8 0%, #f49399 100%);
+  }
+
+  .button {
+    margin-top: 0;
+  }
+
+  .title {
+    font-size: 4.8rem;
+  }
+  
+  .intro {
+    margin-top: 2rem;
+    font-size: 2.4rem;
+    text-align: center;
+    width: 70rem;
+
+  }
+
+  .introWrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
   }
 }

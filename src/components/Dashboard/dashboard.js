@@ -14,7 +14,7 @@ const Dashboard = () => {
     if (uiStore.currentBox === undefined) {
       history.push(ROUTES.login)
       return (
-        <p> loading ...</p>
+        <p className="loading"> loading ...</p>
       )
     } else {
     return (

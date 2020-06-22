@@ -6,7 +6,7 @@ class UiStore {
     this.rootStore = rootStore;
     this.currentBox = undefined;
     this.loginState = false;
-    this.currentActivities = [];
+    this.currentActivities = undefined;
   }
 
   login = async () => {

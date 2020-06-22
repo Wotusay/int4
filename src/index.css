@@ -32,3 +32,14 @@ body {
 span {
   font-weight: bold;
 }
+
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  color: white;
+  font-family: 'Muli';
+  font-size: 3rem;
+  
+}

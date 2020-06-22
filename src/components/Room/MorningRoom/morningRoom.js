@@ -8,24 +8,23 @@ import { useStores } from "../../../hooks";
 import { useObserver } from "mobx-react-lite";
 
 const MorningRoom = () => {
-  const {boxStore, uiStore} = useStores();
-  const currentBox = uiStore.currentBox;
-  const time = 'ochtend-activiteiten'
-  let currentActivities = [];
+  const { uiStore,boxStore } = useStores();
+  const time = 'ochtend-activiteiten';
 
 
-  const setActivities = async () => {
-    await boxStore.getActivities(time, uiStore.currentCode);
-    currentActivities =  uiStore.currentActivities;
-    console.log(currentActivities[0]);
-    console.log(currentActivities);
-    console.log(currentBox);
-    return currentActivities;
-  }
 
-    setActivities();
 
-  return useObserver ( () => (
+
+
+    return useObserver(() => {
+      if (uiStore.currentActivities === undefined) {
+        boxStore.getActivities(time, uiStore.currentCode);    
+        return (
+          <p className="loading"> loading ...</p>
+        )
+      } else {
+      return (
+    
     <>
       <div className={styles.room}>
         <div className={styles.back}>
@@ -62,7 +61,7 @@ const MorningRoom = () => {
 
         <div className={styles.imgBoxYoga}>
           <div className={styles.indicatorYoga}>
-            <Link to={ROUTES.activityDetail.to + '1' }>
+            <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[0].id }>
             <Indicator /></Link>
           </div>
           <picture>
@@ -103,7 +102,7 @@ const MorningRoom = () => {
         </div>
       </div>
     </>
-  ));
+    )}});
 };
 
 export default MorningRoom;

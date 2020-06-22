@@ -23,6 +23,15 @@
   font-family: Muli, sans-serif;
 }
 
+.done {
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+}
+
 .imgWrapper {
   grid-row: 3;
   grid-column: 1 / span 3;
@@ -48,7 +57,20 @@
   justify-self: flex-end;
 }
 
+@media only screen and (min-width: 320px) { 
+  .done {
+    padding-top: 50vw;
+    padding-left: 1rem;
+  }
+}
+
+
 @media only screen and (min-width: 768px) {
+
+  .done {
+    padding-top: 10vw;
+    padding-left: 3rem;
+  }
   .quiz {
     display: grid;
     grid-template-columns: 5vw 1fr 5vw;
@@ -83,7 +105,7 @@
     align-self: flex-end;
     justify-self: center;
     font-size: 5rem;
-    font-family: Muli, sans-serif;
+    font-family: 'Muli', sans-serif;
     font-weight: bold;
     background-color: white;
     height: 10rem;
@@ -98,5 +120,19 @@
     grid-row: 2;
     grid-column: 3;
     justify-self: flex-end;
+  }
+}
+
+@media only screen and (min-width: 1440px) { 
+  .imgRight {
+    grid-row: 1;
+    grid-column: 3;
+    display: grid;
+
+  }
+
+  .vs {
+    align-self: center;
+    justify-self: center;
   }
 }

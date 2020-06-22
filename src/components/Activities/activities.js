@@ -47,7 +47,7 @@ const Activities = () => {
               />
               </picture>
        
-              <Link onClick={e => handleClick(e)} to={ROUTES.room.to + 'ochtend'} className={styles.button}>
+              <Link onClick={e => handleClick(e)} to={ROUTES.kamer.to + 'ochtend'} className={styles.button}>
                 Bekijk ochtendactiviteiten
               </Link>
             </div>
@@ -62,7 +62,7 @@ const Activities = () => {
               />
               </picture>
          
-              <Link onClick={e => handleClick(e)} to={ROUTES.room.to + 'middag'}  className={styles.button}>
+              <Link onClick={e => handleClick(e)} to={ROUTES.kamer.to + 'middag'}  className={styles.button}>
                 Bekijk middagactiviteiten
               </Link>
             </div>
@@ -78,7 +78,7 @@ const Activities = () => {
               />
               </picture>
             
-              <Link onClick={e => handleClick(e)} to={ROUTES.room.to + 'avond'} className={styles.button}>
+              <Link onClick={e => handleClick(e)} to={ROUTES.kamer.to + 'avond'} className={styles.button}>
                 Bekijk avondactiviteiten
               </Link>
             </div>

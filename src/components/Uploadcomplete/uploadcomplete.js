@@ -13,7 +13,7 @@ const UploadComplete = () => {
                 <p className={styles.title}> Jullie foto is geüpload!</p>
                 <div className={styles.buttons}>
                     <Link className={styles.button_left}>
-                    Ga terug naar de activiteiten
+                    Nog een foto uploaden
                     </Link>
                     <Link className={styles.button_right}>
                     Bekijk het fotoboek

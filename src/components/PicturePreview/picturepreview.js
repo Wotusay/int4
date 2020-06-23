@@ -11,7 +11,7 @@ const PicturePreview = () => {
     const [description, setDescription] = useState("");
     const {id} = useParams();
     const history = useHistory();
-    const {pictureStore, uiStore} = useStores();
+    const {pictureStore} = useStores();
     const picture = pictureStore.getPictureById(id);
 
     const handleUpload = async e => {

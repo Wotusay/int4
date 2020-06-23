@@ -3,6 +3,8 @@ import styles from "./yogaDetail.module.css";
 import Back from "../BackBlack/backblack";
 import { ROUTES } from "../../consts";
 import { useHistory } from "react-router-dom";
+import { useObserver } from "mobx-react-lite";
+import { useStores } from "../../hooks";
 
 const YogaDetail = () => {
   let [number = 1, setNumber] = useState(1);
@@ -10,6 +12,7 @@ const YogaDetail = () => {
   let img = `/assets/yoga/pose1.png`;
   let imgMobile = `/assets/yoga/pose1_mobile.png`;
   const history = useHistory();
+  const {uiStore} = useStores();
 
   switch (number) {
     case (number = 0):
@@ -61,7 +64,15 @@ const YogaDetail = () => {
       title = "Twin Trees (Beginner)";
   }
 
-  return (
+  return useObserver (() => {
+    if (uiStore.currentBox === undefined) {
+      history.push(ROUTES.login)
+      return (
+        <p className="loading"> loading ...</p>
+      )
+    } else {
+
+  return(
     <>
       <div className={styles.activity}>
         <div className={styles.back}>
@@ -93,7 +104,7 @@ const YogaDetail = () => {
         </div>
       </div>
     </>
-  );
+  )}});
 };
 
 export default YogaDetail;

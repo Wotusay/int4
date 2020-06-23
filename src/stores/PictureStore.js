@@ -16,6 +16,8 @@ class PictureStore {
         }
   }
 
+  pictureSetState = () => this.loading = true;
+
   onPictureChanged = pictures => {
     pictures.map(picture => this.addPictures(picture));
   }

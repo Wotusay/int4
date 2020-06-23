@@ -3,6 +3,7 @@ import styles from "./uploadcomplete.module.css"
 import { useObserver } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 import BackBlack from "../BackBlack/backblack";
+import { ROUTES } from "../../consts";
 
 const UploadComplete = () => {
     return useObserver(() => (
@@ -12,10 +13,10 @@ const UploadComplete = () => {
           <div className={styles.content}>
                 <p className={styles.title}> Jullie foto is geüpload!</p>
                 <div className={styles.buttons}>
-                    <Link className={styles.button_left}>
+                    <Link to={ROUTES.uploadpicture} className={styles.button_left}>
                     Nog een foto uploaden
                     </Link>
-                    <Link className={styles.button_right}>
+                    <Link to={ROUTES.photobook} className={styles.button_right}>
                     Bekijk het fotoboek
                     </Link>
                 </div>

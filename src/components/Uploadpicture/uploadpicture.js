@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./uploadpicture.module.css"
 import { useObserver } from "mobx-react-lite";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import BackBlack from "../BackBlack/backblack";
 import { useStores } from "../../hooks";
 import Picture from "../../models/picture";
@@ -10,7 +10,6 @@ import { ROUTES } from "../../consts";
 const UploadPicture = () => {
     const {pictureStore,uiStore} = useStores();
     const [newPic,setNewPic] =useState(''); 
-    const history = useHistory();
     const activity = uiStore.currentActivity;
     const box = uiStore.currentBox;
 
@@ -20,10 +19,8 @@ const UploadPicture = () => {
         const p = new Picture({store: pictureStore, activity: activity.title, userId: box.userId});
         try {  
             const pictureRef = await pictureStore.uploadFile(file, p);
-            console.log(pictureRef.id)
             setNewPic(pictureRef.id);
             pictureStore.getPictures();
-            console.log(newPic)
 
         }
         catch (error) {
@@ -34,8 +31,7 @@ const UploadPicture = () => {
     return useObserver(() => {
         if (uiStore.currentActivity === undefined) 
         {
-            history.goBack();
-            return (<p className="loading"> loading ...</p>
+            return ( <p className="loading"> loading ...</p>
             )
         } else {
         return (

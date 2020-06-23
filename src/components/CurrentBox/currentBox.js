@@ -12,7 +12,6 @@ const CurrentBox = () => {
   const history = useHistory();
 
   return useObserver(() => {
-    console.log(uiStore.currentBox)
      if (uiStore.currentBox === undefined) {
        history.push(ROUTES.login)
        return (

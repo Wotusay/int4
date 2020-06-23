@@ -33,8 +33,8 @@ const Quiz = () => {
           <h1 className={styles.introTitle}>We raden  je aan om de Tropicae box te nemen. </h1>
         
         <picture>
-          <source media="(min-width: 1440px)" srcset="/assets/tropical_box.png"/>
-                <source media="(min-width: 320px)" srcset="/assets/tropical_box-mobile.png"/>
+          <source media="(min-width: 1440px)" srcSet="/assets/tropical_box.png"/>
+                <source media="(min-width: 320px)" srcSet="/assets/tropical_box-mobile.png"/>
                 <img
                   style={{width: "auto"}}
                   src="/assets/tropical_box.png"
@@ -47,8 +47,8 @@ const Quiz = () => {
         <div className={styles.done}>
           <h1 className={styles.introTitle}>We raden je aan om de Advontura box te nemen. </h1>
           <picture>
-          <source media="(min-width: 1440px)" srcset="/assets/adventure_box.png"/>
-                <source media="(min-width: 320px)" srcset="/assets/adventure_box-mobile.png"/>
+          <source media="(min-width: 1440px)" srcSet="/assets/adventure_box.png"/>
+                <source media="(min-width: 320px)" srcSet="/assets/adventure_box-mobile.png"/>
                 <img
                   style={{width: "auto"}}
                   src="/assets/adventure_box.png"
@@ -69,11 +69,11 @@ const Quiz = () => {
           <picture id="active" onClick={e => handleClick(e) } className={styles.img}>
             <source
               media="(min-width: 1440px)"
-              srcset={`${activePic}.png`}
+              srcSet={`${activePic}.png`}
             />
             <source
               media="(min-width: 320px)"
-              srcset={`${activePic}_mobile.png`}
+              srcSet={`${activePic}_mobile.png`}
             />
             <img
               style={{ width: "auto" }}
@@ -87,15 +87,15 @@ const Quiz = () => {
           <picture id="lazy" onClick={e => handleClick(e)}  className={styles.imgRight}>
             <source
               media="(min-width: 1440px)"
-              srcset={`${lazyPic}.png`}
+              srcSet={`${lazyPic}.png`}
             />
             <source
               media="(min-width: 320px)"
-              srcset={`${lazyPic}_mobile.png`}
+              srcSet={`${lazyPic}_mobile.png`}
             />
             <img
               style={{ width: "auto" }}
-              srcset={`${lazyPic}.png`}
+              srcSet={`${lazyPic}.png`}
               alt="box"
             />{" "}
           </picture>

@@ -38,12 +38,12 @@ const NightRoom = () => {
           <picture className={styles.contentRightImg}>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/night_room/bullets.png"
+              srcSet="/assets/room/night_room/bullets.png"
             />
 
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/morning_room/empty.png"
+              srcSet="/assets/room/morning_room/empty.png"
             />
             <img
               style={{ width: "auto" }}
@@ -65,15 +65,15 @@ const NightRoom = () => {
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/night_room/tent_desktop.png"
+              srcSet="/assets/room/night_room/tent_desktop.png"
             />
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/night_room/tent_mobile.png"
+              srcSet="/assets/room/night_room/tent_mobile.png"
             />
             <img
               style={{ width: "auto" }}
-              srcset="/assets/room/night_room/tent_desktop.png"
+              srcSet="/assets/room/night_room/tent_desktop.png"
               alt="box"
             />{" "}
           </picture>
@@ -87,11 +87,11 @@ const NightRoom = () => {
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/night_room/fire_desktop.png"
+              srcSet="/assets/room/night_room/fire_desktop.png"
             />
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/night_room/fire_mobile.png"
+              srcSet="/assets/room/night_room/fire_mobile.png"
             />
             <img
               style={{ width: "auto" }}
@@ -110,11 +110,11 @@ const NightRoom = () => {
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/night_room/telescope_desktop.png"
+              srcSet="/assets/room/night_room/telescope_desktop.png"
             />
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/night_room/telescope_mobile.png"
+              srcSet="/assets/room/night_room/telescope_mobile.png"
             />
             <img
               style={{ width: "auto" }}

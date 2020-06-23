@@ -41,7 +41,6 @@ const AdventureBox = () => {
             p.innerHTML ='';            
             p.classList.add(stylesForText.none);
 
-            console.log(targetClass)
             if (targetClass.includes('pic2')) {
                 p.classList.add(stylesForText.pic1)
                 p.innerHTML = text.pic1;

@@ -13,15 +13,13 @@ const PicturePreview = () => {
     const history = useHistory();
     const {pictureStore} = useStores();
     const picture = pictureStore.getPictureById(id);
-    console.log(picture);
 
     const handleUpload = async e => {
         e.preventDefault();
         picture.comment = description;
         await pictureStore.updatePicture(id,picture.comment);
-        history.push(ROUTES.photobook);
-        console.log(picture);
-        console.log(description);
+        history.push(ROUTES.uploadComplete);
+
     }
 
     return useObserver(() => {
@@ -34,7 +32,7 @@ const PicturePreview = () => {
         <BackBlack/>
           <div className={styles.content}>
                 <p className={styles.subtitle}>
-                Activiteit naam - Foto uploaden
+                {picture.activity} - Foto uploaden
                 </p>
                 <div className={styles.pic}>
                     <img alt="placeholder" className={styles.img} src={picture.url} />
@@ -43,7 +41,7 @@ const PicturePreview = () => {
                     </form>
                 </div>
                 <div className={styles.buttons}>
-                    <Link to={history.push(ROUTES.activities)} className={styles.button_left}>
+                    <Link onClick={ (e) => history.push(ROUTES.activities)} className={styles.button_left}>
                     Ga terug naar de activiteiten
                     </Link>
                     <Link onClick={(e) => handleUpload(e)} className={styles.button_right}>

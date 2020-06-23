@@ -39,12 +39,12 @@ const MorningRoom = () => {
           <picture className={styles.contentRightImg}>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/morning_room/bullets.png"
+              srcSet="/assets/room/morning_room/bullets.png"
             />
 
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/morning_room/empty.png"
+              srcSet="/assets/room/morning_room/empty.png"
             />
             <img
               style={{ width: "auto" }}
@@ -63,11 +63,11 @@ const MorningRoom = () => {
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/morning_room/yoga_desktop.png"
+              srcSet="/assets/room/morning_room/yoga_desktop.png"
             />
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/morning_room/yoga_mobile.png"
+              srcSet="/assets/room/morning_room/yoga_mobile.png"
             />
             <img
               style={{ width: "auto" }}
@@ -84,11 +84,11 @@ const MorningRoom = () => {
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/morning_room/guitar_desktop.png"
+              srcSet="/assets/room/morning_room/guitar_desktop.png"
             />
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/morning_room/guitar_mobile.png"
+              srcSet="/assets/room/morning_room/guitar_mobile.png"
             />
             <img
               style={{ width: "auto" }}

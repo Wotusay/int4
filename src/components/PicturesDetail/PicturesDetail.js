@@ -18,8 +18,15 @@ const PicturesDetail = () => {
 
     const handleRemove = async e => {
         e.preventDefault();
+        try {
         await pictureStore.removePicture(id);
-        history.push(ROUTES.photobook);
+        pictureStore.empty();
+        await pictureStore.getPictures();
+        history.push(ROUTES.photobook);    
+        }
+        catch (error) {
+            console.log(error)
+        }
     }
 
     const handelChange = async e => {

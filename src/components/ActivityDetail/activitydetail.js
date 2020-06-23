@@ -10,7 +10,6 @@ const ActivityDetail = () => {
     const { id } = useParams();
     const { boxStore, uiStore } = useStores();
     const activity = boxStore.getActivitiesById(id);
-    console.log(activity)
     uiStore.setCurrentActivity(activity);
 
     return useObserver(() => {
@@ -47,14 +46,14 @@ const ActivityDetail = () => {
         </div>
         <div className={styles.relative}>
         <picture className={styles.right}>
-        <source media="(min-width: 1440px)" srcset={`${activity.pic}.png`} />
-        <source media="(min-width: 320px)" srcset={`${activity.pic}-mobile.png`} />
+        <source media="(min-width: 1440px)" srcSet={`${activity.pic}.png`} />
+        <source media="(min-width: 320px)" srcSet={`${activity.pic}-mobile.png`} />
         <img alt='india' style={{width: 'auto'}} src={`${activity.pic}.png`} />
         </picture>  </div>
 
         <picture className={styles.left}>
-        <source media="(min-width: 1440px)" srcset="/assets/leaf-top.png" />
-        <source media="(min-width: 320px)" srcset="/assets/leaf-top-mobile.png" />
+        <source media="(min-width: 1440px)" srcSet="/assets/leaf-top.png" />
+        <source media="(min-width: 320px)" srcSet="/assets/leaf-top-mobile.png" />
         <img alt='prop-top' style={{width: 'auto'}} src="/assets/leaf-top.png"/>
         </picture>
         </>

@@ -1,5 +1,6 @@
 .activity {
   width: 100vw;
+  height: 100vh;
   background: linear-gradient(238.32deg, #f3c87a 0%, #fff890 100%);
   display: grid;
   grid-template-columns: 5vw 1fr 5vw;
@@ -7,7 +8,7 @@
 }
 
 .back {
-  grid-row: 1;
+  grid-row: 0;
   grid-column: 2;
   margin: 0;
 }
@@ -18,9 +19,8 @@
   grid-row: 2;
   width: 100vw;
   display: grid;
-  grid-template-rows: 6rem 1fr 10rem;
+  grid-template-rows: 6rem 30rem 2rem;
   grid-template-columns: 5vw 1fr 5vw;
-  height: 90vh;
 }
 
 .img {
@@ -34,15 +34,21 @@
   margin-top: 4rem;
   grid-column: 2;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: Playfair Display, sans-serif;
   font-weight: bold;
 }
 
+.yogaTitle {
+  justify-self: center;
+  grid-row: 3;
+  grid-column: 2;
+}
+
 .buttonWrapper {
   margin: 0 auto;
-  width: 70rem;
-  grid-row: 3;
+  width: 100%;
+  grid-row: 4;
   grid-column: 2;
   display: flex;
   justify-content: space-between;
@@ -56,10 +62,77 @@
 }
 
 .button {
-  width: 13rem;
   height: 4rem;
   border: none;
   background-color: black;
   color: white;
   font-family: Muli, sans-serif;
+}
+
+@media only screen and (min-width: 1200px) {
+  .activity {
+    width: 100vw;
+    background: linear-gradient(238.32deg, #f3c87a 0%, #fff890 100%);
+    display: grid;
+    grid-template-columns: 5vw 1fr 5vw;
+    grid-template-rows: 10rem 1fr;
+  }
+
+  .back {
+    grid-row: 1;
+    grid-column: 2;
+    margin: 0;
+  }
+
+  .content {
+    background-color: white;
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 6rem 1fr 10rem;
+    grid-template-columns: 5vw 1fr 5vw;
+    height: 90vh;
+  }
+
+  .img {
+    justify-self: center;
+    align-self: center;
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .title {
+    margin-top: 4rem;
+    grid-column: 2;
+    text-align: center;
+    font-size: 3rem;
+    font-family: Playfair Display, sans-serif;
+    font-weight: bold;
+  }
+
+  .buttonWrapper {
+    margin: 0 auto;
+    width: 70rem;
+    grid-row: 3;
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .yogaTitle {
+    font-size: 2rem;
+    font-family: Muli, sans-serif;
+    font-weight: bold;
+  }
+
+  .button {
+    width: 13rem;
+    height: 4rem;
+    border: none;
+    background-color: black;
+    color: white;
+    font-family: Muli, sans-serif;
+  }
 }

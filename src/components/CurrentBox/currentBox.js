@@ -80,7 +80,7 @@ const CurrentBox = () => {
             /> : uiStore.currentBox.title === 'Amare box' ?          
             <img
             className={styles.bottom}
-            src="/assets/romanticbox/left.png"
+            src="/assets/left.png"
             alt="prop"
           />: 
           <img

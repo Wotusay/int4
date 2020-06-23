@@ -33,12 +33,10 @@ class PictureService {
 
 
     uploadPicture = async file => {
-        console.log(file);
         const metaData = {'contentType': file.type}
         const storageRef = this.storage.ref(`assets/${file.name}`);
         const uploadToFirebase =  storageRef.put(file, metaData);
         await uploadToFirebase; 
-        console.log(uploadToFirebase.state);
         const picureUrl = await storageRef.getDownloadURL();
         return picureUrl;
     }

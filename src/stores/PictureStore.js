@@ -25,13 +25,11 @@ class PictureStore {
   getPictures = async () => {
     const result = await this.pictureService.getAllImages(this.rootstore.uiStore.currentCode);
     this.onPictureChanged(result);
-    console.log(result);
   }
 
   uploadFile = async (file, picture) => {
     //uploading and getting the img url
     const upload = await this.pictureService.uploadPicture(file);
-    console.log(upload);
     //connection between the firestore and storage
     picture.comment = '';
     picture.url = upload;

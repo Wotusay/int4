@@ -39,8 +39,6 @@ class UiStore {
   setCurrentCode = async code => {
     this.currentCode = code;
     await this.searchWithCode(code);
-    //dit komt uit de database
-    //stringfy het element anders lukt het niet hij heeft het mee als een []
   };
 
   searchWithCode = async code => {

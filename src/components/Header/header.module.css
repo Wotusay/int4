@@ -1,82 +1,63 @@
-@font-face {
-  font-family: "exodus";
-  src: url("../../fonts/AnyConv.com__ExodusDemo-Regular.woff2") format("woff2"),
-    url("../../fonts/AnyConv.com__ExodusDemo-Regular.woff") format("woff");
-}
-
 .header {
-  display: grid;
-  grid-template-columns: 10vw 1fr 1fr 10vw;
   position: absolute;
+  display: grid;
+  grid-template-columns: 5vw 1fr 1fr 5vw;
   width: 100vw;
-}
-
-.buttons {
-  display: flex;
-  justify-content: flex-end;
-  grid-column: 3;
-}
-
-.login {
-  color: black;
-  background-color: white;
-  padding: 8px 14px;
+  z-index: 11;
+  height: 10rem;
 }
 
 .logo {
-  font-size: 24px;
-  padding-top: 5px;
-  color: white;
-  font-family: exodus;
   grid-column: 2;
-}
-
-.about {
-  border: 1px solid white;
-  text-decoration: none;
+  align-self: center;
+  font-family: Exodus, sans-serif;
+  font-size: 3rem;
   color: white;
-  padding: 8px 14px;
-  grid-column: 4;
-  justify-self: flex-end;
 }
 
-/* @media only screen and (min-width: 320px) {
-  .logo {
-    font-size: 4.4rem;
-    padding-top: 5px;
-  }
+.nav {
+  display: flex;
+  grid-column: 3;
+  justify-self: flex-end;
+  align-self: center;
+  align-items: center;
+  cursor: pointer;
+}
 
-  .header {
-    grid-template-columns: 1fr 1fr;
-  }
+.navItem {
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  color: white;
+  font-family: Muli, sans-serif;
+}
 
-  .about {
-    font-size: 1.6rem;
-    height: 3.5rem;
-  }
-  .login {
-    font-size: 1.6rem;
-    height: 3.5rem;
-  }
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  color: black;
+  font-family: "Muli", sans-serif;
+  background-color: white;
+  width: 8rem;
+  height: 3.5rem;
+  transition: ease-in-out 0.2s;
+}
 
-  .buttons {
-    margin-top: 1rem;
-  }
+.login:hover {
+  background-color: unset;
+  border: 0.2rem solid black;
+  color: black;
 }
 
 @media only screen and (min-width: 768px) {
-  .logo {
-    font-size: 24px;
-    padding-top: 5px;
+  .header {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 5vw 1fr 1fr 5vw;
+    width: 100vw;
+    z-index: 11;
+    height: 10rem;
   }
-
-  .buttons {
-    margin-top: unset;
-  }
-  .about {
-    font-size: 1.6rem;
-  }
-  .login {
-    font-size: 1.6rem;
-  }
-} */
+}

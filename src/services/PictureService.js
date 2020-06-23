@@ -25,7 +25,7 @@ class PictureService {
         return data;
     }
 
-    createImage = async picture =>  {
+    createImage = async (picture) =>  {
         const pictureRef = await this.db.collection("pictures").doc();
         await pictureRef.withConverter(pictureConverter).set(picture);
         return pictureRef;

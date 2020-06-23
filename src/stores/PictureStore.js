@@ -6,6 +6,7 @@ class PictureStore {
     this.rootstore = rootstore;
     this.pictureService = new PictureService(this.rootstore.firebase);
     this.pictures = [];
+    this.loading = true; 
   }
 
   addPictures = picture => {
@@ -34,8 +35,8 @@ class PictureStore {
     picture.url = upload;
     picture.code = this.rootstore.uiStore.currentCode;
     const newPictureRef = await this.pictureService.createImage(picture);
+    this.loading = false;
     picture.id = newPictureRef.id;
-    
     return picture;
   }
 
@@ -56,6 +57,7 @@ class PictureStore {
 }
 
 decorate(PictureStore, {
+  loading: observable,
   pictures: observable,
   empty: action,
   addPictures: action,

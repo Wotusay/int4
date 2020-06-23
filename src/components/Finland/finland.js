@@ -4,7 +4,14 @@ import styles from "./finland.module.css";
 import Back from "../BackBlack/backblack";
 
 const Finland = () => {
-  return useObserver(() => (
+  return useObserver(() => {
+    if (uiStore.currentBox === undefined) {
+      history.push(ROUTES.login)
+      return (
+        <p className="loading"> loading ...</p>
+      )
+    } else {
+    return (
     <>
       <div className={styles.activity}>
         <div className={styles.back}>
@@ -75,7 +82,7 @@ const Finland = () => {
         </div>
       </div>
     </>
-  ));
+  )}});
 };
 
 export default Finland;

@@ -4,11 +4,12 @@ import Indicator from "../../Indicator/indicator";
 import Back from "../../Back/back";
 import { useObserver } from "mobx-react-lite";
 import { useStores } from "../../../hooks";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { ROUTES } from "../../../consts";
 
 const AfternoonRoom = () => {
   const {boxStore, uiStore} = useStores();
+  const history = useHistory()
   const time = 'middag-activiteiten'
 
     return useObserver(() => {
@@ -16,8 +17,12 @@ const AfternoonRoom = () => {
         boxStore.getActivities(time, uiStore.currentCode);    
         return (
           <p className="loading"> loading ...</p>
-        )
-      } else {
+        ) 
+      } if (uiStore.currentCode !== '3403 - XPD2 - SPA1 - DPE2') {
+          history.push(ROUTES.development)
+      } 
+      
+      else {
 
       return (
        <> 

@@ -10,8 +10,8 @@ const Development = () => {
         <h1 className={styles.title}>
           Deze pagina is onder development en zal binnenkort beschikbaar zijn.
         </h1>
-        <Link to={ROUTES.home}>
-          <button className={styles.button}>Terug naar de homepagina</button>
+        <Link to={ROUTES.dashboard}>
+          <button className={styles.button}>Terug naar de dashboard</button>
         </Link>
       </div>
     </>

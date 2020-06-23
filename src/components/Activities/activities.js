@@ -9,9 +9,8 @@ import { useStores } from "../../hooks";
 const Activities = () => {
   const {uiStore} = useStores();
   const history = useHistory();
-
+  const box =  uiStore.currentBox;
   const handleClick = e  => {
-
     uiStore.emptyActivities();
   }
   return useObserver(() => {
@@ -61,7 +60,7 @@ const Activities = () => {
               />
               </picture>
          
-              <Link onClick={e => handleClick(e)} to={ROUTES.kamer.to + 'middag'}  className={styles.button}>
+              <Link onClick={e => handleClick(e)} to={box.code === '3403 - XPD2 - SPA1 - DPE2' ? ROUTES.kamer.to + 'middag' : ROUTES.development}  className={styles.button}>
                 Bekijk middagactiviteiten
               </Link>
             </div>
@@ -77,7 +76,7 @@ const Activities = () => {
               />
               </picture>
             
-              <Link onClick={e => handleClick(e)} to={ROUTES.kamer.to + 'avond'} className={styles.button}>
+              <Link onClick={e => handleClick(e)} to={box.code === '3403 - XPD2 - SPA1 - DPE2' ? ROUTES.kamer.to + 'avond' : ROUTES.development} className={styles.button}>
                 Bekijk avondactiviteiten
               </Link>
             </div>

@@ -11,7 +11,6 @@ const ActivityDetail = () => {
     const { boxStore, uiStore } = useStores();
     const activity = boxStore.getActivitiesById(id);
     uiStore.setCurrentActivity(activity);
-
     return useObserver(() => {
             if (uiStore.currentBox === undefined) {
             if (!activity) {

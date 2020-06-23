@@ -9,7 +9,9 @@ import { useObserver } from "mobx-react-lite";
 
 const MorningRoom = () => {
   const { uiStore,boxStore } = useStores();
+  const box = uiStore.currentBox;
   const time = 'ochtend-activiteiten';
+  console.log(uiStore.currentActivities);
 
     return useObserver(() => {
       if (uiStore.currentActivities === undefined) {
@@ -56,7 +58,7 @@ const MorningRoom = () => {
 
         <div className={styles.imgBoxYoga}>
           <div className={styles.indicatorYoga}>
-            <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[1].id }>
+            <Link to={box.code === '3403 - XPD2 - SPA1 - DPE2' ? ROUTES.activityDetail.to + uiStore.currentActivities[1].id : ROUTES.activityDetail.to + uiStore.currentActivities[0].id}>
             <Indicator /></Link>
           </div>
           
@@ -78,7 +80,7 @@ const MorningRoom = () => {
         </div>
         <div className={styles.imgBoxGuitar}>
           <div className={styles.indicatorGuitar}>
-            <Link to={ROUTES.activityDetail.to + uiStore.currentActivities[0].id}>
+            <Link to={box.code === '3403 - XPD2 - SPA1 - DPE2' ? ROUTES.activityDetail.to + uiStore.currentActivities[0].id : ROUTES.activityDetail.to + uiStore.currentActivities[0].id}>
             <Indicator /></Link>
           </div>
           <picture>

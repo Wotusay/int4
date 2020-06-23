@@ -1,9 +1,9 @@
 .activity {
   width: 100vw;
-  background: linear-gradient(238.32deg, #fff890 0%, #f3c87a 100%);
+  background: linear-gradient(238.32deg, #f3c87a 0%, #fff890 100%);
   display: grid;
   grid-template-columns: 5vw 1fr 5vw;
-  grid-template-rows: 8rem 1fr;
+  grid-template-rows: 10rem 1fr;
 }
 
 .back {
@@ -18,7 +18,41 @@
   grid-row: 2;
   width: 100vw;
   display: grid;
-  grid-template-rows: 6rem 15rem 1fr 1fr 1fr;
+  grid-template-rows: 6rem 1fr 10rem;
   grid-template-columns: 5vw 1fr 5vw;
-  height: 100%;
+  height: 90vh;
+}
+
+.img {
+  justify-self: center;
+  align-self: center;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.title {
+  margin-top: 4rem;
+  grid-column: 2;
+  text-align: center;
+  font-size: 3rem;
+  font-family: Playfair Display, sans-serif;
+  font-weight: bold;
+}
+
+.buttonWrapper {
+  margin: 0 auto;
+  width: 70rem;
+  grid-row: 3;
+  grid-column: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 13rem;
+  height: 4rem;
+  border: none;
+  background-color: black;
+  color: white;
+  font-family: Muli, sans-serif;
 }

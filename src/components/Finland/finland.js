@@ -2,6 +2,8 @@ import React from "react";
 import { useObserver } from "mobx-react-lite";
 import styles from "./finland.module.css";
 import Back from "../BackBlack/backblack";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../consts";
 
 const Finland = () => {
   return useObserver(() => (
@@ -30,7 +32,9 @@ const Finland = () => {
               />
             </div>
             <div className={styles.buttonWrapper}>
-              <button className={styles.button}>Sterrenbeeld zoeken</button>
+              <Link to={ROUTES.detailvos}>
+                <button className={styles.button}>Sterrenbeeld zoeken</button>
+              </Link>
             </div>
           </div>
 
@@ -43,7 +47,9 @@ const Finland = () => {
               />
             </div>
             <div className={styles.buttonWrapper}>
-              <button className={styles.button}>Sterrenbeeld zoeken</button>
+              <Link to={ROUTES.detailveulen}>
+                <button className={styles.button}>Sterrenbeeld zoeken</button>
+              </Link>
             </div>
           </div>
 
@@ -56,7 +62,9 @@ const Finland = () => {
               />
             </div>
             <div className={styles.buttonWrapper}>
-              <button className={styles.button}>Sterrenbeeld zoeken</button>
+              <Link to={ROUTES.detailslang}>
+                <button className={styles.button}>Sterrenbeeld zoeken</button>
+              </Link>
             </div>
           </div>
 
@@ -69,7 +77,9 @@ const Finland = () => {
               />
             </div>
             <div className={styles.buttonWrapper}>
-              <button className={styles.button}>Sterrenbeeld zoeken</button>
+              <Link to={ROUTES.detailbeer}>
+                <button className={styles.button}>Sterrenbeeld zoeken</button>
+              </Link>
             </div>
           </div>
         </div>

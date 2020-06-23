@@ -13,6 +13,10 @@ const PizzaConfigurator = () => {
   let sauceImg = "/assets/pizza/pixel.png";
   let addImg = "/assets/pizza/pixel.png";
 
+  const addNewImg = (addImg) => {
+    
+  };
+
   switch (sauce) {
     case "tomatensaus":
       sauceImg = "/assets/pizza/tomatensaus.png";
@@ -34,22 +38,27 @@ const PizzaConfigurator = () => {
   switch (add) {
     case "kaas":
       addImg = "/assets/pizza/kaas.png";
+      addNewImg(addImg);
       break;
 
     case "peperoni":
       addImg = "/assets/pizza/peperoni.png";
+      addNewImg();
       break;
 
     case "olijven":
       addImg = "/assets/pizza/olijven.png";
+      addNewImg();
       break;
 
     case "champignons":
       addImg = "/assets/pizza/champignons.png";
+      addNewImg();
       break;
 
     case "ananas":
       addImg = "/assets/pizza/ananas.png";
+      addNewImg();
       break;
   }
 
@@ -63,8 +72,8 @@ const PizzaConfigurator = () => {
           <div className={styles.intro}>
             <h1 className={styles.introTitle}>Maak uw eigen pizza! </h1>
             <p className={styles.introText}>
-              Stel je eigen pizza samen zodat je weet wat je juist moet gaan
-              kopen in de winkel.
+              Stel jullie eigen pizza samen zodat je samen een overheerlijk
+              diner kan hebben!
             </p>
           </div>
           <div className={styles.step1}>
@@ -175,6 +184,9 @@ const PizzaConfigurator = () => {
           ></img>
           <img alt="PizzaSauce" className={styles.pizza} src={sauceImg}></img>
           <img alt="PizzaAdd1" className={styles.pizza} src={addImg}></img>
+          <img alt="PizzaAdd2" className={styles.pizza} src={addImg}></img>
+          <img alt="PizzaAdd3" className={styles.pizza} src={addImg}></img>
+          <button className={styles.buttonDone}>Klaar!</button>
         </div>
       </div>
     </>

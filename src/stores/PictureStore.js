@@ -59,6 +59,7 @@ decorate(PictureStore, {
   pictures: observable,
   empty: action,
   addPictures: action,
+  removePicture: action
 });
 
 export default PictureStore;

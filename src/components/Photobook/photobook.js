@@ -4,14 +4,22 @@ import styles from "./photobook.module.css";
 import Footer from "../Footer/footer";
 import { useStores } from "../../hooks";
 import Picture from "../Picture/picture";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { ROUTES } from "../../consts";
 
 const Photobook = () => {
-  const {pictureStore} = useStores();
-  const pictures = pictureStore.pictures;
+  const {pictureStore,uiStore} = useStores();
+  const pictures = pictureStore.pictures; 
+  const history = useHistory();
 
-  return useObserver(() => (
+  return useObserver(() => {
+    if (uiStore.currentBox === undefined) {
+      history.push(ROUTES.login)
+      return (
+        <p className="loading"> loading ...</p>
+      )
+    } else {
+      return (
       <section className={styles.dashboard}>
         <div className={styles.content}>
           <p className={styles.title}>Hier zien jullie je Fotoboek! </p>
@@ -31,7 +39,7 @@ const Photobook = () => {
         </div>
         <Footer />
       </section>
-    ) 
+      )}} 
   );
 };
 

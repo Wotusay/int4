@@ -10,7 +10,6 @@ import { ROUTES } from "../../consts";
 const UploadPicture = () => {
     const {pictureStore,uiStore} = useStores();
     const [newPic,setNewPic] =useState(''); 
-    const history = useHistory();
     const activity = uiStore.currentActivity;
     const box = uiStore.currentBox;
 
@@ -34,8 +33,7 @@ const UploadPicture = () => {
     return useObserver(() => {
         if (uiStore.currentActivity === undefined) 
         {
-            history.goBack();
-            return (<p className="loading"> loading ...</p>
+            return ( <p className="loading"> loading ...</p>
             )
         } else {
         return (

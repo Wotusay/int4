@@ -10,7 +10,6 @@ const Dashboard = () => {
   const {uiStore} = useStores();
   const history = useHistory();
   return useObserver(() => {
-    console.log(uiStore.currentBox)
     if (uiStore.currentBox === undefined) {
       history.push(ROUTES.login)
       return (
@@ -36,8 +35,8 @@ const Dashboard = () => {
             <div className={styles.imgWrapper}>
               <div className={styles.imgBox}>
                 <picture className={styles.img}>
-                <source media="(min-width: 1440px)" srcset="/assets/dashboard/activities.png"/>
-                <source media="(min-width: 320px)" srcset="/assets/dashboard/activities-mobile.png"/>
+                <source media="(min-width: 1440px)" srcSet="/assets/dashboard/activities.png"/>
+                <source media="(min-width: 320px)" srcSet="/assets/dashboard/activities-mobile.png"/>
                 <img
                   style={{width: "auto"}}
                   src="/assets/dashboard/activities.png"

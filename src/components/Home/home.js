@@ -19,8 +19,8 @@ const Home = () => {
 
             <div className={styles.plane}>
             <picture className={styles.planepic} >
-            <source media="(min-width: 1440px)" srcset="/assets/plane.png"/>
-            <source media="(min-width: 320px)" srcset="/assets/plane-mobile.png"/>
+            <source media="(min-width: 1440px)" srcSet="/assets/plane.png"/>
+            <source media="(min-width: 320px)" srcSet="/assets/plane-mobile.png"/>
       
             <img  src="assets/plane.png" style={{width: 'auto'}} alt="plane"/>
             </picture>
@@ -31,8 +31,8 @@ const Home = () => {
             <h2 className={styles.title_white}>Kies een type box</h2>
             <div className={styles.stackedbox}>
               <picture>
-                <source media="(min-width: 1440px)" srcset="/assets/stackedboxes.png"/>
-                <source media="(min-width: 320px)" srcset="/assets/boxes-mobile.png"/>
+                <source media="(min-width: 1440px)" srcSet="/assets/stackedboxes.png"/>
+                <source media="(min-width: 320px)" srcSet="/assets/boxes-mobile.png"/>
                 <img alt="stackedbox" src="/assets/stackedboxes.png" style={{width: 'auto'}} />
 
               </picture>
@@ -41,12 +41,12 @@ const Home = () => {
             </div>
             <div className={styles.quiz} >
               <picture>
-              <source media="(min-width: 1440px)" srcset="/assets/quizbox.png"/>
-                <source media="(min-width: 320px)" srcset="/assets/quiz-mobile.png"/>
+              <source media="(min-width: 1440px)" srcSet="/assets/quizbox.png"/>
+                <source media="(min-width: 320px)" srcSet="/assets/quiz-mobile.png"/>
               <img alt="quizbox" src="/assets/quizbox.png" style={{width: 'auto'}} />
               </picture>
               <p className={styles.action}>Laat onze test bepalen welke box het beste bij jou past </p>
-              <Link className={styles.button2}>Doe de test</Link>
+              <Link to={ROUTES.quiz} className={styles.button2}>Doe de test</Link>
             </div>
           </section>
 
@@ -73,8 +73,8 @@ const Home = () => {
                 </div>
                 <div className={styles.relativePos}>
                   <picture className={styles.pic1}>
-                  <source media="(min-width: 1440px)" srcset="/assets/marriage.png"/>
-                  <source media="(min-width: 320px)" srcset="/assets/marriage-mobile.png"/>
+                  <source media="(min-width: 1440px)" srcSet="/assets/marriage.png"/>
+                  <source media="(min-width: 320px)" srcSet="/assets/marriage-mobile.png"/>
                   <img style={{width: 'auto'}} alt="mariage" src="/assets/marriage.png" />
                   </picture>
                 </div>
@@ -97,8 +97,8 @@ const Home = () => {
                   </p>
                 </div>
                 <picture className={styles.pic2}>
-                <source media="(min-width: 1440px)" srcset="/assets/openbox.png"/>
-                  <source media="(min-width: 320px)" srcset="/assets/openbox-mobile.png"/>
+                <source media="(min-width: 1440px)" srcSet="/assets/openbox.png"/>
+                  <source media="(min-width: 320px)" srcSet="/assets/openbox-mobile.png"/>
                 <img style={{width: 'auto'}} alt="openbox" src="/assets/openbox.png" />
                 </picture>
               </div>
@@ -108,8 +108,8 @@ const Home = () => {
               <div className={styles.reviewers}>
                 <div className={styles.reviewpattern}>
                   <picture>
-                  <source media="(min-width: 1440px)" srcset="/assets/reviewer-1.png"/>
-                  <source media="(min-width: 320px)" srcset="/assets/reviewer1-mobile.png"/>
+                  <source media="(min-width: 1440px)" srcSet="/assets/reviewer-1.png"/>
+                  <source media="(min-width: 320px)" srcSet="/assets/reviewer1-mobile.png"/>
                   <img alt="reviewer" src="/assets/reviewer-1.png" />
                   </picture>
                   <p className={styles.text_rev} >
@@ -117,15 +117,15 @@ const Home = () => {
                     uitgesteld en het was een goede vervanger!
                   </p>
                   <picture className={styles.stars}>
-                  <source media="(min-width: 1440px)" srcset="/assets/stars.png"/>
-                  <source media="(min-width: 320px)" srcset="/assets/stars-mobile.png"/>
+                  <source media="(min-width: 1440px)" srcSet="/assets/stars.png"/>
+                  <source media="(min-width: 320px)" srcSet="/assets/stars-mobile.png"/>
                   <img style={{width: 'auto'}}  alt="stars" src="/assets/stars.png" />
                   </picture>
                 </div>
                 <div className={styles.reviewpattern}>
                 <picture>
-                  <source media="(min-width: 1440px)" srcset="/assets/reviewer-2.png"/>
-                  <source media="(min-width: 320px)" srcset="/assets/reviewer2-mobile.png"/>
+                  <source media="(min-width: 1440px)" srcSet="/assets/reviewer-2.png"/>
+                  <source media="(min-width: 320px)" srcSet="/assets/reviewer2-mobile.png"/>
                   <img style={{width: 'auto'}} alt="reviewer" src="/assets/reviewer-2.png" />
                   </picture>
                   <p className={styles.text_rev} >
@@ -133,15 +133,15 @@ const Home = () => {
                     uitgesteld en het was een goede vervanger!
                   </p>
                   <picture className={styles.stars}>
-                  <source media="(min-width: 1440px)" srcset="/assets/stars.png"/>
-                  <source media="(min-width: 320px)" srcset="/assets/stars-mobile.png"/>
+                  <source media="(min-width: 1440px)" srcSet="/assets/stars.png"/>
+                  <source media="(min-width: 320px)" srcSet="/assets/stars-mobile.png"/>
                   <img style={{width: 'auto'}}  alt="stars" src="/assets/stars.png" />
                   </picture>
                 </div>
                 <div className={styles.reviewpattern}>
                 <picture>
-                  <source media="(min-width: 1440px)" srcset="/assets/reviewer-3.png"/>
-                  <source media="(min-width: 320px)" srcset="/assets/reviewer3-mobile.png"/>
+                  <source media="(min-width: 1440px)" srcSet="/assets/reviewer-3.png"/>
+                  <source media="(min-width: 320px)" srcSet="/assets/reviewer3-mobile.png"/>
                   <img style={{width: 'auto'}} alt="reviewer" src="/assets/reviewer-3.png" />
                   </picture>
                   <p className={styles.text_rev} >
@@ -149,8 +149,8 @@ const Home = () => {
                     uitgesteld en het was een goede vervanger!
                   </p>
                   <picture className={styles.stars}>
-                  <source media="(min-width: 1440px)" srcset="/assets/stars.png"/>
-                  <source media="(min-width: 320px)" srcset="/assets/stars-mobile.png"/>
+                  <source media="(min-width: 1440px)" srcSet="/assets/stars.png"/>
+                  <source media="(min-width: 320px)" srcSet="/assets/stars-mobile.png"/>
                   <img style={{width: 'auto'}}  alt="stars" src="/assets/stars.png" />
                   </picture>
                 </div>

@@ -15,7 +15,6 @@ const Activities = () => {
     uiStore.emptyActivities();
   }
   return useObserver(() => {
-    console.log(uiStore.currentBox)
     if (uiStore.currentBox === undefined) {
       history.push(ROUTES.login)
       return (
@@ -38,8 +37,8 @@ const Activities = () => {
           <div className={styles.dates}>
             <div className={styles.boxMorning}>
               <picture className={styles.img}>
-              <source media="(min-width: 1440px)" srcset="/assets/activities/morning.png"/>
-                <source media="(min-width: 320px)" srcset="/assets/activities/morning_mobile.png"/>
+              <source media="(min-width: 1440px)" srcSet="/assets/activities/morning.png"/>
+                <source media="(min-width: 320px)" srcSet="/assets/activities/morning_mobile.png"/>
                        <img
                 alt="morning"
                 style={{width:"auto"}}
@@ -53,8 +52,8 @@ const Activities = () => {
             </div>
             <div className={styles.boxNoon}>
               <picture className={styles.img}>
-              <source media="(min-width: 1440px)" srcset="/assets/activities/noon.png"/>
-                <source media="(min-width: 320px)" srcset="/assets/activities/noon_mobile.png"/>
+              <source media="(min-width: 1440px)" srcSet="/assets/activities/noon.png"/>
+                <source media="(min-width: 320px)" srcSet="/assets/activities/noon_mobile.png"/>
                      <img
                 alt="noon"
                 style={{width:"auto"}}
@@ -68,8 +67,8 @@ const Activities = () => {
             </div>
             <div className={styles.boxNight}>
               <picture className={styles.img}>
-              <source media="(min-width: 1440px)" srcset="/assets/activities/night.png"/>
-                <source media="(min-width: 320px)" srcset="/assets/activities/night_mobile.png"/>
+              <source media="(min-width: 1440px)" srcSet="/assets/activities/night.png"/>
+                <source media="(min-width: 320px)" srcSet="/assets/activities/night_mobile.png"/>
               <img
                 alt="night"
                 style={{width:"auto"}}

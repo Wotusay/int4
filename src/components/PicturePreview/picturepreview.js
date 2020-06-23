@@ -19,8 +19,7 @@ const PicturePreview = () => {
         picture.comment = description;
         await pictureStore.updatePicture(id,picture.comment);
         history.push(ROUTES.uploadComplete);
-        console.log(picture);
-        console.log(description);
+
     }
 
     return useObserver(() => {

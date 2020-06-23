@@ -13,7 +13,6 @@ import MediaQuery from "react-responsive";
 const Boxes = () => {
     const {id} = useParams();
     const history = useHistory();
-    console.log(id);
     const handleNext = e  => {
         e.preventDefault();
         id === 'adventure-box' ? history.push(ROUTES.boxes.to + '/romantic-box') : id === 'romantic-box' ? history.push(ROUTES.boxes.to + '/tropic-box') : id === 'tropic-box' ? history.push(ROUTES.boxes.to + '/adventure-box') : history.push(ROUTES.boxes + '/adventure-box');

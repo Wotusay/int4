@@ -40,12 +40,12 @@ const AfternoonRoom = () => {
           <picture >
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/afternoon_room/background.png"
+              srcSet="/assets/room/afternoon_room/background.png"
             />
 
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/morning_room/empty.png"
+              srcSet="/assets/room/morning_room/empty.png"
             />
             <img
               style={{ width: "auto" }}
@@ -64,11 +64,11 @@ const AfternoonRoom = () => {
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/afternoon_room/pizza_desktop.png"
+              srcSet="/assets/room/afternoon_room/pizza_desktop.png"
             />
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/afternoon_room/pizza_mobile.png"
+              srcSet="/assets/room/afternoon_room/pizza_mobile.png"
             />
             <img
               style={{ width: "auto" }}
@@ -86,11 +86,11 @@ const AfternoonRoom = () => {
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/afternoon_room/walk_desktop.png"
+              srcSet="/assets/room/afternoon_room/walk_desktop.png"
             />
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/afternoon_room/walk_mobile.png"
+              srcSet="/assets/room/afternoon_room/walk_mobile.png"
             />
             <img
               style={{ width: "auto" }}
@@ -108,11 +108,11 @@ const AfternoonRoom = () => {
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="/assets/room/afternoon_room/jenga_desktop.png"
+              srcSet="/assets/room/afternoon_room/jenga_desktop.png"
             />
             <source
               media="(min-width: 320px)"
-              srcset="/assets/room/afternoon_room/jenga_mobile.png"
+              srcSet="/assets/room/afternoon_room/jenga_mobile.png"
             />
             <img
               style={{ width: "auto" }}

@@ -19,10 +19,8 @@ const UploadPicture = () => {
         const p = new Picture({store: pictureStore, activity: activity.title, userId: box.userId});
         try {  
             const pictureRef = await pictureStore.uploadFile(file, p);
-            console.log(pictureRef.id)
             setNewPic(pictureRef.id);
             pictureStore.getPictures();
-            console.log(newPic)
 
         }
         catch (error) {

@@ -7,10 +7,16 @@ class UiStore {
     this.currentBox = undefined;
     this.loginState = false;
     this.currentActivities = undefined;
+    this.currentActivity = undefined;
+  }
+
+  setCurrentActivity = activity => {
+    this.currentActivity = activity;
   }
 
   login = async () => {
     this.loginState = true;
+    this.rootStore.pictureStore.getPictures();
   };
 
   setCurrentActivities = activities => {
@@ -20,6 +26,10 @@ class UiStore {
   logout = () => {
     this.loginState = false;
     this.empty();
+    this.rootStore.pictureStore.empty();
+    this.rootStore.boxStore.empty();
+    this.currentActivities = undefined;
+    this.currentActivity = undefined;
   };
 
   setCurrentBox = box => {
@@ -42,7 +52,8 @@ class UiStore {
   }
 
   emptyActivities() {
-    this.currentActivities = undefined
+    this.currentActivities = undefined;
+    this.currentActivity = undefined;
   }
 
   get checker() {

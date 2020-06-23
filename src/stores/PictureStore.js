@@ -1,6 +1,5 @@
 import { decorate, observable, action } from "mobx";
 import PictureService from "../services/PictureService";
-import { pictureConverter } from "../models/picture";
 
 class PictureStore {
   constructor(rootstore) {
@@ -10,11 +9,14 @@ class PictureStore {
   }
 
   addPictures = picture => {
-        this.pictures.push(picture); 
+        let pictureExist = this.pictures.findIndex(item => item.id === picture.id);
+        if(pictureExist === -1) {
+          this.pictures.push(picture)
+        }
   }
 
   onPictureChanged = pictures => {
-    this.addPictures(pictures);
+    pictures.map(picture => this.addPictures(picture));
   }
 
   getPictures = async () => {
@@ -29,10 +31,8 @@ class PictureStore {
     console.log(upload);
     //connection between the firestore and storage
     picture.comment = '';
-    picture.activity = '';
     picture.url = upload;
     picture.code = this.rootstore.uiStore.currentCode;
-    picture.userId = '255';
     const newPictureRef = await this.pictureService.createImage(picture);
     picture.id = newPictureRef.id;
     
@@ -43,9 +43,15 @@ class PictureStore {
     this.pictures = [];
   }
 
+  removePicture = async pictureId => {
+    await this.pictureService.removePicture(pictureId);
+  }
+
   updatePicture = async (pictureId, updates) => {
    await this.pictureService.updatePicture(pictureId, updates);
   }
+
+  getPictureById = id => this.pictures.find(picture => picture.id === id)
   
 }
 

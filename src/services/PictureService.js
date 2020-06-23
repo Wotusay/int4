@@ -38,12 +38,17 @@ class PictureService {
         const storageRef = this.storage.ref(`assets/${file.name}`);
         const uploadToFirebase =  storageRef.put(file, metaData);
         await uploadToFirebase; 
+        console.log(uploadToFirebase.state);
         const picureUrl = await storageRef.getDownloadURL();
         return picureUrl;
     }
 
     updatePicture = async (pictureId, updates) => {
-        await this.db.collection("pictures").doc(pictureId).withConverter(pictureConverter).update(updates); 
+        await this.db.collection("pictures").doc(pictureId).update({'comment': updates}); 
+    }
+
+    removePicture = async pictureId => {
+        await this.db.collection("pictures").doc(pictureId).delete();
     }
 }
 

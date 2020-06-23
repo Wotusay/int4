@@ -1,44 +1,54 @@
-import React from "react";
-//import { useStores } from "../../hooks";
-import {  Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useStores } from "../../hooks";
+import { Link, useParams, useHistory } from "react-router-dom";
 import styles from "./picturedetail.module.css";
 
 import { useObserver } from "mobx-react-lite";
 
 import Footer from "../Footer/footer";
 import BackBlack from "../BackBlack/backblack";
-
-
+import { ROUTES } from "../../consts";
 
 const PicturesDetail = () => {
-    //const {id} = useParams();
-    //const {pictureStore} = useStores();
+    const {id} = useParams();
+    const {pictureStore} = useStores();
+    const history = useHistory();
+    const picture = pictureStore.getPictureById(id);
+    const [input, setInput] =  useState(`${picture.comment}`)
+
+    const handleRemove = async e => {
+        e.preventDefault();
+        await pictureStore.removePicture(id);
+        history.push(ROUTES.photobook);
+    }
+
+    const handelChange = async e => {
+        setInput(e.currentTarget.value);
+        picture.comment = input;
+        await pictureStore.updatePicture(id, picture.comment);
+    }
+
     return useObserver(() => {
-       // const picture = pictureStore.resolvePicture(id);
-        //if (!picture) return <p>Loading ...</p>;
-    ;
-
-
-
+    if (!picture) {return <p>Loading ...</p>} else {
     return (
 <>
     <div className={styles.dashboard}>  
         <BackBlack/>
           <div className={styles.content}>
                 <p className={styles.subtitle}>
-                Activiteit naam
+                {picture.activity}
                 </p>
                 <div className={styles.pic}>
-                    <img alt="placeholder" className={styles.img} src='/assets/img-placeholder.png' />
+                    <img alt={picture.activity} className={styles.img} src={picture.url} />
                     <form >
-                        <input className={styles.input} value="Romantisch avondje" type='text' placeholder="Schrijf hier een korte beschrijving ..." />
+                        <input onChange={(e) => handelChange(e)} className={styles.input} value={input} type='text' placeholder="Schrijf hier een korte beschrijving ..." />
                     </form>
                 </div>
                 <div className={styles.buttons}>                    
                 <Link className={styles.button_right}>
                     Downloaden
                     </Link>
-                    <Link className={styles.button_left}>
+                    <Link onClick={(e) => handleRemove(e)} className={styles.button_left}>
                     Verwijderen
                     </Link>
 
@@ -49,7 +59,7 @@ const PicturesDetail = () => {
         </>
     )
         
-    });
+    }});
 };
 
 export default PicturesDetail;

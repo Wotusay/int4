@@ -47,6 +47,10 @@ class BoxStore {
 
     getActivitiesById = id => this.activities.find(activity => activity.id === id);
     
+    empty() {
+        this.boxes = [];
+        this.activities = []
+    }
 }
 
 decorate(BoxStore, {

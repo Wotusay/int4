@@ -22,6 +22,7 @@ import PicturePreview from "./components/PicturePreview/picturepreview";
 import UploadComplete from "./components/Uploadcomplete/uploadcomplete";
 import PizzaConfigurator from "./components/Configurator/configurator";
 import Quiz from "./components/Quiz/quiz";
+import Finland from "./components/Finland/finland";
 
 function App() {
   const { uiStore } = useStores();
@@ -30,6 +31,9 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
+          <Route exact path={ROUTES.finland}>
+            <Finland />
+          </Route>
           <Route exact path={ROUTES.quiz}>
             <Quiz />
           </Route>

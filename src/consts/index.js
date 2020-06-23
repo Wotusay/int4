@@ -14,6 +14,7 @@ const ROUTES = {
   pizzaconfigurator: "/pizzaconfigurator",
   quiz: "/quiz",
   kamer: {path: "/room/:id", to: "/room/"},
+  finland: "/finland",
 };
 
 const mediaQueries = {

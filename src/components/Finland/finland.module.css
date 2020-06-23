@@ -1,0 +1,108 @@
+.activity {
+  height: 100vh;
+  background: linear-gradient(238.32deg, #a1e3d8 0%, #f49399 100%);
+  display: grid;
+  grid-template-columns: 5vw 1fr 5vw;
+  grid-template-rows: 10rem 1fr;
+}
+
+.back {
+  grid-row: 1;
+  grid-column: 2;
+  margin: 0;
+}
+
+.content {
+  background-color: white;
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 5vw repeat(10, 10vw) 5vw;
+  grid-template-rows: repeat(10, 10vh);
+}
+
+.introTitle {
+  color: #211f1f;
+  font-size: 3rem;
+  font-family: Playfair Display, sans-serif;
+  font-weight: bold;
+}
+
+.introText {
+  color: #211f1f;
+  margin-top: 1rem;
+  width: 30rem;
+  font-size: 1.8rem;
+  font-family: Muli, sans-serif;
+}
+
+.intro {
+  grid-row: 2;
+  grid-column: 2 / span 4;
+}
+
+.starVos {
+  grid-row: 1 / span 4;
+  grid-column: 4 / span 5;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.starVeulen {
+  grid-row: 3 / span 4;
+  grid-column: 7 / span 8;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.starSlang {
+  grid-row: 5/ span 7;
+  grid-column: 4 / span 5;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.starBeer {
+  grid-row: 3 / span 4;
+  grid-column: 2 / span 3;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-family: Playfair Display, sans-serif;
+  font-weight: bold;
+}
+
+.starImg {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(238.32deg, #a1e3d8 0%, #f49399 100%);
+  width: 25rem;
+  height: 20rem;
+}
+
+.button {
+  margin: 0 auto;
+  height: 4rem;
+  background-color: black;
+  color: white;
+  font-family: Muli, sans-serif;
+  border: none;
+  font-size: 1.5rem;
+  width: 20rem;
+}

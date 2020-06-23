@@ -11,8 +11,6 @@
   z-index: 80;
 }
 
-
-
 .footerItem {
   font-size: 2rem;
   color: white;  
@@ -83,14 +81,5 @@
     height: 12rem;
     padding-top: 4rem;
     padding-bottom: 1rem;
-  }
-
-  .footerItem:hover {
-    background-color: white;
-    color: black;
-    padding-top: 4rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 }

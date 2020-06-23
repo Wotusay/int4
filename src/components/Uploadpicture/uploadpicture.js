@@ -47,7 +47,8 @@ const UploadPicture = () => {
                 </p>
 
                 <p className={styles.subtitle}>
-                {activity.title}- Foto uploaden
+                {activity.title}- Foto uploaden <br/>
+                {pictureStore.loading === true ? 'Afbeeling zal ingeladen worden' : 'Afbeelding is ingeladen'}
                 </p>
 
                     <form className={styles.form}>

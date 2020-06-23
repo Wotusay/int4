@@ -13,6 +13,7 @@ const PicturePreview = () => {
     const history = useHistory();
     const {pictureStore} = useStores();
     const picture = pictureStore.getPictureById(id);
+    pictureStore.pictureSetState();
 
     const handleUpload = async e => {
         e.preventDefault();

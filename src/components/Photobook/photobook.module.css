@@ -42,12 +42,21 @@
   grid-template-columns: 30rem 30rem 30rem;
   grid-gap: 2rem;
 }
+
+.emptystate {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-size: 1.8rem;
+  grid-column: 1 / span 2;
+}
 @media only screen and (min-width: 320px) {
   .content {
     padding: 3rem;
     grid-template-rows: 4rem 6rem auto;
     grid-gap: 2rem;
-    height: auto;
+    height: 90vh;
+
   }
 
   .title {
@@ -65,6 +74,15 @@
     grid-template-columns: 14rem 14rem;
     grid-gap: 1rem;
     margin-bottom: 5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    
+  }
+
+  .emptystate {
+    grid-column: 1 / span 2;
+    font-size: 1.8rem;
   }
 }
 
@@ -72,10 +90,9 @@
   .content {
     grid-row: 2;
     padding: 3rem;
-
+    height: 100vh;
     grid-template-rows: 4rem 3rem auto;
     grid-gap: 2rem;
-    height: auto;
   }
 
   .title {
@@ -92,5 +109,11 @@
     grid-template-columns: 30rem 30rem 30rem;
     grid-gap: 2rem;
     margin-bottom: 10rem;
+  }
+
+  .emptystate {
+    grid-column: 1 / span 3;
+
+    font-size: 2.2rem;
   }
 }

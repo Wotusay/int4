@@ -6,6 +6,7 @@ class PictureStore {
     this.rootstore = rootstore;
     this.pictureService = new PictureService(this.rootstore.firebase);
     this.pictures = [];
+    this.loading = true; 
   }
 
   addPictures = picture => {
@@ -15,6 +16,8 @@ class PictureStore {
         }
   }
 
+  pictureSetState = () => this.loading = true;
+
   onPictureChanged = pictures => {
     pictures.map(picture => this.addPictures(picture));
   }
@@ -22,20 +25,18 @@ class PictureStore {
   getPictures = async () => {
     const result = await this.pictureService.getAllImages(this.rootstore.uiStore.currentCode);
     this.onPictureChanged(result);
-    console.log(result);
   }
 
   uploadFile = async (file, picture) => {
     //uploading and getting the img url
     const upload = await this.pictureService.uploadPicture(file);
-    console.log(upload);
     //connection between the firestore and storage
     picture.comment = '';
     picture.url = upload;
     picture.code = this.rootstore.uiStore.currentCode;
     const newPictureRef = await this.pictureService.createImage(picture);
+    this.loading = false;
     picture.id = newPictureRef.id;
-    
     return picture;
   }
 
@@ -56,6 +57,7 @@ class PictureStore {
 }
 
 decorate(PictureStore, {
+  loading: observable,
   pictures: observable,
   empty: action,
   addPictures: action,

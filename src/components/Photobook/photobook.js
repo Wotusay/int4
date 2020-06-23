@@ -28,10 +28,10 @@ const Photobook = () => {
             honeymoon-activiteiten. Klik op een foto om het in detail te zien.
           </p>
           <ul className={styles.pics}>
-            {pictures.map(picture => (
-             <Link to={ROUTES.pictureDetail.to + picture.id}>
+            {pictures.length === 0 ? <p className={styles.emptystate}> Dit fotoboek is heelaas leeg ... </p> : pictures.map(picture => (
+             <Link key={picture.id} to={ROUTES.pictureDetail.to + picture.id}>
               <li key={picture.id}>
-               <Picture picture={picture} />
+               <Picture key={picture.id} picture={picture} />
               </li>
              </Link> 
              ) )}

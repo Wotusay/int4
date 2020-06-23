@@ -27,10 +27,8 @@ class BoxStore {
     };
 
     getActivities = async (time, code) => {
-            console.log(time , code);
             const result =  await this.boxService.getBoxActivities(time,code);
             this.onActivitiesChanged(result);
-            console.log(result);
     };
 
 

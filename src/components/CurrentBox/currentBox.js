@@ -50,22 +50,22 @@ const CurrentBox = () => {
           {uiStore.currentBox.title === 'Advontura Box' ?
           
           <picture className={styles.contentRightImg}>
-          <source media="(min-width: 1440px)" srcset="/assets/current_box/box.png" />
-          <source media="(min-width: 320px)" srcset="/assets/current_box/box-mobile.png" />
+          <source media="(min-width: 1440px)" srcSet="/assets/current_box/box.png" />
+          <source media="(min-width: 320px)" srcSet="/assets/current_box/box-mobile.png" />
           <img style={{width: 'auto'}}
               src="/assets/current_box/box.png"
               alt="box"
             /> </picture>: uiStore.currentBox.title === 'Amare box' ?          
             <picture className={styles.contentRightImg}>
-            <source media="(min-width: 1440px)" srcset="/assets/current_box/box-r.png" />
-            <source media="(min-width: 320px)" srcset="/assets/current_box/box-r-mobile.png" />
+            <source media="(min-width: 1440px)" srcSet="/assets/current_box/box-r.png" />
+            <source media="(min-width: 320px)" srcSet="/assets/current_box/box-r-mobile.png" />
             <img style={{width: 'auto'}}
                 src="/assets/current_box/box-r.png"
                 alt="box"
               /> </picture>: 
               <picture className={styles.contentRightImg}>
-          <source media="(min-width: 1440px)" srcset="/assets/current_box/box-t.png" />
-          <source media="(min-width: 320px)" srcset="/assets/current_box/box-t-mobile.png" />
+          <source media="(min-width: 1440px)" srcSet="/assets/current_box/box-t.png" />
+          <source media="(min-width: 320px)" srcSet="/assets/current_box/box-t-mobile.png" />
           <img style={{width: 'auto'}}
               src="/assets/current_box/box-t.png"
               alt="box"

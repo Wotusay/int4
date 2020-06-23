@@ -25,6 +25,10 @@ import Quiz from "./components/Quiz/quiz";
 import Finland from "./components/Finland/finland";
 import Development from "./components/Development/development";
 import YogaDetail from "./components/YogaDetail/yogaDetail";
+import DetailVos from "./components/Finland/detailVos";
+import DetailBeer from "./components/Finland/detailBeer";
+import DetailSlang from "./components/Finland/detailSlang";
+import DetailVeulen from "./components/Finland/detailVeulen";
 
 function App() {
   const { uiStore } = useStores();
@@ -33,6 +37,18 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
+          <Route exact path={ROUTES.detailveulen}>
+            <DetailVeulen />
+          </Route>
+          <Route exact path={ROUTES.detailslang}>
+            <DetailSlang />
+          </Route>
+          <Route exact path={ROUTES.detailbeer}>
+            <DetailBeer />
+          </Route>
+          <Route exact path={ROUTES.detailvos}>
+            <DetailVos />
+          </Route>
           <Route exact path={ROUTES.yogadetail}>
             <YogaDetail />
           </Route>

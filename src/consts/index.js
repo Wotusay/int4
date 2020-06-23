@@ -17,6 +17,10 @@ const ROUTES = {
   finland: "/finland",
   development: "/development",
   yogadetail: "/yogadetail",
+  detailveulen: "/detailveulen",
+  detailslang: "/detailslang",
+  detailbeer: "/detailbeer",
+  detailvos: "/detailvos",
 };
 
 const mediaQueries = {

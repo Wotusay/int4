@@ -1,9 +1,24 @@
 import React from "react";
 import styles from "./detail.module.css";
 import Back from "../BackBlack/backblack";
+import { useStores } from "../../hooks";
+import { useHistory } from "react-router-dom";
+import { ROUTES } from "../../consts";
+import { useObserver } from "mobx-react-lite";
 
 const DetailSlang = () => {
+  const {uiStore} = useStores();
+  const history = useHistory();
+  return useObserver(() => {
+  if (uiStore.currentBox === undefined) {
+    history.push(ROUTES.login)
+    return (
+      <p className="loading"> loading ...</p>
+    )
+  } else {
+
   return (
+
     <>
       <div className={styles.activity}>
         <div className={styles.back}>
@@ -44,7 +59,8 @@ const DetailSlang = () => {
         </div>
       </div>
     </>
-  );
+  )}});
+
 };
 
 export default DetailSlang;

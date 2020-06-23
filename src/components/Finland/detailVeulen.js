@@ -1,8 +1,22 @@
 import React from "react";
 import styles from "./detail.module.css";
 import Back from "../BackBlack/backblack";
+import { useObserver } from "mobx-react-lite";
+import { ROUTES } from "../../consts";
+import { useHistory } from "react-router-dom";
+import { useStores } from "../../hooks";
 
 const DetailVeulen = () => {
+  const {uiStore} = useStores();
+  const history = useHistory();
+  return useObserver(() => {
+  if (uiStore.currentBox === undefined) {
+    history.push(ROUTES.login)
+    return (
+      <p className="loading"> loading ...</p>
+    )
+  } else {
+
   return (
     <>
       <div className={styles.activity}>
@@ -45,7 +59,7 @@ const DetailVeulen = () => {
         </div>
       </div>
     </>
-  );
+  )}});
 };
 
 export default DetailVeulen;

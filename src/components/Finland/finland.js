@@ -2,18 +2,23 @@ import React from "react";
 import { useObserver } from "mobx-react-lite";
 import styles from "./finland.module.css";
 import Back from "../BackBlack/backblack";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { ROUTES } from "../../consts";
+import { useStores } from "../../hooks";
 
 const Finland = () => {
+
+  const {uiStore} = useStores();
+  const history = useHistory();
   return useObserver(() => {
-    if (uiStore.currentBox === undefined) {
-      history.push(ROUTES.login)
-      return (
-        <p className="loading"> loading ...</p>
-      )
-    } else {
+  if (uiStore.currentBox === undefined) {
+    history.push(ROUTES.login)
     return (
+      <p className="loading"> loading ...</p>
+    )
+  } else {
+
+  return (
     <>
       <div className={styles.activity}>
         <div className={styles.back}>

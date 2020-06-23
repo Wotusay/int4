@@ -46,6 +46,13 @@
   grid-column: 2;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.yogaTitle {
+  font-size: 2rem;
+  font-family: Muli, sans-serif;
+  font-weight: bold;
 }
 
 .button {

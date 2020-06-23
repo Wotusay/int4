@@ -1,0 +1,24 @@
+.activity {
+  width: 100vw;
+  background: linear-gradient(238.32deg, #fff890 0%, #f3c87a 100%);
+  display: grid;
+  grid-template-columns: 5vw 1fr 5vw;
+  grid-template-rows: 8rem 1fr;
+}
+
+.back {
+  grid-row: 1;
+  grid-column: 2;
+  margin: 0;
+}
+
+.content {
+  background-color: white;
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 6rem 15rem 1fr 1fr 1fr;
+  grid-template-columns: 5vw 1fr 5vw;
+  height: 100%;
+}

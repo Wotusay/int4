@@ -22,9 +22,9 @@ const BackBlack = () => {
         <path
           d="M8.49764 15.8986L1.09375 8.49471L8.49764 1.09082"
           stroke="black"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>{" "}
       Ga terug

@@ -24,6 +24,7 @@ import PizzaConfigurator from "./components/Configurator/configurator";
 import Quiz from "./components/Quiz/quiz";
 import Finland from "./components/Finland/finland";
 import Development from "./components/Development/development";
+import YogaDetail from "./components/YogaDetail/yogaDetail";
 
 function App() {
   const { uiStore } = useStores();
@@ -32,6 +33,9 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
+          <Route exact path={ROUTES.yogadetail}>
+            <YogaDetail />
+          </Route>
           <Route exact path={ROUTES.development}>
             <Development />
           </Route>

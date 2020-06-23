@@ -16,6 +16,7 @@ const ROUTES = {
   kamer: { path: "/room/:id", to: "/room/" },
   finland: "/finland",
   development: "/development",
+  yogadetail: "/yogadetail",
 };
 
 const mediaQueries = {

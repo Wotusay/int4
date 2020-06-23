@@ -13,9 +13,7 @@ const PizzaConfigurator = () => {
   let sauceImg = "/assets/pizza/pixel.png";
   let addImg = "/assets/pizza/pixel.png";
 
-  const addNewImg = (addImg) => {
-    
-  };
+  const addNewImg = (addImg) => {};
 
   switch (sauce) {
     case "tomatensaus":
@@ -33,6 +31,9 @@ const PizzaConfigurator = () => {
     case "kaas":
       addImg = "/assets/pizza/kaas.png";
       break;
+
+    default:
+      console.log("default");
   }
 
   switch (add) {
@@ -60,6 +61,9 @@ const PizzaConfigurator = () => {
       addImg = "/assets/pizza/ananas.png";
       addNewImg();
       break;
+
+    default:
+      console.log("default");
   }
 
   return (

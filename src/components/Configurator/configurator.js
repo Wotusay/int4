@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styles from "./configurator.module.css";
 import Back from "../BackBlack/backblack";
+import { ROUTES } from "../../consts/index";
+import { Link } from "react-router-dom";
 
 const PizzaConfigurator = () => {
   const [size, setSize] = useState();
   const [sauce, setSauce] = useState();
   const [add, setAdd] = useState();
   console.log(size);
-  console.log(sauce);
-  console.log(add);
 
   let sauceImg = "/assets/pizza/pixel.png";
   let addImg = "/assets/pizza/pixel.png";
@@ -190,7 +190,9 @@ const PizzaConfigurator = () => {
           <img alt="PizzaAdd1" className={styles.pizza} src={addImg}></img>
           <img alt="PizzaAdd2" className={styles.pizza} src={addImg}></img>
           <img alt="PizzaAdd3" className={styles.pizza} src={addImg}></img>
-          <button className={styles.buttonDone}>Klaar!</button>
+          <Link className={styles.buttonLink} to={ROUTES.pizzadone}>
+            <button className={styles.buttonDone}>Klaar!</button>
+          </Link>
         </div>
       </div>
     </>

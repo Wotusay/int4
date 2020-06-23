@@ -1,0 +1,113 @@
+.configurator {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 10rem 1fr;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 5vw 1fr 5vw;
+  grid-template-rows: 4rem 4rem;
+  grid-row: 2;
+  grid-column: 1;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+}
+
+.back {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.title {
+  margin-top: 1rem;
+  text-align: center;
+  grid-column: 2;
+  grid-row: 2;
+  font-family: Playfair Display, sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.needs {
+  grid-row: 3;
+  grid-column: 2;
+  margin: 1rem;
+}
+
+.needsTitle {
+  font-size: 2rem;
+  font-family: Muli, sans-serif;
+}
+
+.needsItem {
+  list-style-type: disc;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: Muli, sans-serif;
+}
+
+.img {
+  align-self: center;
+  justify-self: center;
+}
+
+.buttonWrapper {
+  grid-row: 4;
+  grid-column: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  font-family: Muli, sans-serif;
+  height: 5rem;
+  width: 15rem;
+}
+
+.buttonLight {
+  border: solid black 0.2rem;
+  background-color: transparent;
+  color: black;
+  font-size: 1.5rem;
+  font-family: Muli, sans-serif;
+  height: 5rem;
+  width: 15rem;
+}
+
+@media only screen and (min-width: 678px) {
+  .configurator {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem 1fr;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 5vw 1fr 5vw;
+    grid-template-rows: 4rem 4rem;
+    grid-row: 2;
+    grid-column: 1;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .needs {
+    grid-row: 3;
+    grid-column: 2;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .img {
+
+  }
+}

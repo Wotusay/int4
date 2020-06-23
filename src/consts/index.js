@@ -21,6 +21,7 @@ const ROUTES = {
   detailslang: "/detailslang",
   detailbeer: "/detailbeer",
   detailvos: "/detailvos",
+  pizzadone: "/pizzadone",
 };
 
 const mediaQueries = {

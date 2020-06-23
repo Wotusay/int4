@@ -29,6 +29,7 @@ import DetailVos from "./components/Finland/detailVos";
 import DetailBeer from "./components/Finland/detailBeer";
 import DetailSlang from "./components/Finland/detailSlang";
 import DetailVeulen from "./components/Finland/detailVeulen";
+import PizzaDone from "./components/Configurator/pizzaDone";
 
 function App() {
   const { uiStore } = useStores();
@@ -37,6 +38,9 @@ function App() {
       <div className={styles.container}>
         <Header />
         <Switch>
+          <Route exact path={ROUTES.pizzadone}>
+            <PizzaDone />
+          </Route>
           <Route exact path={ROUTES.detailveulen}>
             <DetailVeulen />
           </Route>

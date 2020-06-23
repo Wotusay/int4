@@ -102,8 +102,6 @@
 
 .buttonDone {
   margin-top: 3rem;
-  grid-row: 7;
-  grid-column: 2;
   width: 15rem;
   height: 5rem;
   font-size: 2rem;
@@ -112,6 +110,11 @@
   color: white;
   font-family: Muli, sans-serif;
   transition: ease-in-out 0.2s;
+}
+
+.buttonLink {
+  grid-row: 7;
+  grid-column: 2;
 }
 
 .buttonDone:hover {

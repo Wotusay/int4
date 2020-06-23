@@ -13,8 +13,9 @@ const ROUTES = {
   uploadComplete: "/uploadcomplete",
   pizzaconfigurator: "/pizzaconfigurator",
   quiz: "/quiz",
-  kamer: {path: "/room/:id", to: "/room/"},
+  kamer: { path: "/room/:id", to: "/room/" },
   finland: "/finland",
+  development: "/development",
 };
 
 const mediaQueries = {

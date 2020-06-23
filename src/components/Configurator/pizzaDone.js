@@ -4,11 +4,20 @@ import Back from "../BackBlack/backblack";
 import { ROUTES } from "../../consts/index";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import { useObserver } from "mobx-react-lite";
+import { useStores } from "../../hooks";
 
 const PizzaDone = () => {
   const history = useHistory();
-
-  return (
+  const {uiStore} = useStores();
+  return useObserver(() => {
+  if (uiStore.currentBox === undefined) {
+    history.push(ROUTES.login)
+    return (
+      <p className="loading"> loading ...</p>
+    )
+  } else { 
+    return(
     <>
       <div className={styles.configurator}>
         <div className={styles.content}>
@@ -50,7 +59,7 @@ const PizzaDone = () => {
         </div>
       </div>
     </>
-  );
+  )}});
 };
 
 export default PizzaDone;

@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import styles from "./configurator.module.css";
 import Back from "../BackBlack/backblack";
 import { ROUTES } from "../../consts/index";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { useStores } from "../../hooks";
+import { useObserver } from "mobx-react-lite";
 
 const PizzaConfigurator = () => {
   const [size, setSize] = useState();
@@ -66,7 +68,16 @@ const PizzaConfigurator = () => {
       console.log("default");
   }
 
-  return (
+  const {uiStore} = useStores();
+  const history = useHistory();
+  return useObserver(() => {
+  if (uiStore.currentBox === undefined) {
+    history.push(ROUTES.login)
+    return (
+      <p className="loading"> loading ...</p>
+    )
+  } else { 
+    return(
     <>
       <div className={styles.configurator}>
         <div className={styles.content}>
@@ -196,7 +207,7 @@ const PizzaConfigurator = () => {
         </div>
       </div>
     </>
-  );
+  )}});
 };
 
 export default PizzaConfigurator;

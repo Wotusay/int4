@@ -15,16 +15,13 @@
 .content {
   grid-row: 2;
   background-color: white;
-  padding: 3rem;
   display: grid;
   grid-template-rows: 4rem 3rem 40rem;
   justify-content: center;
   grid-gap: 2rem;
-  height: 90vh;
 }
 
 .title {
-  font-weight: bold;
   font-size: 4.8rem;
   display: flex;
   justify-content: center;
@@ -56,7 +53,6 @@
     grid-template-rows: 4rem 6rem auto;
     grid-gap: 2rem;
     height: 90vh;
-
   }
 
   .title {
@@ -76,8 +72,6 @@
     margin-bottom: 5rem;
     overflow-y: auto;
     overflow-x: hidden;
-
-    
   }
 
   .emptystate {
@@ -89,7 +83,6 @@
 @media only screen and (min-width: 1440px) {
   .content {
     grid-row: 2;
-    padding: 3rem;
     height: 100vh;
     grid-template-rows: 4rem 3rem auto;
     grid-gap: 2rem;

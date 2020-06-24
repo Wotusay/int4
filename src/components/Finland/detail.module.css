@@ -115,4 +115,11 @@
     font-size: 1.8rem;
     font-family: Muli, sans-serif;
   }
+
+  .buttonWrapper {
+    justify-self: flex-start;
+    margin-top: 25rem;
+    grid-row: 2;
+    grid-column: 3;
+  }
 }
